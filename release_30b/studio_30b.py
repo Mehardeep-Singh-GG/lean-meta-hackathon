@@ -590,7 +590,7 @@ HTML_PAGE = r"""<!DOCTYPE html>
   .cad-cross.br { bottom: 0; right: 0; }
 
   /* =========================================================================
-     ACT I: GOD-TIER 52-SPIRAL SINGULARITY PARTICLE PORTAL & DIAGNOSTIC HUD
+     ACT I: GOD-TIER 52-SPIRAL SINGULARITY PARTICLE PORTAL OVERLAY
      ========================================================================= */
   .portal-overlay {
     position: fixed;
@@ -599,16 +599,13 @@ HTML_PAGE = r"""<!DOCTYPE html>
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 24px 32px;
+    padding: 28px 36px;
     pointer-events: none;
-    transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .portal-overlay.hidden {
     opacity: 0;
-    transform: scale(1.08);
-    pointer-events: none !important;
-  }
-  .portal-overlay.warping {
+    transform: scale(1.06);
     pointer-events: none !important;
   }
 
@@ -622,13 +619,6 @@ HTML_PAGE = r"""<!DOCTYPE html>
     letter-spacing: 0.06em;
     color: var(--ink-soft);
     text-transform: uppercase;
-    z-index: 25;
-  }
-  .portal-top-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    pointer-events: auto;
   }
   .portal-top-right {
     display: flex;
@@ -641,16 +631,16 @@ HTML_PAGE = r"""<!DOCTYPE html>
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border: 1px solid var(--border);
-    padding: 6px 14px;
+    padding: 6px 13px;
     border-radius: 999px;
     color: var(--ink-soft);
   }
-  .portal-top-btn {
+  .portal-theme-btn {
     background: var(--portal-pill);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border: 1px solid var(--border);
-    padding: 6px 14px;
+    padding: 6px 13px;
     border-radius: 999px;
     font-family: 'JetBrains Mono', monospace;
     font-size: 10.5px;
@@ -658,152 +648,33 @@ HTML_PAGE = r"""<!DOCTYPE html>
     letter-spacing: 0.04em;
     color: var(--ink);
     cursor: pointer;
-    transition: all 0.2s ease;
   }
-  .portal-top-btn:hover {
+  .portal-theme-btn:hover {
     border-color: var(--blue);
     color: var(--blue);
   }
 
-  /* 3-Column Diagnostic Stage Layout */
-  .portal-main-grid {
-    display: grid;
-    grid-template-columns: 310px 1fr 310px;
-    align-items: center;
-    gap: 24px;
-    width: 100%;
-    max-width: 1560px;
-    margin: 0 auto;
-    pointer-events: none;
-    z-index: 22;
-  }
-
-  /* Left Diagnostic Waterfall Terminal */
-  .portal-terminal {
-    background: var(--portal-glass);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid var(--portal-border);
-    border-radius: 18px;
-    padding: 16px 18px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    line-height: 1.6;
-    color: var(--ink-soft);
-    pointer-events: auto;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-  }
-  .pt-head {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid var(--border-subtle);
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    color: var(--ink);
-    text-transform: uppercase;
-  }
-  .pt-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--emerald);
-    box-shadow: 0 0 8px var(--emerald);
-  }
-  .pt-body {
-    max-height: 220px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .pt-line {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .pt-line.highlight {
-    color: var(--blue);
-    font-weight: 600;
-  }
-  .pt-line.coral {
-    color: #FF5A5F;
-    font-weight: 600;
-  }
-
-  /* Right Benchmark Bento */
-  .portal-bento {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    pointer-events: auto;
-  }
-  .pb-card {
-    background: var(--portal-glass);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid var(--portal-border);
-    border-radius: 14px;
-    padding: 12px 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-  }
-  .pb-card.highlight {
-    border-color: rgba(0, 102, 204, 0.45);
-  }
-  html[data-theme="dark"] .pb-card.highlight {
-    border-color: rgba(41, 151, 255, 0.45);
-  }
-  .pb-lbl {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    color: var(--muted);
-    text-transform: uppercase;
-  }
-  .pb-val {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    color: var(--ink);
-  }
-  .pb-sub {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9.5px;
-    color: var(--muted-light);
-  }
-
-  /* Center Holographic Command Portal */
   .portal-center {
     align-self: center;
     text-align: center;
-    max-width: 660px;
-    margin: 0 auto;
+    max-width: 640px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
-    padding: 28px 36px;
+    gap: 14px;
+    padding: 26px 34px;
     border-radius: 28px;
     background: var(--portal-glass);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--portal-border);
-    pointer-events: auto;
-    position: relative;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
   }
+
   .portal-kicker {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 5px 14px;
+    padding: 5px 13px;
     border-radius: 999px;
     background: var(--panel-solid);
     border: 1px solid var(--border);
@@ -814,113 +685,60 @@ HTML_PAGE = r"""<!DOCTYPE html>
     text-transform: uppercase;
     color: var(--ink);
   }
+
   .portal-kicker-dot {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #FF5A5F;
-    box-shadow: 0 0 8px #FF5A5F;
-    animation: portalPulseDot 1.4s ease-in-out infinite alternate;
+    background: var(--blue);
   }
-  @keyframes portalPulseDot {
-    0% { transform: scale(0.9); opacity: 0.7; }
-    100% { transform: scale(1.3); opacity: 1.0; }
-  }
+
   .portal-headline {
     font-family: 'Space Grotesk', -apple-system, sans-serif;
     font-weight: 700;
-    font-size: 64px;
-    line-height: 0.95;
+    font-size: 62px;
+    line-height: 0.96;
     letter-spacing: -0.045em;
     color: var(--ink);
   }
+
   .portal-sub {
     font-size: 14.5px;
     line-height: 1.55;
     color: var(--ink-soft);
-    max-width: 520px;
+    max-width: 490px;
     font-weight: 450;
   }
 
-  /* Kinetic Progress Indicator */
-  .portal-progress-box {
-    width: 100%;
-    max-width: 440px;
+  .portal-cta-row {
     display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  .portal-progress-top {
-    display: flex;
-    justify-content: space-between;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9.5px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    color: var(--muted);
-  }
-  .portal-progress-pct {
-    color: var(--blue);
-  }
-  .portal-progress-track {
-    width: 100%;
-    height: 4px;
-    background: var(--border-subtle);
-    border-radius: 999px;
-    overflow: hidden;
-  }
-  .portal-progress-bar {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, #FF5A5F, var(--blue));
-    border-radius: 999px;
-    transform-origin: left;
-    transition: transform 0.4s ease;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+    pointer-events: auto;
   }
 
-  /* High-Impact Warp Button */
-  .portal-warp-btn {
+  .portal-enter-btn {
     background: var(--ink);
     color: var(--ink-contrast);
     border: 1px solid var(--ink);
     border-radius: 999px;
-    padding: 15px 32px;
+    padding: 13px 28px;
     font-family: inherit;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
+    font-size: 13.5px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), background 0.2s ease, border-color 0.2s ease;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    gap: 10px;
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), background 0.2s ease, color 0.2s ease;
   }
-  .portal-warp-btn:hover {
+  .portal-enter-btn:hover {
     background: var(--blue);
     border-color: var(--blue);
     color: #FFFFFF;
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 12px 32px rgba(0, 102, 204, 0.35);
-  }
-  .portal-warp-btn:active {
-    transform: translateY(0) scale(0.98);
-  }
-  .pwb-icon {
-    font-size: 16px;
-    color: #FF5A5F;
-  }
-  .portal-warp-btn:hover .pwb-icon {
-    color: #FFE600;
-  }
-  .pwb-hotkey {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    font-weight: 600;
-    opacity: 0.65;
-    padding: 2px 7px;
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.14);
+    transform: translateY(-2px);
   }
 
   .portal-bottom {
@@ -928,19 +746,33 @@ HTML_PAGE = r"""<!DOCTYPE html>
     justify-content: space-between;
     align-items: center;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
+    font-size: 10.5px;
     color: var(--muted);
-    z-index: 25;
   }
-  .portal-telemetry-pill {
+
+  .portal-stats {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
     background: var(--portal-pill);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--border);
-    padding: 7px 14px;
-    border-radius: 999px;
-    color: var(--ink-soft);
-    font-weight: 600;
+    border-radius: 16px;
+    padding: 10px 20px;
+  }
+  .portal-stat-val {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.03em;
+    display: block;
+  }
+  .portal-stat-lbl {
+    font-size: 9.5px;
+    color: var(--muted);
+    text-transform: uppercase;
     letter-spacing: 0.04em;
   }
   .portal-hint-pill {
@@ -948,20 +780,10 @@ HTML_PAGE = r"""<!DOCTYPE html>
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border: 1px solid var(--border);
-    padding: 7px 14px;
+    padding: 8px 14px;
     border-radius: 999px;
     color: var(--ink-soft);
     font-weight: 600;
-    letter-spacing: 0.04em;
-  }
-
-  @media (max-width: 1100px) {
-    .portal-main-grid {
-      grid-template-columns: 1fr;
-    }
-    .portal-terminal, .portal-bento {
-      display: none;
-    }
   }
 
   /* =========================================================================
@@ -1930,96 +1752,48 @@ HTML_PAGE = r"""<!DOCTYPE html>
      ========================================================================= -->
 <section class="portal-overlay" id="portal-overlay">
   <div class="portal-top">
-    <div class="portal-top-left">
-      <span class="portal-top-pill">PROJECT LEAN · SPATIAL ARCHITECTURE LAB</span>
-      <span class="portal-top-pill">32,000 QUANTA · ACCRETION JET ACTIVE</span>
-    </div>
+    <span class="portal-top-pill">PROJECT LEAN · SPATIAL ARCHITECTURE LAB</span>
     <div class="portal-top-right">
-      <button class="portal-top-btn" id="portal-sfx-btn" onclick="event.stopPropagation(); toggleAudioFX()">🔊 SFX: ON</button>
-      <button class="portal-top-btn" id="portal-theme-btn" onclick="event.stopPropagation(); toggleTheme()">☾ Space Black</button>
-      <button class="portal-top-btn" onclick="event.stopPropagation(); instantSkipToStudio()">Skip ➔</button>
+      <span class="portal-top-pill">52 SPIRAL ARMS · 32,000 QUANTA PARTICLES</span>
+      <button class="portal-theme-btn" id="portal-theme-btn" onclick="event.stopPropagation(); toggleTheme()">☾ Space Black</button>
     </div>
   </div>
 
-  <div class="portal-main-grid">
-    <!-- Left Diagnostic Terminal -->
-    <div class="portal-terminal">
-      <div class="pt-head">
-        <span class="pt-dot"></span>
-        <span>SYS_TELEMETRY.STREAM</span>
-      </div>
-      <div class="pt-body" id="portal-diag-body">
-        <div class="pt-line highlight">> HOST DETECTED: NVIDIA A100-SXM4-80GB</div>
-        <div class="pt-line">> HOST RAM: 167.05 GiB AVAILABLE</div>
-        <div class="pt-line">> 52-LAYER HESSIAN CALIBRATION: OK</div>
-        <div class="pt-line coral">> COMPRESSION: 59.90 GB ⟶ 6.53 GB (9.17×)</div>
-        <div class="pt-line highlight">> ASYNC DMA RING: [L08, L17, L26, L35, L44]</div>
-        <div class="pt-line highlight">> HARDWARE WALL: 7.27 GiB &lt; 8.00 GiB [PASS]</div>
-        <div class="pt-line">> SPLIT-K TRITON COALESCED KERNELS: WARMED</div>
-        <div class="pt-line">> 32,000 QUANTA IN RELATIVISTIC EQUILIBRIUM</div>
-      </div>
+  <div class="portal-center">
+    <div class="portal-kicker">
+      <span class="portal-kicker-dot"></span>
+      <span>Priced-Quanta v2 · Real-Time 3D Neural Silicon</span>
     </div>
-
-    <!-- Center Command Portal -->
-    <div class="portal-center">
-      <div class="portal-kicker">
-        <span class="portal-kicker-dot"></span>
-        <span>Priced-Quanta v2 · Real-Time 3D Neural Silicon</span>
-      </div>
-      <h1 class="portal-headline">Muse-Glimmer-30B</h1>
-      <p class="portal-sub">
-        Experience 29.95 billion parameters collapse <strong>9.17×</strong> from an uncompressed
-        <strong>59.90 GB</strong> singularity into a precision-machined <strong>6.53 GB</strong>
-        52-layer transformer core inside an 8.00 GiB hardware envelope.
-      </p>
-
-      <div class="portal-progress-box">
-        <div class="portal-progress-top">
-          <span>NEURAL SILICON STATUS</span>
-          <span class="portal-progress-pct" id="portal-progress-text">READY · 100%</span>
-        </div>
-        <div class="portal-progress-track">
-          <div class="portal-progress-bar" id="portal-progress-bar"></div>
-        </div>
-      </div>
-
-      <div class="portal-cta-row">
-        <button class="portal-warp-btn" id="portal-warp-btn" onclick="triggerCinematicWarp()">
-          <span class="pwb-icon">⚡</span>
-          <span class="pwb-text">WARP INTO 3D SILICON CORE</span>
-          <span class="pwb-hotkey">[SPACE]</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Right Benchmark Bento -->
-    <div class="portal-bento">
-      <div class="pb-card highlight">
-        <div class="pb-lbl">COMPRESSION RATIO</div>
-        <div class="pb-val">9.17×</div>
-        <div class="pb-sub">59.90 GB → 6.53 GB (Priced-Quanta)</div>
-      </div>
-      <div class="pb-card highlight">
-        <div class="pb-lbl">VRAM ALLOCATION</div>
-        <div class="pb-val">7.27 GiB</div>
-        <div class="pb-sub">&lt; 8.00 GiB Wall (0.71 GiB Free)</div>
-      </div>
-      <div class="pb-card">
-        <div class="pb-lbl">52-LAYER CORES</div>
-        <div class="pb-val">2,496</div>
-        <div class="pb-sub">8 Heads · 24 SwiGLU Voxels/Layer</div>
-      </div>
-      <div class="pb-card">
-        <div class="pb-lbl">HOST TELEMETRY</div>
-        <div class="pb-val">39°C · 76W</div>
-        <div class="pb-sub">NVIDIA A100-SXM4-80GB (Live)</div>
-      </div>
+    <h1 class="portal-headline">Muse-Glimmer-30B</h1>
+    <p class="portal-sub">
+      Experience 29.95 billion parameters collapse <strong>9.17×</strong> from an uncompressed
+      <strong>59.90 GB</strong> singularity into a precision-machined <strong>6.53 GB</strong>
+      52-layer transformer core inside an 8.00 GiB hardware envelope.
+    </p>
+    <div class="portal-cta-row">
+      <button class="portal-enter-btn" onclick="enterNeuralCore()">
+        <span>Initialize &amp; Enter 3D Core</span>
+        <span>→</span>
+      </button>
     </div>
   </div>
 
   <div class="portal-bottom">
-    <span class="portal-telemetry-pill" id="portal-cam-telemetry">3D CAM [0.0, 0.0, 13.5] · FOV 40° · 32,000 QUANTA</span>
-    <span class="portal-hint-pill">SPACE / CLICK TO WARP · DRAG TO ROTATE · WHEEL TO ZOOM · [T] THEME</span>
+    <div class="portal-stats">
+      <div>
+        <span class="portal-stat-val" id="portal-stat-payload">-- GB</span>
+        <span class="portal-stat-lbl">4 Quantized Shards (Priced-Quanta v2)</span>
+      </div>
+      <div>
+        <span class="portal-stat-val" id="portal-stat-vram">-- GiB</span>
+        <span class="portal-stat-lbl">Persistent VRAM (&lt; 8.00 GiB Wall)</span>
+      </div>
+      <div>
+        <span class="portal-stat-val" id="portal-stat-speed">-- tok/s</span>
+        <span class="portal-stat-lbl">Circular Async DMA + Triton Split-K</span>
+      </div>
+    </div>
+    <span class="portal-hint-pill">MOVE CURSOR TO PERTURB FIELD · CLICK TO CRYSTALLIZE</span>
   </div>
 </section>
 
@@ -2043,7 +1817,6 @@ HTML_PAGE = r"""<!DOCTYPE html>
     </div>
     <button class="toggle-panel-btn" id="telemetry-toggle-btn" onclick="toggleTelemetryDrawer()">Colab Link</button>
     <button class="toggle-panel-btn active-pill" id="arena3d-toggle-btn" onclick="toggleArena3D()">3D Graphs</button>
-    <button class="toggle-panel-btn" id="intro-replay-btn" onclick="replayCinematicIntro()" title="Re-launch 3D Singularity Warp Intro">⚡ 3D Warp Intro</button>
     <button class="toggle-panel-btn" id="theme-toggle-btn" onclick="toggleTheme()">☾ Dark</button>
     <button class="toggle-panel-btn" id="toggle-sheet-btn" onclick="toggleChatSheet()">Full 3D View</button>
   </header>
@@ -2689,8 +2462,6 @@ Check: bat costs $1.05, total $1.10</div>
     uTime: { value: 0 },
     uImplode: { value: 0 },
     uOpacity: { value: 1 },
-    uWarpSpeed: { value: 1 },
-    uWarpStreak: { value: 0 },
     uMouse: { value: new THREE.Vector2(0, 0) },
     uPixelRatio: { value: Math.min(window.devicePixelRatio || 1, 2) }
   };
@@ -2706,8 +2477,6 @@ Check: bat costs $1.05, total $1.10</div>
       attribute float aSize;
       uniform float uTime;
       uniform float uImplode;
-      uniform float uWarpSpeed;
-      uniform float uWarpStreak;
       uniform vec2 uMouse;
       uniform float uPixelRatio;
       varying vec3 vColor;
@@ -2717,13 +2486,13 @@ Check: bat costs $1.05, total $1.10</div>
         vColor = aColor;
         float rad = length(position.xy);
         float kepler = 0.24 / max(0.55, rad * 0.25);
-        float angle = uTime * kepler * uWarpSpeed;
+        float angle = uTime * kepler;
         float ca = cos(angle);
         float sa = sin(angle);
         vec3 swirled = vec3(
           position.x * ca - position.y * sa,
           position.x * sa + position.y * ca,
-          position.z + sin(uTime * 1.3 * uWarpSpeed + aPhase) * 0.18
+          position.z + sin(uTime * 1.3 + aPhase) * 0.18
         );
 
         vec2 mWorld = uMouse * 5.8;
@@ -2732,9 +2501,6 @@ Check: bat costs $1.05, total $1.10</div>
         vec2 dir = normalize(swirled.xy - mWorld + vec2(0.0001));
         swirled.xy += dir * push * 0.80;
         swirled.z  += push * 1.05;
-
-        // Relativistic Warp Streak stretching during camera dive
-        swirled.z += uWarpStreak * (1.2 + rad * 1.4);
 
         float t = smoothstep(0.0, 1.0, uImplode);
         float spin = t * (1.0 - t) * 5.2;
@@ -2748,7 +2514,7 @@ Check: bat costs $1.05, total $1.10</div>
         );
 
         vec4 mvPosition = modelViewMatrix * vec4(finalPos, 1.0);
-        gl_PointSize = aSize * uPixelRatio * (11.5 / max(1.5, -mvPosition.z)) * (1.0 + uWarpStreak * 0.35);
+        gl_PointSize = aSize * uPixelRatio * (11.5 / max(1.5, -mvPosition.z));
         gl_Position = projectionMatrix * mvPosition;
 
         float edgeFade = (1.0 - smoothstep(5.9, 7.75, rad)) * smoothstep(2.95, 3.38, rad);
@@ -2812,221 +2578,6 @@ Check: bat costs $1.05, total $1.10</div>
   portalRingsGroup.add(pRingInner, pTicks, pRingMid, pRingOuter);
   scene.add(portalRingsGroup);
 
-  // A. Volumetric Relativistic Polar Jet Cones (Emerging along Singularity Z-Axis)
-  const portalJetsGroup = new THREE.Group();
-  portalJetsGroup.rotation.x = -0.34;
-  const jetGeo = new THREE.ConeGeometry(0.55, 8.2, 32, 1, true);
-  const jetMat = new THREE.MeshBasicMaterial({
-    color: 0x0066CC,
-    transparent: true,
-    opacity: 0.26,
-    side: THREE.DoubleSide,
-    depthWrite: false
-  });
-  const jetTop = new THREE.Mesh(jetGeo, jetMat);
-  jetTop.position.z = 4.1;
-  jetTop.rotation.x = Math.PI * 0.5;
-  const jetBot = new THREE.Mesh(jetGeo, jetMat.clone());
-  jetBot.position.z = -4.1;
-  jetBot.rotation.x = -Math.PI * 0.5;
-  portalJetsGroup.add(jetTop, jetBot);
-  scene.add(portalJetsGroup);
-
-  // B. Concentric Gravitational Wave Pulsar Rings
-  const portalGravRings = new THREE.Group();
-  portalGravRings.rotation.x = -0.34;
-  const gravRings = [];
-  for (let g = 0; g < 4; g++) {
-    const gMat = new THREE.MeshBasicMaterial({
-      color: 0x3B82F6,
-      transparent: true,
-      opacity: 0.35,
-      side: THREE.DoubleSide,
-      depthWrite: false
-    });
-    const gr = new THREE.Mesh(new THREE.RingGeometry(0.97, 1.03, 64), gMat);
-    portalGravRings.add(gr);
-    gravRings.push(gr);
-  }
-  scene.add(portalGravRings);
-
-  // C. Plane 1: Giant 3D World-Space Monumental Typography Behind the Singularity (z = -4.5)
-  function buildPortalBackdropTex(dark) {
-    const cnv = document.createElement('canvas');
-    cnv.width = 2048;
-    cnv.height = 1024;
-    const ctx = cnv.getContext('2d');
-    ctx.clearRect(0, 0, cnv.width, cnv.height);
-
-    // Architectural reticle lines
-    ctx.strokeStyle = dark ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.05)';
-    ctx.lineWidth = 1.5;
-    for (let x = 0; x < cnv.width; x += 128) {
-      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, cnv.height); ctx.stroke();
-    }
-    for (let y = 0; y < cnv.height; y += 128) {
-      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(cnv.width, y); ctx.stroke();
-    }
-
-    // Monumental World Typography
-    ctx.font = '900 160px "Space Grotesk", -apple-system, sans-serif';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillStyle = dark ? 'rgba(255, 255, 255, 0.09)' : 'rgba(20, 20, 25, 0.08)';
-    ctx.fillText('MUSE-GLIMMER-30B', cnv.width * 0.5, cnv.height * 0.38);
-
-    ctx.font = '700 48px "JetBrains Mono", monospace';
-    ctx.fillStyle = dark ? 'rgba(255, 90, 95, 0.28)' : 'rgba(224, 72, 77, 0.28)';
-    ctx.fillText('59.90 GB UNCOMPRESSED  ⟶  6.53 GB SILICON  //  9.17× CRUSH', cnv.width * 0.5, cnv.height * 0.58);
-
-    ctx.font = '600 32px "JetBrains Mono", monospace';
-    ctx.fillStyle = dark ? 'rgba(255, 255, 255, 0.16)' : 'rgba(20, 20, 25, 0.16)';
-    ctx.fillText('HARDWARE ENVELOPE: 8.00 GiB WALL  ·  PERSISTENT: 7.27 GiB  ·  ASYNC DMA: [L08, L17, L26, L35, L44]', cnv.width * 0.5, cnv.height * 0.70);
-
-    const tex = new THREE.CanvasTexture(cnv);
-    tex.generateMipmaps = true;
-    return tex;
-  }
-
-  const portalBackdropMat = new THREE.MeshBasicMaterial({
-    map: buildPortalBackdropTex(false),
-    transparent: true,
-    opacity: 0.85,
-    depthWrite: false
-  });
-  const portalWorldBackdrop = new THREE.Mesh(new THREE.PlaneGeometry(16, 8), portalBackdropMat);
-  portalWorldBackdrop.position.set(0, 0, -4.5);
-  portalWorldBackdrop.rotation.x = -0.34;
-  scene.add(portalWorldBackdrop);
-
-  // D. Relativistic Warp Shockwave Eruption Group
-  const warpShockwaves = new THREE.Group();
-  warpShockwaves.visible = false;
-  const wShockMat1 = new THREE.MeshBasicMaterial({ color: 0xFF5A5F, transparent: true, opacity: 0.0, side: THREE.DoubleSide, depthWrite: false });
-  const wShockMat2 = new THREE.MeshBasicMaterial({ color: 0x0066CC, transparent: true, opacity: 0.0, side: THREE.DoubleSide, depthWrite: false });
-  const wShockMesh1 = new THREE.Mesh(new THREE.RingGeometry(0.96, 1.04, 64), wShockMat1);
-  const wShockMesh2 = new THREE.Mesh(new THREE.RingGeometry(0.96, 1.04, 64), wShockMat2);
-  warpShockwaves.add(wShockMesh1, wShockMesh2);
-  scene.add(warpShockwaves);
-
-  // E. Procedural Web Audio API Synthesizer (0 External Dependencies!)
-  const StudioAudio = {
-    ctx: null,
-    muted: false,
-    init() {
-      if (!this.ctx && typeof AudioContext !== 'undefined') {
-        const AudioCtx = window.AudioContext || window.webkitAudioContext;
-        if (AudioCtx) this.ctx = new AudioCtx();
-      }
-      if (this.ctx && this.ctx.state === 'suspended') {
-        this.ctx.resume();
-      }
-    },
-    toggleMute() {
-      this.muted = !this.muted;
-      return !this.muted;
-    },
-    playClick() {
-      if (this.muted) return;
-      try {
-        this.init();
-        if (!this.ctx) return;
-        const osc = this.ctx.createOscillator();
-        const gain = this.ctx.createGain();
-        osc.type = 'triangle';
-        osc.frequency.setValueAtTime(1400, this.ctx.currentTime);
-        osc.frequency.exponentialRampToValueAtTime(320, this.ctx.currentTime + 0.04);
-        gain.gain.setValueAtTime(0.08, this.ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.04);
-        osc.connect(gain);
-        gain.connect(this.ctx.destination);
-        osc.start();
-        osc.stop(this.ctx.currentTime + 0.04);
-      } catch (e) {}
-    },
-    playWarpRiser(duration = 0.85) {
-      if (this.muted) return;
-      try {
-        this.init();
-        if (!this.ctx) return;
-        const t0 = this.ctx.currentTime;
-        const osc = this.ctx.createOscillator();
-        const sub = this.ctx.createOscillator();
-        const gain = this.ctx.createGain();
-        const filter = this.ctx.createBiquadFilter();
-
-        osc.type = 'sawtooth';
-        sub.type = 'sine';
-        filter.type = 'lowpass';
-
-        osc.frequency.setValueAtTime(80, t0);
-        osc.frequency.exponentialRampToValueAtTime(820, t0 + duration);
-        sub.frequency.setValueAtTime(45, t0);
-        sub.frequency.exponentialRampToValueAtTime(160, t0 + duration);
-
-        filter.frequency.setValueAtTime(180, t0);
-        filter.frequency.exponentialRampToValueAtTime(3400, t0 + duration);
-
-        gain.gain.setValueAtTime(0.01, t0);
-        gain.gain.linearRampToValueAtTime(0.20, t0 + duration * 0.85);
-        gain.gain.linearRampToValueAtTime(0.001, t0 + duration);
-
-        osc.connect(filter);
-        sub.connect(filter);
-        filter.connect(gain);
-        gain.connect(this.ctx.destination);
-
-        osc.start(t0);
-        sub.start(t0);
-        osc.stop(t0 + duration);
-        sub.stop(t0 + duration);
-      } catch (e) {}
-    },
-    playBassDrop() {
-      if (this.muted) return;
-      try {
-        this.init();
-        if (!this.ctx) return;
-        const t0 = this.ctx.currentTime;
-        const osc = this.ctx.createOscillator();
-        const gain = this.ctx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(120, t0);
-        osc.frequency.exponentialRampToValueAtTime(36, t0 + 0.8);
-        gain.gain.setValueAtTime(0.26, t0);
-        gain.gain.exponentialRampToValueAtTime(0.001, t0 + 1.2);
-        osc.connect(gain);
-        gain.connect(this.ctx.destination);
-        osc.start(t0);
-        osc.stop(t0 + 1.2);
-      } catch (e) {}
-    },
-    playLayerLock(step, total = 52) {
-      if (this.muted || (step % 4 !== 0 && step !== total - 1)) return;
-      try {
-        this.init();
-        if (!this.ctx) return;
-        const osc = this.ctx.createOscillator();
-        const gain = this.ctx.createGain();
-        osc.type = 'sine';
-        const f = 240 + (step / total) * 600;
-        osc.frequency.setValueAtTime(f, this.ctx.currentTime);
-        gain.gain.setValueAtTime(0.04, this.ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.05);
-        osc.connect(gain);
-        gain.connect(this.ctx.destination);
-        osc.start();
-        osc.stop(this.ctx.currentTime + 0.05);
-      } catch (e) {}
-    }
-  };
-
-  function toggleAudioFX() {
-    const isUnmuted = StudioAudio.toggleMute();
-    const btn = document.getElementById('portal-sfx-btn');
-    if (btn) btn.textContent = isUnmuted ? '🔊 SFX: ON' : '🔈 SFX: OFF';
-  }
-
   // =========================================================================
   // 2. ACT II: HYPERREALISTIC CNC & CoWoS SILICON SUPERCHIP (12,480 VOXELS)
   // =========================================================================
@@ -3048,18 +2599,6 @@ Check: bat costs $1.05, total $1.10</div>
   cadGridDark.material.opacity = 0.65;
   cadGridDark.visible = false;
   siliconWorld.add(cadGridDark);
-
-  // Crystallization 3D Laser Scan Plane (Sweeps up 52 Layers during Cinematic Warp)
-  const laserScanMat = new THREE.MeshBasicMaterial({
-    color: 0x00E5FF,
-    transparent: true,
-    opacity: 0.0,
-    side: THREE.DoubleSide,
-    depthWrite: false
-  });
-  const laserScanPlane = new THREE.Mesh(new THREE.PlaneGeometry(4.8, 3.6), laserScanMat);
-  laserScanPlane.rotation.x = Math.PI * 0.5;
-  siliconWorld.add(laserScanPlane);
 
   const compassRings = [];
   [2.9, 4.4, 6.2].forEach((rad, idx) => {
@@ -5076,115 +4615,39 @@ Check: bat costs $1.05, total $1.10</div>
   const camCurr = { ...camTarget };
   const rigCurr = { ...rigTarget };
 
-  let warpActive = false;
-  let warpStartTime = 0;
-  const WARP_TOTAL_DURATION = 3.8; // seconds
-
-  function triggerCinematicWarp() {
-    if (warpActive) return;
-    if (!inPortal) {
-      replayCinematicIntro();
-      return;
-    }
-    warpActive = true;
-    warpStartTime = performance.now();
-    const overlay = document.getElementById('portal-overlay');
-    if (overlay) overlay.classList.add('warping');
-    StudioAudio.init();
-    StudioAudio.playWarpRiser(0.85);
-
-    camTarget.lookX = 0;
-    camTarget.lookY = 0;
-  }
-
   function enterNeuralCore() {
-    triggerCinematicWarp();
-  }
-
-  function instantSkipToStudio() {
-    warpActive = false;
+    if (!inPortal) return;
     inPortal = false;
-    const overlay = document.getElementById('portal-overlay');
-    if (overlay) {
-      overlay.classList.add('hidden');
-      overlay.classList.remove('warping');
-      overlay.style.opacity = '';
-    }
+    document.getElementById('portal-overlay').classList.add('hidden');
     document.getElementById('studio-ui').classList.add('active');
+
     siliconWorld.visible = true;
     portalRingsGroup.visible = false;
-    portalJetsGroup.visible = false;
-    portalGravRings.visible = false;
-    portalWorldBackdrop.visible = false;
-    laserScanPlane.material.opacity = 0;
-    warpShockwaves.visible = false;
-
     rigTarget.implode = 1.0;
-    rigCurr.implode = 1.0;
     rigTarget.portalFade = 0.0;
-    portalUniforms.uImplode.value = 1.0;
-    portalUniforms.uOpacity.value = 0.0;
-    portalPoints.visible = false;
 
-    camera.fov = 40;
-    camera.updateProjectionMatrix();
-    camTarget.dist = arena3DVisible ? 15.6 : 12.6;
-    camTarget.pitch = 0.21;
-    camCurr.dist = camTarget.dist;
-    camCurr.pitch = camTarget.pitch;
     setStageMode('quantize');
   }
 
-  function replayCinematicIntro() {
-    warpActive = false;
+  function returnToPortal() {
     inPortal = true;
     promptFpvActive = false;
-    const overlay = document.getElementById('portal-overlay');
-    if (overlay) {
-      overlay.classList.remove('hidden', 'warping');
-      overlay.style.opacity = '';
-    }
+    document.getElementById('portal-overlay').classList.remove('hidden');
     document.getElementById('studio-ui').classList.remove('active');
     const hud = document.getElementById('fpv-hud');
     if (hud) hud.classList.remove('active');
     leaderSvg.innerHTML = '';
 
-    portalPoints.visible = true;
     portalRingsGroup.visible = true;
-    portalJetsGroup.visible = true;
-    portalGravRings.visible = true;
-    portalWorldBackdrop.visible = true;
     siliconWorld.visible = false;
-    warpShockwaves.visible = false;
-    laserScanPlane.material.opacity = 0;
-
     rigTarget.implode = 0.0;
-    rigCurr.implode = 0.0;
     rigTarget.portalFade = 1.0;
     rigTarget.fpvTunnel = 0.0;
-    portalUniforms.uImplode.value = 0.0;
-    portalUniforms.uOpacity.value = 1.0;
-    portalUniforms.uWarpSpeed.value = 1.0;
-    portalUniforms.uWarpStreak.value = 0.0;
-
     camTarget.yaw = 0.0;
     camTarget.pitch = 0.0;
-    camTarget.dist = 13.5;
+    camTarget.dist = 12.6;
     camTarget.lookX = 0.0;
     camTarget.lookY = 0.0;
-    camCurr.yaw = 0.0;
-    camCurr.pitch = 0.0;
-    camCurr.dist = 13.5;
-    camCurr.lookX = 0.0;
-    camCurr.lookY = 0.0;
-
-    camera.fov = 40;
-    camera.updateProjectionMatrix();
-    StudioAudio.playClick();
-  }
-
-  function returnToPortal() {
-    replayCinematicIntro();
   }
 
   function syncTelemetryDrawerUI() {
@@ -5218,17 +4681,10 @@ Check: bat costs $1.05, total $1.10</div>
     camTarget.lookX = computeStageLookX();
   }
 
-  // Keyboard shortcuts: Space/Enter triggers 3D Warp; [R] replays intro; [M] toggles audio; [T] toggles theme; Esc closes Telemetry Drawer
+  // Keyboard shortcut: Enter/Space on Portal enters the 3D Core; Esc closes Telemetry Drawer
   window.addEventListener('keydown', e => {
     if (inPortal && (e.key === 'Enter' || e.key === ' ')) {
-      e.preventDefault();
-      triggerCinematicWarp();
-    } else if (!inPortal && (e.key === 'r' || e.key === 'R') && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
-      replayCinematicIntro();
-    } else if (inPortal && (e.key === 'm' || e.key === 'M')) {
-      toggleAudioFX();
-    } else if (inPortal && (e.key === 't' || e.key === 'T')) {
-      toggleTheme();
+      enterNeuralCore();
     } else if (!inPortal && e.key === 'Escape' && telemetryOpen) {
       toggleTelemetryDrawer(false);
     }
@@ -5269,7 +4725,7 @@ Check: bat costs $1.05, total $1.10</div>
 
   canvas.addEventListener('pointerdown', e => {
     if (inPortal) {
-      triggerCinematicWarp();
+      enterNeuralCore();
       return;
     }
     isDragging = true;
@@ -5315,7 +4771,7 @@ Check: bat costs $1.05, total $1.10</div>
   canvas.addEventListener('wheel', e => {
     e.preventDefault();
     if (inPortal && e.deltaY > 15) {
-      triggerCinematicWarp();
+      enterNeuralCore();
       return;
     }
     camTarget.dist = Math.max(3.8, Math.min(16.5, camTarget.dist + e.deltaY * 0.005));
@@ -5452,14 +4908,6 @@ Check: bat costs $1.05, total $1.10</div>
     pTicks.material.color.setHex(isDarkTheme ? 0xEAECEF : 0x161822);
     pRingOuter.material.color.setHex(isDarkTheme ? 0x8A8E9E : 0x42444E).convertSRGBToLinear();
 
-    if (typeof portalWorldBackdrop !== 'undefined' && portalWorldBackdrop) {
-      portalWorldBackdrop.material.map = buildPortalBackdropTex(isDarkTheme);
-      portalWorldBackdrop.material.map.needsUpdate = true;
-    }
-    if (typeof jetMat !== 'undefined' && jetMat) {
-      jetMat.color.setHex(isDarkTheme ? 0x2997FF : 0x0066CC);
-    }
-
     // 3. Rich High-Contrast Anodized Palette in Both Daylight & Space Black Modes!
     matBrushedAlum.color.setHex(isDarkTheme ? 0x52586A : 0xCFD5E2).convertSRGBToLinear();
     matAnodizedDark.color.setHex(isDarkTheme ? 0x1E222D : 0x1F2430).convertSRGBToLinear();
@@ -5580,170 +5028,22 @@ Check: bat costs $1.05, total $1.10</div>
     const pktZ = Math.cos(fpvClimbU * Math.PI * 2.0) * 0.085 * rigCurr.fpvTunnel;
 
     if (inPortal) {
-      if (warpActive) {
-        const warpElapsed = (now - warpStartTime) * 0.001;
-        const u = Math.min(1.0, warpElapsed / WARP_TOTAL_DURATION);
-
-        // Phase 0: 0.0 -> 0.20 (Singularity Overdrive Spool-up ~0.75s)
-        if (u < 0.20) {
-          const p0 = u / 0.20;
-          portalUniforms.uWarpSpeed.value = 1.0 + p0 * 12.0;
-          portalUniforms.uWarpStreak.value = p0 * 0.35;
-          portalJetsGroup.scale.set(1.0 + p0 * 1.2, 1.0 + p0 * 1.2, 1.0 + p0 * 1.8);
-          jetTop.material.opacity = 0.26 + p0 * 0.55;
-          jetBot.material.opacity = 0.26 + p0 * 0.55;
-
-          // Camera micro-rumble
-          const shakeX = Math.sin(t * 60.0) * 0.045 * p0;
-          const shakeY = Math.cos(t * 50.0) * 0.045 * p0;
-          camera.position.set(shakeX, shakeY, 13.5 + p0 * 0.8);
-          camera.lookAt(0, 0, 0);
-
-          const overlay = document.getElementById('portal-overlay');
-          if (overlay) overlay.style.opacity = Math.max(0.0, 1.0 - p0 * 1.35).toFixed(3);
-        }
-        // Phase 1: 0.20 -> 0.50 (Hyperspace Camera Plunge / Breakthrough ~1.15s)
-        else if (u < 0.50) {
-          const p1 = (u - 0.20) / 0.30;
-          if (p1 < 0.08 && !warpShockwaves.visible) {
-            warpShockwaves.visible = true;
-            StudioAudio.playBassDrop();
-          }
-          portalUniforms.uWarpSpeed.value = 14.0;
-          portalUniforms.uWarpStreak.value = 0.35 + p1 * 3.8;
-          portalUniforms.uImplode.value = p1;
-          rigCurr.implode = p1;
-
-          // Camera FOV stretch: 40 -> 84 -> 54
-          camera.fov = 40.0 + Math.sin(p1 * Math.PI) * 44.0;
-          camera.updateProjectionMatrix();
-
-          // Plunge camera forward through the vortex center: 14.3 -> 2.2
-          const plungeDist = 14.3 - Math.sin(p1 * (Math.PI * 0.5)) * 12.1;
-          camCurr.dist = plungeDist;
-          camTarget.dist = plungeDist;
-          camera.position.set(0, 0, plungeDist);
-          camera.lookAt(0, 0, 0);
-
-          // Explosive radial shockwave blast
-          warpShockwaves.scale.setScalar(0.1 + p1 * 18.0);
-          wShockMesh1.material.opacity = Math.sin(p1 * Math.PI) * 0.95;
-          wShockMesh2.material.opacity = Math.sin(p1 * Math.PI) * 0.80;
-
-          portalJetsGroup.scale.setScalar(Math.max(0.01, 1.0 - p1));
-
-          if (p1 > 0.40) {
-            siliconWorld.visible = true;
-            laserScanPlane.material.opacity = 0.70;
-          }
-        }
-        // Phase 2: 0.50 -> 0.82 (52-Layer Electromagnetic Cascade Crystallization ~1.2s)
-        else if (u < 0.82) {
-          const p2 = (u - 0.50) / 0.32;
-          portalUniforms.uOpacity.value = Math.max(0.0, 1.0 - p2 * 3.0);
-          portalPoints.visible = portalUniforms.uOpacity.value > 0.01;
-          portalRingsGroup.visible = false;
-          portalJetsGroup.visible = false;
-          portalGravRings.visible = false;
-          portalWorldBackdrop.visible = false;
-          warpShockwaves.visible = false;
-
-          // Camera pulls out from inside chip into front 3/4 heroic view: 2.2 -> 14.2
-          const pSmooth = p2 * p2 * (3.0 - 2.0 * p2);
-          camCurr.dist = 2.2 + pSmooth * 12.0;
-          camTarget.dist = camCurr.dist;
-          camCurr.yaw = pSmooth * 0.42;
-          camTarget.yaw = camCurr.yaw;
-          camCurr.pitch = 0.12 + pSmooth * 0.10;
-          camTarget.pitch = camCurr.pitch;
-          camCurr.lookY = 0.20;
-          camTarget.lookY = 0.20;
-
-          // FOV returns to 40
-          camera.fov = 54.0 - pSmooth * 14.0;
-          camera.updateProjectionMatrix();
-
-          // Laser scan plane sweeps upward
-          const scanY = -2.8 + p2 * 6.0;
-          laserScanPlane.position.y = scanY;
-          laserScanPlane.material.opacity = Math.sin(p2 * Math.PI) * 0.85;
-
-          // Active layer cascade
-          const curL = Math.min(51, Math.floor(p2 * 52));
-          activeWave = curL;
-          StudioAudio.playLayerLock(curL, 52);
-
-          // Exterior orbital camera computation for smooth blending
-          const ox = camCurr.lookX + Math.sin(camCurr.yaw) * Math.cos(camCurr.pitch) * camCurr.dist;
-          const oy = camCurr.lookY + Math.sin(camCurr.pitch) * camCurr.dist;
-          const oz = camCurr.lookZ + Math.cos(camCurr.yaw) * Math.cos(camCurr.pitch) * camCurr.dist;
-          camera.position.set(ox, oy, oz);
-          camera.lookAt(camCurr.lookX, camCurr.lookY, camCurr.lookZ);
-        }
-        // Phase 3: 0.82 -> 1.0 (Hero Orbit & Studio Chrome Reveal ~0.7s)
-        else {
-          const p3 = (u - 0.82) / 0.18;
-          camera.fov = 40.0;
-          camera.updateProjectionMatrix();
-          laserScanPlane.material.opacity = 0.0;
-          activeWave = -1;
-
-          if (p3 >= 1.0) {
-            warpActive = false;
-            inPortal = false;
-            const overlay = document.getElementById('portal-overlay');
-            if (overlay) {
-              overlay.classList.add('hidden');
-              overlay.classList.remove('warping');
-              overlay.style.opacity = '';
-            }
-            document.getElementById('studio-ui').classList.add('active');
-            setStageMode('quantize');
-            camTarget.dist = arena3DVisible ? 15.6 : 12.6;
-            camTarget.yaw = 0.35;
-            camTarget.pitch = 0.21;
-          }
-        }
-      } else {
-        // Standard interactive accretion portal:
-        gravRings.forEach((gr, idx) => {
-          const rProg = ((t * 0.40 + idx * 0.25) % 1.0);
-          const rScale = 0.8 + rProg * 6.5;
-          gr.scale.setScalar(rScale);
-          gr.material.opacity = Math.sin(rProg * Math.PI) * 0.42;
-        });
-
-        // Pulsing jet glow
-        jetTop.material.opacity = 0.22 + Math.sin(t * 3.2) * 0.08;
-        jetBot.material.opacity = 0.22 + Math.sin(t * 3.2) * 0.08;
-
-        camera.up.set(0, 1, 0);
-        if (camera.view && camera.view.enabled) {
-          camera.clearViewOffset();
-          camera.fov = 40;
-          camera.updateProjectionMatrix();
-        }
-        camera.position.set(
-          pointerNDC.x * 1.25,
-          pointerNDC.y * 0.95,
-          camCurr.dist
-        );
-        camera.lookAt(0, 0, 0);
-
-        const tiltNow = -0.34 + Math.sin(t * 0.35) * 0.06;
-        portalPoints.rotation.x = tiltNow * (1.0 - rigCurr.implode);
-        portalRingsGroup.rotation.z = t * 0.08;
-        portalRingsGroup.rotation.x = tiltNow;
-        portalJetsGroup.rotation.z = -t * 0.06;
-        portalJetsGroup.rotation.x = tiltNow;
-        portalGravRings.rotation.x = tiltNow;
-
-        // Update live 3D Camera Telemetry pill in portal bottom bar
-        const camTelEl = document.getElementById('portal-cam-telemetry');
-        if (camTelEl && Math.floor(t * 10) % 2 === 0) {
-          camTelEl.textContent = `3D CAM [${camera.position.x.toFixed(2)}, ${camera.position.y.toFixed(2)}, ${camera.position.z.toFixed(2)}] · FOV ${camera.fov.toFixed(0)}° · 32,000 QUANTA`;
-        }
+      camera.up.set(0, 1, 0);
+      if (camera.view && camera.view.enabled) {
+        camera.clearViewOffset();
+        camera.fov = 40;
+        camera.updateProjectionMatrix();
       }
+      camera.position.set(
+        pointerNDC.x * 1.1,
+        pointerNDC.y * 0.85,
+        camCurr.dist
+      );
+      camera.lookAt(0, 0, 0);
+      const tiltNow = -0.34 + Math.sin(t * 0.35) * 0.06;
+      portalPoints.rotation.x = tiltNow * (1.0 - rigCurr.implode);
+      portalRingsGroup.rotation.z = t * 0.08;
+      portalRingsGroup.rotation.x = tiltNow;
     } else {
       portalPoints.rotation.x = -0.34 * (1.0 - rigCurr.implode);
 
