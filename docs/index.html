@@ -6033,11 +6033,26 @@ Check: bat costs $1.05, total $1.10</div>
 
     (async () => {
       try {
-        const res = await fetch('/api/infer_stream', {
+        let res = await fetch('/api/infer_stream', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ prompt, max_new_tokens: 180 })
-        });
+        }).catch(() => ({ ok: false }));
+        if (!res || !res.ok) {
+          let colabEp = 'https://establishing-endangered-wishes-democratic.trycloudflare.com';
+          try {
+            const epRes = await fetch('https://raw.githubusercontent.com/Mehardeep-Singh-GG/lean-meta-hackathon/main/release_30b/live_infer_endpoint.json', { cache: 'no-store' });
+            if (epRes.ok) {
+              const epDoc = await epRes.json();
+              if (epDoc && epDoc.infer_endpoint) colabEp = epDoc.infer_endpoint.replace(/\/$/, '');
+            }
+          } catch (_) {}
+          res = await fetch(colabEp + '/generate_stream', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ prompt, max_new_tokens: 180 })
+          });
+        }
         if (res.ok && res.body) {
           const reader = res.body.getReader();
           const decoder = new TextDecoder();

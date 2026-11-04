@@ -233,6 +233,14 @@ class TelemetryEngine:
         env_ep = os.environ.get("LEAN_30B_ENDPOINT", "").strip()
         if env_ep:
             return env_ep.rstrip("/")
+        if self.ep_file.exists():
+            try:
+                disk_doc = json.loads(self.ep_file.read_text(encoding="utf-8"))
+                disk_ep = str(disk_doc.get("infer_endpoint", "")).strip().rstrip("/")
+                if disk_ep and disk_ep != str(self.ep_doc.get("infer_endpoint", "")).strip().rstrip("/"):
+                    self.ep_doc = disk_doc
+            except Exception:
+                pass
         return str(self.ep_doc.get("infer_endpoint", "")).strip().rstrip("/")
 
     def set_endpoint(self, new_url: str) -> dict:
