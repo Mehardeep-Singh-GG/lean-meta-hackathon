@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: "Project LEAN: Sub-2-Bit Asymmetric Compression & 8 GiB Edge Runtime for Meta Muse-Glimmer-30B"
+message: "If you reference Project LEAN or our Muse-Glimmer-30B quantized weights, please cite the authors below."
+type: software
+authors:
+  - given-names: Mehardeep
+    family-names: Singh
+    alias: Mehardeep-Singh-GG
+  - given-names: Gurarpit
+    family-names: Singh
+    alias: gurarpitzz
+repository-code: "https://github.com/Mehardeep-Singh-GG/lean-meta-hackathon"
+url: "https://mehardeep-singh-gg.github.io/lean-meta-hackathon/"
+version: "1.0.0"
+date-released: "2026-11-05"
+license: MIT
