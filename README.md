@@ -5,19 +5,19 @@
 <br/>
 
 [![Meta Global AI Hackathon 2026](https://img.shields.io/badge/Meta%20Global%20AI%20Hackathon%202026-Push%20the%20Frontier-FF5A5F?style=flat-square&labelColor=121214)](#submission-alignment--hackathon-scope)
+[![Quantized Model Release](https://img.shields.io/badge/Quantized%20Weights%20Release-v1.0.0%20(.safetensors)-FF5A5F?style=flat-square&labelColor=121214)](https://github.com/Mehardeep-Singh-GG/lean-meta-hackathon/releases/tag/v1.0.0)
 [![Target Architecture](https://img.shields.io/badge/Meta%20Model-Muse--Glimmer--30B%20(29.78B)-EAEAEA?style=flat-square&labelColor=121214)](#2-anatomical-structure-of-muse-glimmer-30b)
 [![Interactive 3D Studio](https://img.shields.io/badge/Live%203D%20WebGL%20Studio-Launch%20in%20Browser-FF5A5F?style=flat-square&labelColor=121214)](https://mehardeep-singh-gg.github.io/lean-meta-hackathon/)
 [![3D CAD Model](https://img.shields.io/badge/GitHub%203D%20Viewer-.STL%20Superchip%20Mesh-EAEAEA?style=flat-square&labelColor=121214)](assets/3d/muse_glimmer_30b_superchip.stl)
 [![Verification](https://img.shields.io/badge/Audits%20A1--A15-15%2F15%20PASS%20(49%20Pytest%20Green)-10B981?style=flat-square&labelColor=121214)](#7-verification-cryptographic-provenance--audit-matrix)
-[![License](https://img.shields.io/badge/License-MIT-8E8E96?style=flat-square&labelColor=121214)](LICENSE)
 
 <p align="center">
+  <a href="https://github.com/Mehardeep-Singh-GG/lean-meta-hackathon/releases/tag/v1.0.0"><b>Download Quantized Model (v1.0.0)</b></a> ·
   <a href="https://mehardeep-singh-gg.github.io/lean-meta-hackathon/"><b>Live 3D WebGL Studio</b></a> ·
   <a href="assets/3d/muse_glimmer_30b_superchip.stl"><b>Interactive 3D CAD Mesh (.STL)</b></a> ·
   <a href="#quickstart--reproducibility"><b>60-Second Quickstart</b></a> ·
   <a href="#3-end-to-end-system-workflow"><b>System Workflow</b></a> ·
-  <a href="#5-empirical-benchmarks--ablation-tables"><b>Benchmarks &amp; Ablations</b></a> ·
-  <a href="reports/GRAND_CHALLENGE_30B_report.md"><b>30-Point Audit Report</b></a>
+  <a href="#5-empirical-benchmarks--ablation-tables"><b>Benchmarks &amp; Ablations</b></a>
 </p>
 
 </div>
@@ -61,9 +61,14 @@ python3 release_30b/studio_30b.py --port 8789
 
 > **Browser Instant Preview (Zero Install):** Open **[https://mehardeep-singh-gg.github.io/lean-meta-hackathon/](https://mehardeep-singh-gg.github.io/lean-meta-hackathon/)** to inspect the 32,000-quanta singularity warp and 52-layer 3D superchip directly in your browser, or open **[`assets/3d/muse_glimmer_30b_superchip.stl`](assets/3d/muse_glimmer_30b_superchip.stl)** to rotate the physical 52-layer CAD topology in GitHub's native 3D STL viewer.
 
-### 3. Run 52-Layer `Muse-Glimmer-30B` Inference (`< 8.00 GiB` Envelope)
+### 3. Download Final Quantized Weights (`v1.0.0`) & Run 52-Layer Inference
+
+The full post-quantization `Muse-Glimmer-30B` checkpoint (`.safetensors` shards + index + `SHA256SUMS.txt` + `18,235-byte` BM25 index) is hosted directly on **[GitHub Releases (`v1.0.0`)](https://github.com/Mehardeep-Singh-GG/lean-meta-hackathon/releases/tag/v1.0.0)**:
 
 ```bash
+# Download all 6 bit-packed .safetensors shards from GitHub Releases v1.0.0
+python3 release_30b/inference_loader_30b.py --download
+
 # Single-prompt algebraic verification
 python3 release_30b/inference_loader_30b.py \
   --prompt 'A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? Show the algebra clearly.'

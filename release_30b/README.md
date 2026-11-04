@@ -16,20 +16,30 @@ This directory contains the official **Project LEAN** release package and infere
 | **Parametric MLP (80% SwiGLU `gate/up/down`)** | 16-bit BF16 | 4-bit Uniform | **1.58-Bit / 2-Bit AWQ (`group_size=512`) + Block-Cholesky Hessian KAC** |
 | **Embeddings (`202,048 x 6,656`)** | 16-bit BF16 | 4-bit Uniform | **1-Bit / 2-Bit Packed + Weight-Less RMSNorm (`eps=1e-5`)** |
 
-### Shard Breakdown (`release_30b/`)
-- `model_lean_30b-00001-of-00004.safetensors`: **`1.5856 GiB`** (`1,702,557,946` bytes — Embedding + Layers `00..12`)
-- `model_lean_30b-00002-of-00004.safetensors`: **`1.4193 GiB`** (`1,523,933,954` bytes — Layers `13..25`)
-- `model_lean_30b-00003-of-00004.safetensors`: **`1.4193 GiB`** (`1,523,933,954` bytes — Layers `26..38`)
-- `model_lean_30b-00004-of-00004.safetensors`: **`1.7612 GiB`** (`1,891,122,810` bytes — Layers `39..51` + Final RMSNorm + `lm_head`)
-- **Total Across 4 Shards:** **`6.1854 GiB` (`6.64 GB` decimal; `6.0805 GiB` / `6.53 GB` raw weight payload)**
+### Official GitHub Release (`v1.0.0`) `.safetensors` Shards
+All 52 quantized layers (`2,717` packed tensors + full lossless `FP16` scales/mins/outlier columns prior to runtime `< 8.00 GiB` `UINT8`/`INT8` VRAM packing) are hosted directly on **[GitHub Releases `v1.0.0`](https://github.com/Mehardeep-Singh-GG/lean-meta-hackathon/releases/tag/v1.0.0)** under GitHub's `2.00 GiB` per-file cap:
+
+- `model_lean_30b-00001-of-00006.safetensors`: **`1.5644 GiB`** (`1,679,799,600` bytes — Embedding + Layers `00..07`)
+- `model_lean_30b-00002-of-00006.safetensors`: **`1.3546 GiB`** (`1,454,529,912` bytes — Layers `08..16`)
+- `model_lean_30b-00003-of-00006.safetensors`: **`1.3546 GiB`** (`1,454,530,016` bytes — Layers `17..25`)
+- `model_lean_30b-00004-of-00006.safetensors`: **`1.3546 GiB`** (`1,454,530,016` bytes — Layers `26..34`)
+- `model_lean_30b-00005-of-00006.safetensors`: **`1.3562 GiB`** (`1,456,234,216` bytes — Layers `35..43`)
+- `model_lean_30b-00006-of-00006.safetensors`: **`1.5869 GiB`** (`1,703,971,432` bytes — Layers `44..51` + Final RMSNorm + `lm_head`)
+- **Raw Bit-Packed Weight Payload:** **`6.0805 GiB` (`6,528,903,738` bytes, `9.12x` vs. BF16)**
 
 ---
 
-## 2. Running Prompts via [`inference_loader_30b.py`](file:///Users/mac/llm/release_30b/inference_loader_30b.py)
+## 2. Downloading & Running Prompts via [`inference_loader_30b.py`](inference_loader_30b.py)
 
-### Single-Command Prompt Execution (Connected to the 8 GB-Wall A100 Daemon)
+### Download All 6 Shards from GitHub Releases (`v1.0.0`) & Verify `SHA256SUMS.txt`
 ```bash
-.venv/bin/python release_30b/inference_loader_30b.py \
+python3 release_30b/inference_loader_30b.py --download
+(cd release_30b && shasum -a 256 -c SHA256SUMS.txt)
+```
+
+### Single-Command Prompt Execution
+```bash
+python3 release_30b/inference_loader_30b.py \
   --prompt 'A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? Show the algebra clearly.'
 ```
 

@@ -251,14 +251,49 @@ class LocalMuseGlimmer30BRunner:
         )
 
         prefix = "model_lean_30b_compact" if variant == "compact" else "model_lean_30b"
-        self.shard_paths = [
-            release_dir / f"{prefix}-0000{i+1}-of-00004.safetensors" for i in range(4)
-        ]
+        index_path = release_dir / "model_lean_30b.safetensors.index.json"
+        self.shard_schedule: List[Tuple[Path, bool, List[int], bool]] = []
+        if variant != "compact" and index_path.exists():
+            idx_data = json.loads(index_path.read_text())
+            wmap = idx_data.get("weight_map", {})
+            embed_shard = wmap.get("model.language_model.embed_tokens.packed")
+            head_shard = wmap.get("lm_head.packed")
+            ordered_shards: List[str] = []
+            shard_layers: Dict[str, List[int]] = {}
+            if embed_shard:
+                ordered_shards.append(embed_shard)
+                shard_layers.setdefault(embed_shard, [])
+            for l_idx in range(self.num_layers):
+                s_name = wmap.get(f"model.language_model.layers.{l_idx}.input_layernorm.weight")
+                if s_name:
+                    if s_name not in ordered_shards:
+                        ordered_shards.append(s_name)
+                    shard_layers.setdefault(s_name, []).append(l_idx)
+            if head_shard and head_shard not in ordered_shards:
+                ordered_shards.append(head_shard)
+                shard_layers.setdefault(head_shard, [])
+            for s_name in ordered_shards:
+                self.shard_schedule.append(
+                    (
+                        release_dir / s_name,
+                        s_name == embed_shard,
+                        shard_layers.get(s_name, []),
+                        s_name == head_shard,
+                    )
+                )
+        else:
+            for s_idx in range(4):
+                sp = release_dir / f"{prefix}-0000{s_idx+1}-of-00004.safetensors"
+                l_start = s_idx * 13
+                l_end = min(self.num_layers, (s_idx + 1) * 13)
+                self.shard_schedule.append((sp, s_idx == 0, list(range(l_start, l_end)), s_idx == 3))
+
+        self.shard_paths = [item[0] for item in self.shard_schedule]
         for sp in self.shard_paths:
             if not sp.exists():
                 raise FileNotFoundError(
-                    f"Missing required 30B shard ({variant} variant): {sp}. "
-                    f"See release_30b/RELEASE_VARIANTS_MANIFEST.json for shard details."
+                    f"Missing required 30B quantized shard: {sp.name}. "
+                    f"Run `python3 release_30b/inference_loader_30b.py --download` to fetch all shards from GitHub Releases (v1.0.0)."
                 )
 
         self.tokenizer = AutoTokenizer.from_pretrained(str(release_dir))
@@ -281,23 +316,22 @@ class LocalMuseGlimmer30BRunner:
         sin = emb.sin().to(self.device, dtype=torch.float16)
         rep = self.num_heads // self.num_kv_heads
 
-        # Stream across the 4 shards in order (13 layers per shard)
+        # Stream across all quantized shards in exact layer order
         h: Optional[torch.Tensor] = None
         logits: Optional[torch.Tensor] = None
+        n_shards = len(self.shard_schedule)
 
-        for s_idx, sp in enumerate(self.shard_paths):
+        for s_idx, (sp, has_embed, layer_list, has_head) in enumerate(self.shard_schedule):
             with safe_open(str(sp), framework="pt", device="cpu") as sf:
-                if s_idx == 0:
+                if has_embed:
                     h_cpu = unpack_lean_embedding_rows(
                         sf, "model.language_model.embed_tokens", input_ids, self.vocab_size, self.hidden_size
                     )
                     h = rms_norm_no_scale(h_cpu, eps=self.rms_eps).to(self.device, dtype=torch.float16)
 
-                l_start = s_idx * 13
-                l_end = min(self.num_layers, (s_idx + 1) * 13)
-                for i in range(l_start, l_end):
-                    if verbose_layers and (i % 13 == 0 or i == self.num_layers - 1):
-                        print(f"    [Shard {s_idx+1}/4] Executing Layer {i:02d}/51...", flush=True)
+                for pos_in_shard, i in enumerate(layer_list):
+                    if verbose_layers and (pos_in_shard == 0 or i == self.num_layers - 1):
+                        print(f"    [Shard {s_idx+1}/{n_shards}] Executing Layer {i:02d}/51...", flush=True)
                     p = f"model.language_model.layers.{i}"
                     in_norm_w = sf.get_tensor(f"{p}.input_layernorm.weight").to(self.device, dtype=torch.float16)
                     post_attn_w = sf.get_tensor(f"{p}.post_attention_layernorm.weight").to(self.device, dtype=torch.float16)
@@ -364,10 +398,9 @@ class LocalMuseGlimmer30BRunner:
 
                     h = residual + centered_rms_norm(mlp_out, post_ff_w, eps=self.post_eps)
 
-                if s_idx == 3:
+                if has_head:
                     final_norm_w = sf.get_tensor("model.language_model.norm.weight").to(self.device, dtype=torch.float16)
                     h_last = rms_norm_with_scale(h[:, -1:, :], final_norm_w, eps=self.rms_eps)
-                    # Unpack lm_head in 4 chunks so peak memory stays < 300 MB
                     w_head = unpack_lean_linear(sf, "lm_head", self.vocab_size, self.hidden_size, self.device)
                     logits = F.linear(h_last, w_head).float() * self.out_mult
                     del w_head
@@ -426,18 +459,59 @@ class LocalMuseGlimmer30BRunner:
         return self.tokenizer.decode(out_ids, skip_special_tokens=True)
 
 
+GITHUB_RELEASE_BASE = "https://github.com/Mehardeep-Singh-GG/lean-meta-hackathon/releases/download/v1.0.0"
+
+
+def download_quantized_release_shards(release_dir: Path) -> None:
+    """Downloads the 6 bit-packed Muse-Glimmer-30B `.safetensors` shards + index from GitHub Releases v1.0.0."""
+    release_dir.mkdir(parents=True, exist_ok=True)
+    files = ["model_lean_30b.safetensors.index.json"] + [
+        f"model_lean_30b-0000{i}-of-00006.safetensors" for i in range(1, 7)
+    ]
+    for fname in files:
+        dest = release_dir / fname
+        if dest.exists() and dest.stat().st_size > 1024 and fname.endswith(".safetensors"):
+            print(f"[Skip] {fname} already exists ({dest.stat().st_size / (1024**3):.3f} GiB)")
+            continue
+        url = f"{GITHUB_RELEASE_BASE}/{fname}"
+        print(f"[Download] Fetching {url} -> {dest} ...", flush=True)
+        req = urllib.request.Request(url, headers={"User-Agent": "ProjectLEAN-30B-Downloader/1.0"})
+        with urllib.request.urlopen(req, timeout=300) as resp, open(dest, "wb") as wf:
+            total = int(resp.headers.get("Content-Length", "0"))
+            done = 0
+            t0 = time.perf_counter()
+            while True:
+                chunk = resp.read(8 * 1024 * 1024)
+                if not chunk:
+                    break
+                wf.write(chunk)
+                done += len(chunk)
+                if total > 10 * 1024 * 1024:
+                    pct = 100.0 * done / total
+                    mbps = (done / (1024 ** 2)) / max(1e-3, time.perf_counter() - t0)
+                    print(f"\r  -> {fname}: {pct:5.1f}% ({done / (1024**3):.2f}/{total / (1024**3):.2f} GiB @ {mbps:.1f} MiB/s)", end="", flush=True)
+            if total > 10 * 1024 * 1024:
+                print()
+    print("[Download Complete] All 6 LEAN-quantized Muse-Glimmer-30B shards ready in release_30b/!")
+
+
 def main():
-    parser = argparse.ArgumentParser(description="Run the real 52-layer LEAN-quantized Muse-Glimmer-30B model on your Mac.")
+    parser = argparse.ArgumentParser(description="Run the real 52-layer LEAN-quantized Muse-Glimmer-30B model.")
     parser.add_argument("--prompt", type=str, default="If all Bloops are Razzies and all Razzies are Lazzies, are all Bloops definitely Lazzies? Explain why.")
     parser.add_argument("--max-new-tokens", type=int, default=320)
-    parser.add_argument("--variant", type=str, default="pro", choices=["pro", "compact"], help="Select release variant: 'pro' (8.9 GB w/ FP16 SwiGLU outliers) or 'compact' (6.5 GB for 8 GB RAM).")
-    parser.add_argument("--list-variants", action="store_true", help="Print the two official 30B release variants (6.5 GB Compact vs 8.9 GB Pro-FP16Outliers) and exit.")
+    parser.add_argument("--variant", type=str, default="pro", choices=["pro", "compact"], help="Select release variant.")
+    parser.add_argument("--list-variants", action="store_true", help="Print the official 30B release manifest and exit.")
+    parser.add_argument("--download", action="store_true", help="Download the quantized 30B `.safetensors` shards from GitHub Releases v1.0.0.")
     parser.add_argument("--device", type=str, default="mps", choices=["mps", "cpu"])
     parser.add_argument("--local-only", action="store_true", help="Force offline local shard streaming on Mac CPU/MPS.")
     parser.add_argument("--interactive", action="store_true", help="Launch an interactive prompt loop on your Mac.")
     args = parser.parse_args()
 
     release_dir = Path(__file__).resolve().parent
+
+    if args.download:
+        download_quantized_release_shards(release_dir)
+        return
 
     if args.list_variants:
         manifest_path = release_dir / "RELEASE_VARIANTS_MANIFEST.json"
