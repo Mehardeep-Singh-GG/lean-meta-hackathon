@@ -17,7 +17,9 @@
   <a href="assets/3d/muse_glimmer_30b_superchip.stl"><b>Interactive 3D CAD Mesh (.STL)</b></a> ·
   <a href="#quickstart--reproducibility"><b>60-Second Quickstart</b></a> ·
   <a href="#3-end-to-end-system-workflow"><b>System Workflow</b></a> ·
-  <a href="#5-empirical-benchmarks--ablation-tables"><b>Benchmarks &amp; Ablations</b></a>
+  <a href="#5-empirical-benchmarks--ablation-tables"><b>Benchmarks &amp; Ablations</b></a> ·
+  <a href="reports/LEAN_Meta_Hackathon_Benchmarks_Deck.pdf"><b>8-Slide Benchmark PDF Deck</b></a> ·
+  <a href="#8-team--contributors"><b>Team &amp; Contributors</b></a>
 </p>
 
 </div>
@@ -375,10 +377,19 @@ Every code module and experimental receipt in this repository is governed by aut
 | **Hardware Provenance Hash-Chain (`Audit A13`)** | Every milestone receipt (`M14`–`M20`) is linked in `audit/CRYPTO_LEDGER.jsonl` with GPU UUID (`GPU-5fca8b78-31ff-f53d-d705-a6c86546c3a3`) and SHA-256 output digests. | **Chain Intact** |
 | **Strict `8.00 GiB` Envelope Proof (`Audit A15`)** | Persistent payload `6.0805 GiB <= 6.15 GiB`; peak runtime memory `6.8652 GiB < 8.00 GiB`; iso-storage baseline delta `0.0000%`. | **PASS** |
 
-For the complete 30-question adversarial red-team audit table (`RT_01` through `RT_30`), see [`reports/GRAND_CHALLENGE_30B_report.md`](reports/GRAND_CHALLENGE_30B_report.md).
+For the complete 30-question adversarial red-team audit table (`RT_01` through `RT_30`), see [`reports/GRAND_CHALLENGE_30B_report.md`](reports/GRAND_CHALLENGE_30B_report.md), and for the visual executive benchmark presentation, see [`reports/LEAN_Meta_Hackathon_Benchmarks_Deck.pdf`](reports/LEAN_Meta_Hackathon_Benchmarks_Deck.pdf).
+
+---
+
+## 8. Team & Contributors
+
+| Contributor | GitHub | Role & Contributions |
+| :--- | :--- | :--- |
+| **Mehardeep Singh** | [@Mehardeep-Singh-GG](https://github.com/Mehardeep-Singh-GG) | Systems Architecture, `Priced-Quanta v2` Sub-2-Bit Compression Engine, Split-K `< 8.00 GiB` Runtime & Interactive 3D Spatial Studio |
+| **Gurarpit Singh** | [@gurarpitzz](https://github.com/gurarpitzz) | Empirical Evaluation Battery (`M15`–`M18`), Multi-Seed Grounding / `18 KB` Pocket RAG Benchmarks, Open-Source Quantizer Parity & Hardware Telemetry |
 
 ---
 
 ## License
 
-Released under the [MIT License](LICENSE). Built on Meta's open-weight `Muse-Glimmer-30B` architecture for the **Meta Global AI Developer Hackathon 2026**.
+Released under the [MIT License](LICENSE). Built by [Mehardeep Singh](https://github.com/Mehardeep-Singh-GG) and [Gurarpit Singh](https://github.com/gurarpitzz) on Meta's open-weight `Muse-Glimmer-30B` architecture for the **Meta Global AI Developer Hackathon 2026**.
