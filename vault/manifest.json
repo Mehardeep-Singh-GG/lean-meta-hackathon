@@ -1,0 +1,34 @@
+{
+  "files": {
+    "raw/calibration.txt": {
+      "sha256": "3e1fb71ebf4550324c3cde3bbf09dd25607c92ea6dd5329769659b73034768fc",
+      "split": "calibration",
+      "size_bytes": 455
+    },
+    "raw/dev.txt": {
+      "sha256": "b35ccd8035578f2b40187b268c3e0d0864652b3cdbf22b641f8bbda0a0f69889",
+      "split": "dev",
+      "size_bytes": 327
+    },
+    "locked/t1_test.txt": {
+      "sha256": "9361f1765e82c00f2a11212bbe50eeba88b022e0a2d07e23195d5365b214f5a5",
+      "split": "t1",
+      "size_bytes": 50648
+    },
+    "locked/t2_test.txt": {
+      "sha256": "349c8c5da493ae8b38e08a86bbb0208377f71adb38d7474e3da951022ed4dde6",
+      "split": "t2",
+      "size_bytes": 120
+    },
+    "locked/t3_test.txt": {
+      "sha256": "865b1d1bffe4c44f40231fe9955e75313a94a8a81b976e4aef93442d79765971",
+      "split": "t3",
+      "size_bytes": 130
+    },
+    "raw/wikitext_2_valid.txt": {
+      "sha256": "f0737ed31fc1329026e95cb8b98e19c2a182c39c240ab909dc31abf2f8af58e8",
+      "split": "dev",
+      "size_bytes": 1121681
+    }
+  }
+}

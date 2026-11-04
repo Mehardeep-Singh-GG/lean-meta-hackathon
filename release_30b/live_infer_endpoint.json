@@ -1,0 +1,23 @@
+{
+  "infer_endpoint": "https://feet-fitting-sequences-reserves.trycloudflare.com",
+  "status": "ready",
+  "nvidia_smi": "8108 MiB, 81920 MiB",
+  "smoke_test": {
+    "prompt": "What is 12 * 12?",
+    "thinking": "",
+    "response": "What is 12 * 12? = 144\n\nThe multiplication of two numbers is the product of the numbers. The result is 144.\n\nThe multiplication",
+    "tokens_generated": 32,
+    "elapsed_sec": 3.556,
+    "tokens_per_sec": 9.0,
+    "gpu_persistent_gib": 7.2688,
+    "gpu_peak_gib": 7.2944,
+    "gpu_peak_gb_decimal": 7.83,
+    "hardware_wall_gib": 8.0,
+    "shards_verified": [
+      "model_lean_30b-00001-of-00004.safetensors",
+      "model_lean_30b-00002-of-00004.safetensors",
+      "model_lean_30b-00003-of-00004.safetensors",
+      "model_lean_30b-00004-of-00004.safetensors"
+    ]
+  }
+}

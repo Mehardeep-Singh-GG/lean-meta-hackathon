@@ -1,0 +1,104 @@
+{
+  "milestone": "M19_PUBLICATION_PLOTTING_AND_LEAN_STUDIO_COCKPIT",
+  "timestamp_utc": "2026-10-28T04:30:12Z",
+  "wall_clock_seconds": 2.45,
+  "figures": [
+    {
+      "id": "fig1",
+      "path": "reports/figures_30b/fig1_cross_scale_half_life_70m_to_30b.png",
+      "pdf": "reports/figures_30b/fig1_cross_scale_half_life_70m_to_30b.pdf",
+      "png_sha256": "15a418cf0d9fc6162b21e177fa77052c43bc3400893e5617b695f0c7d30ca7ad"
+    },
+    {
+      "id": "fig2",
+      "path": "reports/figures_30b/fig2_30b_anatomical_bit_allocation_map.png",
+      "pdf": "reports/figures_30b/fig2_30b_anatomical_bit_allocation_map.pdf",
+      "png_sha256": "cc563d094b67fdb09bfbaa59e8d8ab84b0604fd13a13af24633975b8d995fb91"
+    },
+    {
+      "id": "fig3",
+      "path": "reports/figures_30b/fig3_8gb_memory_wall_and_vram_trace.png",
+      "pdf": "reports/figures_30b/fig3_8gb_memory_wall_and_vram_trace.pdf",
+      "png_sha256": "7dd7205f523a20e818dbeb97afb05fd4df62b500f72e9d4101d8df49940aa1a9"
+    },
+    {
+      "id": "fig4",
+      "path": "reports/figures_30b/fig4_iterative_accuracy_ladder_30b.png",
+      "pdf": "reports/figures_30b/fig4_iterative_accuracy_ladder_30b.pdf",
+      "png_sha256": "b01439de9420942e954d7f46ce1412525676d95b8c9700c767155b7c020ce39e"
+    },
+    {
+      "id": "fig5",
+      "path": "reports/figures_30b/fig5_multiseed_statistical_dominance.png",
+      "pdf": "reports/figures_30b/fig5_multiseed_statistical_dominance.pdf",
+      "png_sha256": "2237987b426e098162abb5f072d827ef994c17db09f43f2a08c2ee21622742a7"
+    },
+    {
+      "id": "fig6",
+      "path": "reports/figures_30b/fig6_long_horizon_agentic_survival.png",
+      "pdf": "reports/figures_30b/fig6_long_horizon_agentic_survival.pdf",
+      "png_sha256": "ff571e46b2c5739fda90710403c5ce87b36115bfccb362e60c1b574ba57f2613"
+    },
+    {
+      "id": "fig7",
+      "path": "reports/figures_30b/fig7_30b_trilemma_comparison_matrix.png",
+      "pdf": "reports/figures_30b/fig7_30b_trilemma_comparison_matrix.pdf",
+      "png_sha256": "b76dc71ce8ce07655becfa22cec731bdf84c6e056978b2c2a7e9f65da19d2ef9"
+    },
+    {
+      "id": "fig8",
+      "path": "reports/figures_30b/fig8_pareto_frontier_bits_vs_intelligence.png",
+      "pdf": "reports/figures_30b/fig8_pareto_frontier_bits_vs_intelligence.pdf",
+      "png_sha256": "d703cfca30e60173713a11c7ba0fe5fa9c9e269bdf292308f4a1995c2dc019cd"
+    }
+  ],
+  "figures_by_id": {
+    "fig1": {
+      "pdf": "reports/figures_30b/fig1_cross_scale_half_life_70m_to_30b.pdf",
+      "png": "reports/figures_30b/fig1_cross_scale_half_life_70m_to_30b.png",
+      "png_sha256": "15a418cf0d9fc6162b21e177fa77052c43bc3400893e5617b695f0c7d30ca7ad"
+    },
+    "fig2": {
+      "pdf": "reports/figures_30b/fig2_30b_anatomical_bit_allocation_map.pdf",
+      "png": "reports/figures_30b/fig2_30b_anatomical_bit_allocation_map.png",
+      "png_sha256": "cc563d094b67fdb09bfbaa59e8d8ab84b0604fd13a13af24633975b8d995fb91"
+    },
+    "fig3": {
+      "pdf": "reports/figures_30b/fig3_8gb_memory_wall_and_vram_trace.pdf",
+      "png": "reports/figures_30b/fig3_8gb_memory_wall_and_vram_trace.png",
+      "png_sha256": "7dd7205f523a20e818dbeb97afb05fd4df62b500f72e9d4101d8df49940aa1a9"
+    },
+    "fig4": {
+      "pdf": "reports/figures_30b/fig4_iterative_accuracy_ladder_30b.pdf",
+      "png": "reports/figures_30b/fig4_iterative_accuracy_ladder_30b.png",
+      "png_sha256": "b01439de9420942e954d7f46ce1412525676d95b8c9700c767155b7c020ce39e"
+    },
+    "fig5": {
+      "pdf": "reports/figures_30b/fig5_multiseed_statistical_dominance.pdf",
+      "png": "reports/figures_30b/fig5_multiseed_statistical_dominance.png",
+      "png_sha256": "2237987b426e098162abb5f072d827ef994c17db09f43f2a08c2ee21622742a7"
+    },
+    "fig6": {
+      "pdf": "reports/figures_30b/fig6_long_horizon_agentic_survival.pdf",
+      "png": "reports/figures_30b/fig6_long_horizon_agentic_survival.png",
+      "png_sha256": "ff571e46b2c5739fda90710403c5ce87b36115bfccb362e60c1b574ba57f2613"
+    },
+    "fig7": {
+      "pdf": "reports/figures_30b/fig7_30b_trilemma_comparison_matrix.pdf",
+      "png": "reports/figures_30b/fig7_30b_trilemma_comparison_matrix.png",
+      "png_sha256": "b76dc71ce8ce07655becfa22cec731bdf84c6e056978b2c2a7e9f65da19d2ef9"
+    },
+    "fig8": {
+      "pdf": "reports/figures_30b/fig8_pareto_frontier_bits_vs_intelligence.pdf",
+      "png": "reports/figures_30b/fig8_pareto_frontier_bits_vs_intelligence.png",
+      "png_sha256": "d703cfca30e60173713a11c7ba0fe5fa9c9e269bdf292308f4a1995c2dc019cd"
+    }
+  },
+  "gates": {
+    "G19.1_cryptographic_pre_plot_verification": true,
+    "G19.2_zero_hardcoded_plot_arrays": true,
+    "G19.3_all_8_figures_rendered": true,
+    "G19.4_anti_slop_palette_compliance": true
+  },
+  "all_gates_passed": true
+}

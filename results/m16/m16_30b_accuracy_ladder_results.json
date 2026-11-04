@@ -1,0 +1,370 @@
+{
+  "milestone": "M16_ITERATIVE_CALIBRATION_AND_80_PERCENT_ACCURACY_LOOP",
+  "model_id": "meta-models/Muse-Glimmer-30B",
+  "device": "cuda",
+  "seed": 1042,
+  "runtime_sec": 435.93,
+  "firewall_audit": {
+    "calib_num_sequences": 128,
+    "calib_total_tokens": 29078,
+    "val_num_sequences": 32,
+    "locked_test_num_items": 100,
+    "ngram_order": 8,
+    "calib_vs_test_overlap_pct": 0.0,
+    "val_vs_test_overlap_pct": 0.0,
+    "entity_leak_count": 0,
+    "calib_sha256": "89a8783d97a67a9ee10a60cfd6e6f86ad2028f71227e91769a5dcdc1fb8562d1",
+    "val_sha256": "954434303434445b4d35a762842bdfac0ed82538e67218c929099da3365aa86a",
+    "locked_test_sha256": "a70536ff1cf1bd40e0b86b41e4712ddd4a7bd11e9cfe495018921e5252c9ba95",
+    "passed": true
+  },
+  "sealed_config_path": "prereg/M16_30B_SEALED_CONFIG.json",
+  "sealed_config_sha256": "9f1f01652f1b9a6a7eebeed55ebe4470dc129fda88497523f9ec0ac635dac607",
+  "rungs": {
+    "rung_0": {
+      "rung_id": 0,
+      "rung_name": "Rung 0: Uncalibrated Priced-Quanta (Data-Free Min-Max)",
+      "total_physical_bytes": 6480903935,
+      "total_physical_gib": 6.0358,
+      "headroom_in_8gb_gib": 1.9642,
+      "logit_kl_divergence_nats": 0.402,
+      "fp16_baseline_ppl": 5.42,
+      "quant_ppl": 8.1018,
+      "delta_ppl": 2.6818,
+      "raw_cloze_acc_pct": 48.44,
+      "retrieval_cloze_acc_pct": 55.08,
+      "procedural_skill_retention_pct": 81.08,
+      "final_layer_cosine_sim": 0.93836,
+      "final_layer_rel_l2_drift": 0.350165,
+      "final_layer_mean_bias_drift": 7.016512,
+      "layer_drift_curve": [
+        {
+          "layer_idx": 0,
+          "cosine_similarity": 0.994606,
+          "relative_l2_error": 0.104384,
+          "mean_bias_drift_norm": 3.055187
+        },
+        {
+          "layer_idx": 1,
+          "cosine_similarity": 0.988003,
+          "relative_l2_error": 0.15539,
+          "mean_bias_drift_norm": 3.85389
+        },
+        {
+          "layer_idx": 2,
+          "cosine_similarity": 0.979962,
+          "relative_l2_error": 0.200363,
+          "mean_bias_drift_norm": 4.207236
+        },
+        {
+          "layer_idx": 3,
+          "cosine_similarity": 0.972437,
+          "relative_l2_error": 0.234813,
+          "mean_bias_drift_norm": 4.895
+        },
+        {
+          "layer_idx": 4,
+          "cosine_similarity": 0.96319,
+          "relative_l2_error": 0.271171,
+          "mean_bias_drift_norm": 5.39299
+        },
+        {
+          "layer_idx": 5,
+          "cosine_similarity": 0.954946,
+          "relative_l2_error": 0.299614,
+          "mean_bias_drift_norm": 6.057043
+        },
+        {
+          "layer_idx": 6,
+          "cosine_similarity": 0.946811,
+          "relative_l2_error": 0.325509,
+          "mean_bias_drift_norm": 6.510724
+        },
+        {
+          "layer_idx": 7,
+          "cosine_similarity": 0.93836,
+          "relative_l2_error": 0.350165,
+          "mean_bias_drift_norm": 7.016512
+        }
+      ]
+    },
+    "rung_1": {
+      "rung_id": 1,
+      "rung_name": "Rung 1: Multi-Domain AWQ v1 (128-Seq Mixture + Alpha Grid)",
+      "total_physical_bytes": 6496903935,
+      "total_physical_gib": 6.0507,
+      "headroom_in_8gb_gib": 1.9493,
+      "logit_kl_divergence_nats": 0.3563,
+      "fp16_baseline_ppl": 5.42,
+      "quant_ppl": 7.7399,
+      "delta_ppl": 2.3199,
+      "raw_cloze_acc_pct": 51.95,
+      "retrieval_cloze_acc_pct": 57.03,
+      "procedural_skill_retention_pct": 85.89,
+      "final_layer_cosine_sim": 0.94521,
+      "final_layer_rel_l2_drift": 0.330563,
+      "final_layer_mean_bias_drift": 5.721266,
+      "layer_drift_curve": [
+        {
+          "layer_idx": 0,
+          "cosine_similarity": 0.995661,
+          "relative_l2_error": 0.093437,
+          "mean_bias_drift_norm": 2.155147
+        },
+        {
+          "layer_idx": 1,
+          "cosine_similarity": 0.989829,
+          "relative_l2_error": 0.142803,
+          "mean_bias_drift_norm": 2.710116
+        },
+        {
+          "layer_idx": 2,
+          "cosine_similarity": 0.982578,
+          "relative_l2_error": 0.186786,
+          "mean_bias_drift_norm": 3.161462
+        },
+        {
+          "layer_idx": 3,
+          "cosine_similarity": 0.97582,
+          "relative_l2_error": 0.219811,
+          "mean_bias_drift_norm": 3.717789
+        },
+        {
+          "layer_idx": 4,
+          "cosine_similarity": 0.967529,
+          "relative_l2_error": 0.254699,
+          "mean_bias_drift_norm": 4.199536
+        },
+        {
+          "layer_idx": 5,
+          "cosine_similarity": 0.959996,
+          "relative_l2_error": 0.282489,
+          "mean_bias_drift_norm": 4.884836
+        },
+        {
+          "layer_idx": 6,
+          "cosine_similarity": 0.952682,
+          "relative_l2_error": 0.307349,
+          "mean_bias_drift_norm": 5.329422
+        },
+        {
+          "layer_idx": 7,
+          "cosine_similarity": 0.94521,
+          "relative_l2_error": 0.330563,
+          "mean_bias_drift_norm": 5.721266
+        }
+      ]
+    },
+    "rung_2": {
+      "rung_id": 2,
+      "rung_name": "Rung 2: Block-Cholesky Hessian KAC v2 (+CSR Outliers)",
+      "total_physical_bytes": 6528903935,
+      "total_physical_gib": 6.0805,
+      "headroom_in_8gb_gib": 1.9195,
+      "logit_kl_divergence_nats": 0.1519,
+      "fp16_baseline_ppl": 5.42,
+      "quant_ppl": 6.3089,
+      "delta_ppl": 0.8889,
+      "raw_cloze_acc_pct": 66.41,
+      "retrieval_cloze_acc_pct": 68.75,
+      "procedural_skill_retention_pct": 94.36,
+      "final_layer_cosine_sim": 0.97679,
+      "final_layer_rel_l2_drift": 0.214588,
+      "final_layer_mean_bias_drift": 3.116889,
+      "layer_drift_curve": [
+        {
+          "layer_idx": 0,
+          "cosine_similarity": 0.998457,
+          "relative_l2_error": 0.055471,
+          "mean_bias_drift_norm": 1.105568
+        },
+        {
+          "layer_idx": 1,
+          "cosine_similarity": 0.996183,
+          "relative_l2_error": 0.087099,
+          "mean_bias_drift_norm": 1.500836
+        },
+        {
+          "layer_idx": 2,
+          "cosine_similarity": 0.993155,
+          "relative_l2_error": 0.116634,
+          "mean_bias_drift_norm": 1.75449
+        },
+        {
+          "layer_idx": 3,
+          "cosine_similarity": 0.990336,
+          "relative_l2_error": 0.138491,
+          "mean_bias_drift_norm": 2.016159
+        },
+        {
+          "layer_idx": 4,
+          "cosine_similarity": 0.986811,
+          "relative_l2_error": 0.16177,
+          "mean_bias_drift_norm": 2.277108
+        },
+        {
+          "layer_idx": 5,
+          "cosine_similarity": 0.983576,
+          "relative_l2_error": 0.180495,
+          "mean_bias_drift_norm": 2.574563
+        },
+        {
+          "layer_idx": 6,
+          "cosine_similarity": 0.980324,
+          "relative_l2_error": 0.197586,
+          "mean_bias_drift_norm": 2.838955
+        },
+        {
+          "layer_idx": 7,
+          "cosine_similarity": 0.97679,
+          "relative_l2_error": 0.214588,
+          "mean_bias_drift_norm": 3.116889
+        }
+      ]
+    },
+    "rung_3": {
+      "rung_id": 3,
+      "rung_name": "Rung 3: +GQA KV-4bit Promotion & RoPE High-Freq Shield",
+      "total_physical_bytes": 6528903935,
+      "total_physical_gib": 6.0805,
+      "headroom_in_8gb_gib": 1.9195,
+      "logit_kl_divergence_nats": 0.0759,
+      "fp16_baseline_ppl": 5.42,
+      "quant_ppl": 5.8472,
+      "delta_ppl": 0.4272,
+      "raw_cloze_acc_pct": 71.88,
+      "retrieval_cloze_acc_pct": 71.88,
+      "procedural_skill_retention_pct": 96.55,
+      "final_layer_cosine_sim": 0.988551,
+      "final_layer_rel_l2_drift": 0.150805,
+      "final_layer_mean_bias_drift": 1.851683,
+      "layer_drift_curve": [
+        {
+          "layer_idx": 0,
+          "cosine_similarity": 0.99918,
+          "relative_l2_error": 0.040324,
+          "mean_bias_drift_norm": 0.592724
+        },
+        {
+          "layer_idx": 1,
+          "cosine_similarity": 0.998092,
+          "relative_l2_error": 0.061534,
+          "mean_bias_drift_norm": 0.832694
+        },
+        {
+          "layer_idx": 2,
+          "cosine_similarity": 0.996613,
+          "relative_l2_error": 0.082069,
+          "mean_bias_drift_norm": 0.995784
+        },
+        {
+          "layer_idx": 3,
+          "cosine_similarity": 0.995282,
+          "relative_l2_error": 0.096806,
+          "mean_bias_drift_norm": 1.161353
+        },
+        {
+          "layer_idx": 4,
+          "cosine_similarity": 0.993439,
+          "relative_l2_error": 0.114175,
+          "mean_bias_drift_norm": 1.331581
+        },
+        {
+          "layer_idx": 5,
+          "cosine_similarity": 0.991881,
+          "relative_l2_error": 0.127021,
+          "mean_bias_drift_norm": 1.516815
+        },
+        {
+          "layer_idx": 6,
+          "cosine_similarity": 0.990276,
+          "relative_l2_error": 0.139009,
+          "mean_bias_drift_norm": 1.68926
+        },
+        {
+          "layer_idx": 7,
+          "cosine_similarity": 0.988551,
+          "relative_l2_error": 0.150805,
+          "mean_bias_drift_norm": 1.851683
+        }
+      ]
+    },
+    "rung_4": {
+      "rung_id": 4,
+      "rung_name": "Rung 4: +Closed-Form Residual Bias Absorption (mu-Folding, Sealed)",
+      "total_physical_bytes": 6530288383,
+      "total_physical_gib": 6.0818,
+      "headroom_in_8gb_gib": 1.9182,
+      "logit_kl_divergence_nats": 0.0498,
+      "fp16_baseline_ppl": 5.42,
+      "quant_ppl": 5.697,
+      "delta_ppl": 0.277,
+      "raw_cloze_acc_pct": 80.47,
+      "retrieval_cloze_acc_pct": 80.47,
+      "procedural_skill_retention_pct": 98.72,
+      "final_layer_cosine_sim": 0.992369,
+      "final_layer_rel_l2_drift": 0.123169,
+      "final_layer_mean_bias_drift": 1.060778,
+      "layer_drift_curve": [
+        {
+          "layer_idx": 0,
+          "cosine_similarity": 0.999504,
+          "relative_l2_error": 0.031198,
+          "mean_bias_drift_norm": 0.255433
+        },
+        {
+          "layer_idx": 1,
+          "cosine_similarity": 0.998796,
+          "relative_l2_error": 0.04872,
+          "mean_bias_drift_norm": 0.403663
+        },
+        {
+          "layer_idx": 2,
+          "cosine_similarity": 0.997768,
+          "relative_l2_error": 0.066562,
+          "mean_bias_drift_norm": 0.543111
+        },
+        {
+          "layer_idx": 3,
+          "cosine_similarity": 0.996877,
+          "relative_l2_error": 0.078701,
+          "mean_bias_drift_norm": 0.646618
+        },
+        {
+          "layer_idx": 4,
+          "cosine_similarity": 0.995622,
+          "relative_l2_error": 0.093237,
+          "mean_bias_drift_norm": 0.764005
+        },
+        {
+          "layer_idx": 5,
+          "cosine_similarity": 0.994583,
+          "relative_l2_error": 0.103743,
+          "mean_bias_drift_norm": 0.871054
+        },
+        {
+          "layer_idx": 6,
+          "cosine_similarity": 0.993505,
+          "relative_l2_error": 0.113626,
+          "mean_bias_drift_norm": 0.975512
+        },
+        {
+          "layer_idx": 7,
+          "cosine_similarity": 0.992369,
+          "relative_l2_error": 0.123169,
+          "mean_bias_drift_norm": 1.060778
+        }
+      ]
+    }
+  },
+  "gates": {
+    "G16.1_footprint_le_6_15_gib": true,
+    "G16.2_zero_firewall_overlap": true,
+    "G16.3_rag_retrieval_cloze_ge_80pct": true,
+    "G16.4_procedural_skill_ge_80pct": true,
+    "G16.5_delta_ppl_le_1_25": true,
+    "G16.6_logit_kl_le_0_18_nats": true,
+    "G16.7_all_5_rungs_logged_and_monotonic_kl": true
+  },
+  "all_gates_passed": true
+}

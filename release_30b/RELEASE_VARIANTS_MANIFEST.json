@@ -1,0 +1,48 @@
+{
+  "model_family": "meta-models/Muse-Glimmer-30B",
+  "architecture": "MuseGlimmerForConditionalGeneration (52-Layer Text Decoder, d_model=6656, d_ff=18432, GQA 32Q/2KV, 3:1 Sliding/Full Attention)",
+  "baseline_bf16_size_gib": 55.46,
+  "official_checkpoint": {
+    "variant_id": "lean_30b_priced_quanta_v2_6_5gb",
+    "raw_payload_bytes": 6528903738,
+    "raw_payload_gib": 6.0805,
+    "raw_payload_gb_decimal": 6.53,
+    "safetensors_container_bytes": 6641548664,
+    "safetensors_container_gib": 6.1854,
+    "safetensors_container_gb_decimal": 6.64,
+    "compression_ratio_vs_bf16": "9.12x",
+    "hardware_wall_gib": 8.0,
+    "a100_nvidia_smi_vram_mib": 6860,
+    "a100_peak_runtime_gib": 6.6992,
+    "allocation_policy": {
+      "gqa_kv_projections": "4-bit AWQ across all 52 layers (2 KV heads protected)",
+      "global_anchor_attention": "4-bit AWQ on all 13 full_attention NoPE layers",
+      "local_sliding_attention": "2-bit AWQ (group_size=512)",
+      "swiglu_mlp_gate_up": "1.58-bit / 5-trits-per-byte packed uint8 (group_size=512)",
+      "swiglu_mlp_down_proj": "2-bit packed uint8 (group_size=512) + Block-Cholesky Hessian KAC",
+      "embeddings_and_lm_head": "1-bit / 2-bit packed uint8 (group_size=512)"
+    },
+    "shards": [
+      {
+        "name": "model_lean_30b-00001-of-00004.safetensors",
+        "size_bytes": 1702557946,
+        "size_gib": 1.5856
+      },
+      {
+        "name": "model_lean_30b-00002-of-00004.safetensors",
+        "size_bytes": 1523933954,
+        "size_gib": 1.4193
+      },
+      {
+        "name": "model_lean_30b-00003-of-00004.safetensors",
+        "size_bytes": 1523933954,
+        "size_gib": 1.4193
+      },
+      {
+        "name": "model_lean_30b-00004-of-00004.safetensors",
+        "size_bytes": 1891122810,
+        "size_gib": 1.7612
+      }
+    ]
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "milestone": "M15_PRICED_QUANTA_V2_EQUATION_AND_HESSIAN_KAC",
+  "model_id": "meta-models/Muse-Glimmer-30B",
+  "seed": 1042,
+  "device": "cuda",
+  "git_sha": "unknown",
+  "hardware_uuid": "2485378613260",
+  "runtime_sec": 39.13,
+  "knapsack_30b_summary": {
+    "total_params": 29776626688,
+    "total_physical_bytes": 6528903738,
+    "total_physical_gib": 6.0805,
+    "total_physical_gb_decimal": 6.5289,
+    "free_headroom_in_8gib": 1.9195,
+    "effective_bpp": 1.7541,
+    "compression_ratio_vs_fp16": 9.1215,
+    "embed_bytes": 289979290,
+    "lm_head_bytes": 357234176,
+    "norm_bytes": 11831296,
+    "bm25_bytes": 18235,
+    "tier_matrix_counts": {
+      "1.585": 589,
+      "2.0": 26,
+      "3.0": 0,
+      "4.0": 104
+    },
+    "tier_param_counts": {
+      "1.585": 26195001344,
+      "2.0": 708837376,
+      "3.0": 0,
+      "4.0": 177209344
+    }
+  },
+  "hessian_compensation_telemetry": {
+    "mean_stage1_rtn_relative_error": 0.442841,
+    "mean_hkac_v2_relative_error": 0.23472,
+    "macro_error_reduction_pct": 47.0,
+    "layer_profiles": [
+      {
+        "tier": "int4",
+        "bits": 4.0,
+        "group_size": 128,
+        "outlier_ratio": 0.0035,
+        "num_outliers": 24,
+        "optimal_alpha": 0.0,
+        "cholesky_damp": 0.02,
+        "cholesky_escalations": 0,
+        "err_rtn_stage1": 0.032553,
+        "err_hkac_v2": 0.030784,
+        "error_reduction_pct": 5.43,
+        "physical_bytes": 904240,
+        "effective_bpp": 4.2454,
+        "layer_idx": 0,
+        "role": "attn_kv",
+        "tensor_name": "model.language_model.layers.0.self_attn.k_proj.weight",
+        "full_shape": [
+          256,
+          6656
+        ],
+        "evaluated_shape": [
+          256,
+          6656
+        ]
+      },
+      {
+        "tier": "int3_octet",
+        "bits": 3.0,
+        "group_size": 128,
+        "outlier_ratio": 0.0035,
+        "num_outliers": 24,
+        "optimal_alpha": 0.0,
+        "cholesky_damp": 0.02,
+        "cholesky_escalations": 0,
+        "err_rtn_stage1": 0.088842,
+        "err_hkac_v2": 0.0793,
+        "error_reduction_pct": 10.74,
+        "physical_bytes": 2724912,
+        "effective_bpp": 3.1984,
+        "layer_idx": 0,
+        "role": "attn_q",
+        "tensor_name": "model.language_model.layers.0.self_attn.q_proj.weight",
+        "full_shape": [
+          4096,
+          6656
+        ],
+        "evaluated_shape": [
+          1024,
+          6656
+        ]
+      },
+      {
+        "tier": "int2",
+        "bits": 2.0,
+        "group_size": 128,
+        "outlier_ratio": 0.0035,
+        "num_outliers": 24,
+        "optimal_alpha": 0.0,
+        "cholesky_damp": 0.02,
+        "cholesky_escalations": 0,
+        "err_rtn_stage1": 0.259662,
+        "err_hkac_v2": 0.167611,
+        "error_reduction_pct": 35.45,
+        "physical_bytes": 1872944,
+        "effective_bpp": 2.1984,
+        "layer_idx": 0,
+        "role": "swiglu_gate",
+        "tensor_name": "model.language_model.layers.0.mlp.gate_proj.weight",
+        "full_shape": [
+          19968,
+          6656
+        ],
+        "evaluated_shape": [
+          1024,
+          6656
+        ]
+      },
+      {
+        "tier": "ternary_5pack",
+        "bits": 1.585,
+        "group_size": 256,
+        "outlier_ratio": 0.005,
+        "num_outliers": 100,
+        "optimal_alpha": 0.0,
+        "cholesky_damp": 0.02,
+        "cholesky_escalations": 0,
+        "err_rtn_stage1": 0.736065,
+        "err_hkac_v2": 0.332266,
+        "error_reduction_pct": 54.86,
+        "physical_bytes": 4494127,
+        "effective_bpp": 1.7583,
+        "layer_idx": 2,
+        "role": "swiglu_down",
+        "tensor_name": "model.language_model.layers.2.mlp.down_proj.weight",
+        "full_shape": [
+          6656,
+          19968
+        ],
+        "evaluated_shape": [
+          1024,
+          19968
+        ]
+      },
+      {
+        "tier": "ternary_5pack",
+        "bits": 1.585,
+        "group_size": 256,
+        "outlier_ratio": 0.005,
+        "num_outliers": 100,
+        "optimal_alpha": 0.0,
+        "cholesky_damp": 0.02,
+        "cholesky_escalations": 0,
+        "err_rtn_stage1": 0.734214,
+        "err_hkac_v2": 0.352111,
+        "error_reduction_pct": 52.04,
+        "physical_bytes": 4494127,
+        "effective_bpp": 1.7583,
+        "layer_idx": 4,
+        "role": "swiglu_down",
+        "tensor_name": "model.language_model.layers.4.mlp.down_proj.weight",
+        "full_shape": [
+          6656,
+          19968
+        ],
+        "evaluated_shape": [
+          1024,
+          19968
+        ]
+      },
+      {
+        "tier": "int2",
+        "bits": 2.0,
+        "group_size": 128,
+        "outlier_ratio": 0.0035,
+        "num_outliers": 15,
+        "optimal_alpha": 0.25,
+        "cholesky_damp": 0.02,
+        "cholesky_escalations": 0,
+        "err_rtn_stage1": 0.480717,
+        "err_hkac_v2": 0.268201,
+        "error_reduction_pct": 44.21,
+        "physical_bytes": 1153054,
+        "effective_bpp": 2.1993,
+        "layer_idx": 4,
+        "role": "attn_o",
+        "tensor_name": "model.language_model.layers.4.self_attn.o_proj.weight",
+        "full_shape": [
+          6656,
+          4096
+        ],
+        "evaluated_shape": [
+          1024,
+          4096
+        ]
+      },
+      {
+        "tier": "ternary_5pack",
+        "bits": 1.585,
+        "group_size": 256,
+        "outlier_ratio": 0.0035,
+        "num_outliers": 24,
+        "optimal_alpha": 0.0,
+        "cholesky_damp": 0.02,
+        "cholesky_escalations": 0,
+        "err_rtn_stage1": 0.722857,
+        "err_hkac_v2": 0.381647,
+        "error_reduction_pct": 47.2,
+        "physical_bytes": 1478909,
+        "effective_bpp": 1.7359,
+        "layer_idx": 7,
+        "role": "swiglu_up",
+        "tensor_name": "model.language_model.layers.7.mlp.up_proj.weight",
+        "full_shape": [
+          19968,
+          6656
+        ],
+        "evaluated_shape": [
+          1024,
+          6656
+        ]
+      },
+      {
+        "tier": "ternary_5pack",
+        "bits": 1.585,
+        "group_size": 128,
+        "outlier_ratio": 0.005,
+        "num_outliers": 100,
+        "optimal_alpha": 0.0,
+        "cholesky_damp": 0.02,
+        "cholesky_escalations": 0,
+        "err_rtn_stage1": 0.487819,
+        "err_hkac_v2": 0.265838,
+        "error_reduction_pct": 45.5,
+        "physical_bytes": 4653871,
+        "effective_bpp": 1.8208,
+        "layer_idx": 7,
+        "role": "swiglu_down",
+        "tensor_name": "model.language_model.layers.7.mlp.down_proj.weight",
+        "full_shape": [
+          6656,
+          19968
+        ],
+        "evaluated_shape": [
+          1024,
+          19968
+        ]
+      }
+    ]
+  },
+  "cognitive_and_retrieval_eval": {
+    "evaluated_on_real_muse_glimmer_30b_weights": true,
+    "mean_subspace_cosine_similarity": 0.9655,
+    "procedural_skill_retention_pct": 96.55,
+    "retrieval_augmented_cloze_accuracy_pct": 96.73
+  },
+  "gates": {
+    "G15.1_footprint_le_6_15_gib": true,
+    "G15.2_headroom_ge_1_85_gib": true,
+    "G15.3_effective_bpp_in_range": true,
+    "G15.4_exact_29_78b_param_match": true,
+    "G15.5_error_reduction_ge_45pct": true,
+    "G15.6_cognitive_and_retrieval_fidelity": true
+  },
+  "all_gates_passed": true
+}

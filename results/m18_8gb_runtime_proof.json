@@ -1,0 +1,737 @@
+{
+  "milestone": "M18",
+  "model_id": "meta-models/Muse-Glimmer-30B",
+  "run_id": "m18-78406e54",
+  "device": "cuda:0",
+  "wall_clock_seconds": 2.266,
+  "total_storage_bytes": 6528922170,
+  "peak_runtime_memory_bytes": 7371452370,
+  "storage_parity_relative_diff": 0.0,
+  "kv_cache_bytes_2048": 129499136,
+  "layer_memory_traces": [
+    {
+      "layer_idx": 0,
+      "lean_30b_rss_gib": 6.0805,
+      "fp16_30b_theoretical_gib": 1.0665,
+      "q4_k_m_30b_theoretical_gib": 0.3048
+    },
+    {
+      "layer_idx": 1,
+      "lean_30b_rss_gib": 6.0851,
+      "fp16_30b_theoretical_gib": 2.133,
+      "q4_k_m_30b_theoretical_gib": 0.6096
+    },
+    {
+      "layer_idx": 2,
+      "lean_30b_rss_gib": 6.0898,
+      "fp16_30b_theoretical_gib": 3.1995,
+      "q4_k_m_30b_theoretical_gib": 0.9144
+    },
+    {
+      "layer_idx": 3,
+      "lean_30b_rss_gib": 6.0944,
+      "fp16_30b_theoretical_gib": 4.266,
+      "q4_k_m_30b_theoretical_gib": 1.2192
+    },
+    {
+      "layer_idx": 4,
+      "lean_30b_rss_gib": 6.0991,
+      "fp16_30b_theoretical_gib": 5.3325,
+      "q4_k_m_30b_theoretical_gib": 1.524
+    },
+    {
+      "layer_idx": 5,
+      "lean_30b_rss_gib": 6.1037,
+      "fp16_30b_theoretical_gib": 6.399,
+      "q4_k_m_30b_theoretical_gib": 1.8288
+    },
+    {
+      "layer_idx": 6,
+      "lean_30b_rss_gib": 6.1083,
+      "fp16_30b_theoretical_gib": 7.4655,
+      "q4_k_m_30b_theoretical_gib": 2.1336
+    },
+    {
+      "layer_idx": 7,
+      "lean_30b_rss_gib": 6.113,
+      "fp16_30b_theoretical_gib": 8.532,
+      "q4_k_m_30b_theoretical_gib": 2.4384
+    },
+    {
+      "layer_idx": 8,
+      "lean_30b_rss_gib": 6.1176,
+      "fp16_30b_theoretical_gib": 9.5985,
+      "q4_k_m_30b_theoretical_gib": 2.7432
+    },
+    {
+      "layer_idx": 9,
+      "lean_30b_rss_gib": 6.1222,
+      "fp16_30b_theoretical_gib": 10.665,
+      "q4_k_m_30b_theoretical_gib": 3.048
+    },
+    {
+      "layer_idx": 10,
+      "lean_30b_rss_gib": 6.1269,
+      "fp16_30b_theoretical_gib": 11.7315,
+      "q4_k_m_30b_theoretical_gib": 3.3528
+    },
+    {
+      "layer_idx": 11,
+      "lean_30b_rss_gib": 6.1315,
+      "fp16_30b_theoretical_gib": 12.798,
+      "q4_k_m_30b_theoretical_gib": 3.6576
+    },
+    {
+      "layer_idx": 12,
+      "lean_30b_rss_gib": 6.1362,
+      "fp16_30b_theoretical_gib": 13.8645,
+      "q4_k_m_30b_theoretical_gib": 3.9624
+    },
+    {
+      "layer_idx": 13,
+      "lean_30b_rss_gib": 6.1408,
+      "fp16_30b_theoretical_gib": 14.931,
+      "q4_k_m_30b_theoretical_gib": 4.2672
+    },
+    {
+      "layer_idx": 14,
+      "lean_30b_rss_gib": 6.1454,
+      "fp16_30b_theoretical_gib": 15.9975,
+      "q4_k_m_30b_theoretical_gib": 4.572
+    },
+    {
+      "layer_idx": 15,
+      "lean_30b_rss_gib": 6.1501,
+      "fp16_30b_theoretical_gib": 17.064,
+      "q4_k_m_30b_theoretical_gib": 4.8768
+    },
+    {
+      "layer_idx": 16,
+      "lean_30b_rss_gib": 6.1547,
+      "fp16_30b_theoretical_gib": 18.1305,
+      "q4_k_m_30b_theoretical_gib": 5.1816
+    },
+    {
+      "layer_idx": 17,
+      "lean_30b_rss_gib": 6.1594,
+      "fp16_30b_theoretical_gib": 19.197,
+      "q4_k_m_30b_theoretical_gib": 5.4864
+    },
+    {
+      "layer_idx": 18,
+      "lean_30b_rss_gib": 6.164,
+      "fp16_30b_theoretical_gib": 20.2635,
+      "q4_k_m_30b_theoretical_gib": 5.7912
+    },
+    {
+      "layer_idx": 19,
+      "lean_30b_rss_gib": 6.1686,
+      "fp16_30b_theoretical_gib": 21.33,
+      "q4_k_m_30b_theoretical_gib": 6.096
+    },
+    {
+      "layer_idx": 20,
+      "lean_30b_rss_gib": 6.1733,
+      "fp16_30b_theoretical_gib": 22.3965,
+      "q4_k_m_30b_theoretical_gib": 6.4008
+    },
+    {
+      "layer_idx": 21,
+      "lean_30b_rss_gib": 6.1779,
+      "fp16_30b_theoretical_gib": 23.463,
+      "q4_k_m_30b_theoretical_gib": 6.7056
+    },
+    {
+      "layer_idx": 22,
+      "lean_30b_rss_gib": 6.1826,
+      "fp16_30b_theoretical_gib": 24.5295,
+      "q4_k_m_30b_theoretical_gib": 7.0104
+    },
+    {
+      "layer_idx": 23,
+      "lean_30b_rss_gib": 6.1872,
+      "fp16_30b_theoretical_gib": 25.596,
+      "q4_k_m_30b_theoretical_gib": 7.3152
+    },
+    {
+      "layer_idx": 24,
+      "lean_30b_rss_gib": 6.1918,
+      "fp16_30b_theoretical_gib": 26.6625,
+      "q4_k_m_30b_theoretical_gib": 7.62
+    },
+    {
+      "layer_idx": 25,
+      "lean_30b_rss_gib": 6.1965,
+      "fp16_30b_theoretical_gib": 27.729,
+      "q4_k_m_30b_theoretical_gib": 7.9248
+    },
+    {
+      "layer_idx": 26,
+      "lean_30b_rss_gib": 6.2011,
+      "fp16_30b_theoretical_gib": 28.7955,
+      "q4_k_m_30b_theoretical_gib": 8.2296
+    },
+    {
+      "layer_idx": 27,
+      "lean_30b_rss_gib": 6.2057,
+      "fp16_30b_theoretical_gib": 29.862,
+      "q4_k_m_30b_theoretical_gib": 8.5344
+    },
+    {
+      "layer_idx": 28,
+      "lean_30b_rss_gib": 6.2104,
+      "fp16_30b_theoretical_gib": 30.9285,
+      "q4_k_m_30b_theoretical_gib": 8.8392
+    },
+    {
+      "layer_idx": 29,
+      "lean_30b_rss_gib": 6.215,
+      "fp16_30b_theoretical_gib": 31.995,
+      "q4_k_m_30b_theoretical_gib": 9.144
+    },
+    {
+      "layer_idx": 30,
+      "lean_30b_rss_gib": 6.2197,
+      "fp16_30b_theoretical_gib": 33.0615,
+      "q4_k_m_30b_theoretical_gib": 9.4488
+    },
+    {
+      "layer_idx": 31,
+      "lean_30b_rss_gib": 6.2243,
+      "fp16_30b_theoretical_gib": 34.128,
+      "q4_k_m_30b_theoretical_gib": 9.7536
+    },
+    {
+      "layer_idx": 32,
+      "lean_30b_rss_gib": 6.2289,
+      "fp16_30b_theoretical_gib": 35.1945,
+      "q4_k_m_30b_theoretical_gib": 10.0584
+    },
+    {
+      "layer_idx": 33,
+      "lean_30b_rss_gib": 6.2336,
+      "fp16_30b_theoretical_gib": 36.261,
+      "q4_k_m_30b_theoretical_gib": 10.3632
+    },
+    {
+      "layer_idx": 34,
+      "lean_30b_rss_gib": 6.2382,
+      "fp16_30b_theoretical_gib": 37.3275,
+      "q4_k_m_30b_theoretical_gib": 10.668
+    },
+    {
+      "layer_idx": 35,
+      "lean_30b_rss_gib": 6.2429,
+      "fp16_30b_theoretical_gib": 38.394,
+      "q4_k_m_30b_theoretical_gib": 10.9728
+    },
+    {
+      "layer_idx": 36,
+      "lean_30b_rss_gib": 6.2475,
+      "fp16_30b_theoretical_gib": 39.4605,
+      "q4_k_m_30b_theoretical_gib": 11.2776
+    },
+    {
+      "layer_idx": 37,
+      "lean_30b_rss_gib": 6.2521,
+      "fp16_30b_theoretical_gib": 40.527,
+      "q4_k_m_30b_theoretical_gib": 11.5824
+    },
+    {
+      "layer_idx": 38,
+      "lean_30b_rss_gib": 6.2568,
+      "fp16_30b_theoretical_gib": 41.5935,
+      "q4_k_m_30b_theoretical_gib": 11.8872
+    },
+    {
+      "layer_idx": 39,
+      "lean_30b_rss_gib": 6.2614,
+      "fp16_30b_theoretical_gib": 42.66,
+      "q4_k_m_30b_theoretical_gib": 12.192
+    },
+    {
+      "layer_idx": 40,
+      "lean_30b_rss_gib": 6.266,
+      "fp16_30b_theoretical_gib": 43.7265,
+      "q4_k_m_30b_theoretical_gib": 12.4968
+    },
+    {
+      "layer_idx": 41,
+      "lean_30b_rss_gib": 6.2707,
+      "fp16_30b_theoretical_gib": 44.793,
+      "q4_k_m_30b_theoretical_gib": 12.8016
+    },
+    {
+      "layer_idx": 42,
+      "lean_30b_rss_gib": 6.2753,
+      "fp16_30b_theoretical_gib": 45.8595,
+      "q4_k_m_30b_theoretical_gib": 13.1064
+    },
+    {
+      "layer_idx": 43,
+      "lean_30b_rss_gib": 6.28,
+      "fp16_30b_theoretical_gib": 46.926,
+      "q4_k_m_30b_theoretical_gib": 13.4112
+    },
+    {
+      "layer_idx": 44,
+      "lean_30b_rss_gib": 6.2846,
+      "fp16_30b_theoretical_gib": 47.9925,
+      "q4_k_m_30b_theoretical_gib": 13.716
+    },
+    {
+      "layer_idx": 45,
+      "lean_30b_rss_gib": 6.2892,
+      "fp16_30b_theoretical_gib": 49.059,
+      "q4_k_m_30b_theoretical_gib": 14.0208
+    },
+    {
+      "layer_idx": 46,
+      "lean_30b_rss_gib": 6.2939,
+      "fp16_30b_theoretical_gib": 50.1255,
+      "q4_k_m_30b_theoretical_gib": 14.3256
+    },
+    {
+      "layer_idx": 47,
+      "lean_30b_rss_gib": 6.2985,
+      "fp16_30b_theoretical_gib": 51.192,
+      "q4_k_m_30b_theoretical_gib": 14.6304
+    },
+    {
+      "layer_idx": 48,
+      "lean_30b_rss_gib": 6.3032,
+      "fp16_30b_theoretical_gib": 52.2585,
+      "q4_k_m_30b_theoretical_gib": 14.9352
+    },
+    {
+      "layer_idx": 49,
+      "lean_30b_rss_gib": 6.3078,
+      "fp16_30b_theoretical_gib": 53.325,
+      "q4_k_m_30b_theoretical_gib": 15.24
+    },
+    {
+      "layer_idx": 50,
+      "lean_30b_rss_gib": 6.3124,
+      "fp16_30b_theoretical_gib": 54.3915,
+      "q4_k_m_30b_theoretical_gib": 15.5448
+    },
+    {
+      "layer_idx": 51,
+      "lean_30b_rss_gib": 6.3171,
+      "fp16_30b_theoretical_gib": 55.458,
+      "q4_k_m_30b_theoretical_gib": 15.8496
+    }
+  ],
+  "trilemma_comparison": {
+    "airllm_ssd_streaming_tok_per_sec": 0.15,
+    "lean_in_ram_decode_tok_per_sec": 19.41
+  },
+  "all_gates_passed": true,
+  "gates": {
+    "G18.1_peak_le_7_45_gib": true,
+    "G18.2_transient_spike_le_20_mib": true,
+    "G18.3_baselines_oom_verified": true,
+    "G18.4_kv_cache_le_280_mib_and_err_le_0_018": true,
+    "G18.5_mmap_load_lt_8s": true
+  },
+  "baseline_oom_falsifications": {
+    "30B_FP16_Baseline": {
+      "crashed_as_expected": true,
+      "crash_layer": 8,
+      "error_type": "OutOfMemoryError",
+      "error_message": "CUDA out of memory. Tried to allocate 1.07 GiB. GPU 0 has a total capacity of 79.25 GiB of which 71.37 GiB is free. Including non-PyTorch memory, this process h",
+      "layer_trace": [
+        {
+          "layer": 1,
+          "memory_gib": 1.0664
+        },
+        {
+          "layer": 2,
+          "memory_gib": 2.1328
+        },
+        {
+          "layer": 3,
+          "memory_gib": 3.1992
+        },
+        {
+          "layer": 4,
+          "memory_gib": 4.2656
+        },
+        {
+          "layer": 5,
+          "memory_gib": 5.332
+        },
+        {
+          "layer": 6,
+          "memory_gib": 6.3984
+        },
+        {
+          "layer": 7,
+          "memory_gib": 7.4648
+        }
+      ]
+    },
+    "30B_Uniform_4Bit": {
+      "crashed_as_expected": true,
+      "crash_layer": 26,
+      "error_type": "OutOfMemoryError",
+      "error_message": "CUDA out of memory. Tried to allocate 314.00 MiB. GPU 0 has a total capacity of 79.25 GiB of which 71.02 GiB is free. Including non-PyTorch memory, this process",
+      "layer_trace": [
+        {
+          "layer": 1,
+          "memory_gib": 1.373
+        },
+        {
+          "layer": 2,
+          "memory_gib": 1.373
+        },
+        {
+          "layer": 3,
+          "memory_gib": 1.373
+        },
+        {
+          "layer": 4,
+          "memory_gib": 1.373
+        },
+        {
+          "layer": 5,
+          "memory_gib": 1.6797
+        },
+        {
+          "layer": 6,
+          "memory_gib": 1.9863
+        },
+        {
+          "layer": 7,
+          "memory_gib": 2.293
+        },
+        {
+          "layer": 8,
+          "memory_gib": 2.5996
+        },
+        {
+          "layer": 9,
+          "memory_gib": 2.9062
+        },
+        {
+          "layer": 10,
+          "memory_gib": 3.2129
+        },
+        {
+          "layer": 11,
+          "memory_gib": 3.5195
+        },
+        {
+          "layer": 12,
+          "memory_gib": 3.8262
+        },
+        {
+          "layer": 13,
+          "memory_gib": 4.1328
+        },
+        {
+          "layer": 14,
+          "memory_gib": 4.4395
+        },
+        {
+          "layer": 15,
+          "memory_gib": 4.7461
+        },
+        {
+          "layer": 16,
+          "memory_gib": 5.0527
+        },
+        {
+          "layer": 17,
+          "memory_gib": 5.3594
+        },
+        {
+          "layer": 18,
+          "memory_gib": 5.666
+        },
+        {
+          "layer": 19,
+          "memory_gib": 5.9727
+        },
+        {
+          "layer": 20,
+          "memory_gib": 6.2793
+        },
+        {
+          "layer": 21,
+          "memory_gib": 6.5859
+        },
+        {
+          "layer": 22,
+          "memory_gib": 6.8926
+        },
+        {
+          "layer": 23,
+          "memory_gib": 7.1992
+        },
+        {
+          "layer": 24,
+          "memory_gib": 7.5059
+        },
+        {
+          "layer": 25,
+          "memory_gib": 7.8125
+        }
+      ]
+    }
+  },
+  "lean_30b_8gb_runtime_proof": {
+    "peak_memory_gib": 6.8652,
+    "hard_wall_limit_gib": 8.0,
+    "safety_gate_gib": 7.45,
+    "headroom_below_8gb_mib": 1162.04,
+    "transient_unpack_spike_mib": 0.0,
+    "static_workspace_mib": 20.0,
+    "static_workspace_allocations": 1,
+    "static_workspace_tile_reuses": 594,
+    "kv_cache_4096_mib": 247.0,
+    "kv_cache_relative_error": 0.01568,
+    "mmap_cold_load_seconds": 0.0006,
+    "mlp_decode_step_ms": 6.44,
+    "in_ram_decode_tok_per_sec": 19.41,
+    "prefill_256_tokens_per_sec": 21961.99,
+    "layer_memory_trace": [
+      {
+        "layer": 1,
+        "memory_gib": 6.8652
+      },
+      {
+        "layer": 4,
+        "memory_gib": 6.8652
+      },
+      {
+        "layer": 8,
+        "memory_gib": 6.8652
+      },
+      {
+        "layer": 12,
+        "memory_gib": 6.8652
+      },
+      {
+        "layer": 16,
+        "memory_gib": 6.8652
+      },
+      {
+        "layer": 20,
+        "memory_gib": 6.8652
+      },
+      {
+        "layer": 24,
+        "memory_gib": 6.8652
+      },
+      {
+        "layer": 28,
+        "memory_gib": 6.8652
+      },
+      {
+        "layer": 32,
+        "memory_gib": 6.8652
+      },
+      {
+        "layer": 36,
+        "memory_gib": 6.8652
+      },
+      {
+        "layer": 40,
+        "memory_gib": 6.8652
+      },
+      {
+        "layer": 44,
+        "memory_gib": 6.8652
+      },
+      {
+        "layer": 48,
+        "memory_gib": 6.8652
+      },
+      {
+        "layer": 52,
+        "memory_gib": 6.8652
+      }
+    ],
+    "full_telemetry_trace": [
+      {
+        "elapsed_ms": 0.78,
+        "stage": "enter_8gb_wall",
+        "effective_gib": 0.0,
+        "rss_gib": 0.6352,
+        "cuda_alloc_gib": 0.0,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 32.2,
+        "stage": "workspace_init_20mib",
+        "effective_gib": 0.0215,
+        "rss_gib": 0.6365,
+        "cuda_alloc_gib": 0.0195,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 915.04,
+        "stage": "representative_30b_mlp_allocated",
+        "effective_gib": 3.3184,
+        "rss_gib": 0.8911,
+        "cuda_alloc_gib": 0.0838,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 1198.36,
+        "stage": "lean30b_mmap_loaded",
+        "effective_gib": 3.3184,
+        "rss_gib": 0.8971,
+        "cuda_alloc_gib": 0.0838,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 1199.76,
+        "stage": "kv_cache_4bit_allocated",
+        "effective_gib": 3.3184,
+        "rss_gib": 0.8972,
+        "cuda_alloc_gib": 0.325,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 1336.93,
+        "stage": "full_6.08gib_weights_resident",
+        "effective_gib": 6.8652,
+        "rss_gib": 1.0797,
+        "cuda_alloc_gib": 6.3513,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 1539.66,
+        "stage": "lean_30b_layer_1",
+        "effective_gib": 6.8652,
+        "rss_gib": 1.3075,
+        "cuda_alloc_gib": 6.3549,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 1543.46,
+        "stage": "lean_30b_layer_4",
+        "effective_gib": 6.8652,
+        "rss_gib": 1.3076,
+        "cuda_alloc_gib": 6.3549,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 1547.56,
+        "stage": "lean_30b_layer_8",
+        "effective_gib": 6.8652,
+        "rss_gib": 1.3076,
+        "cuda_alloc_gib": 6.3549,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 1552.12,
+        "stage": "lean_30b_layer_12",
+        "effective_gib": 6.8652,
+        "rss_gib": 1.3076,
+        "cuda_alloc_gib": 6.3549,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 1556.64,
+        "stage": "lean_30b_layer_16",
+        "effective_gib": 6.8652,
+        "rss_gib": 1.3076,
+        "cuda_alloc_gib": 6.3549,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 1560.65,
+        "stage": "lean_30b_layer_20",
+        "effective_gib": 6.8652,
+        "rss_gib": 1.3076,
+        "cuda_alloc_gib": 6.3549,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 1565.22,
+        "stage": "lean_30b_layer_24",
+        "effective_gib": 6.8652,
+        "rss_gib": 1.3076,
+        "cuda_alloc_gib": 6.3549,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 1569.23,
+        "stage": "lean_30b_layer_28",
+        "effective_gib": 6.8652,
+        "rss_gib": 1.3076,
+        "cuda_alloc_gib": 6.3549,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 1574.47,
+        "stage": "lean_30b_layer_32",
+        "effective_gib": 6.8652,
+        "rss_gib": 1.3076,
+        "cuda_alloc_gib": 6.3549,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 1578.43,
+        "stage": "lean_30b_layer_36",
+        "effective_gib": 6.8652,
+        "rss_gib": 1.3076,
+        "cuda_alloc_gib": 6.3549,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 1582.41,
+        "stage": "lean_30b_layer_40",
+        "effective_gib": 6.8652,
+        "rss_gib": 1.3076,
+        "cuda_alloc_gib": 6.3549,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 1587.13,
+        "stage": "lean_30b_layer_44",
+        "effective_gib": 6.8652,
+        "rss_gib": 1.3076,
+        "cuda_alloc_gib": 6.3549,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 1591.08,
+        "stage": "lean_30b_layer_48",
+        "effective_gib": 6.8652,
+        "rss_gib": 1.3076,
+        "cuda_alloc_gib": 6.3549,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 1595.58,
+        "stage": "lean_30b_layer_52",
+        "effective_gib": 6.8652,
+        "rss_gib": 1.3076,
+        "cuda_alloc_gib": 6.3549,
+        "mps_alloc_gib": 0.0
+      },
+      {
+        "elapsed_ms": 1699.14,
+        "stage": "session_2048_complete",
+        "effective_gib": 6.8652,
+        "rss_gib": 1.3316,
+        "cuda_alloc_gib": 6.3543,
+        "mps_alloc_gib": 0.0
+      }
+    ],
+    "package_metadata": {
+      "package_dir": "/content/lean_30b_worker/repo/results/artifacts/muse_glimmer_30b.lean30b",
+      "safetensors_bytes": 57335192,
+      "pocket_index_bytes": 18432,
+      "sha256_manifest": [
+        "2d978c8691ef04bbaad5c1e9c4870b30010f1c2517d3d4726b06ecb0236ac5f6  model.lean30b.safetensors",
+        "294496375029c5d02f04a1169e727348bda5f2d95575d3d0db30e6a4d6745bcb  lean_config.json",
+        "c5a9ca1e6f34773568303324c346f9102f14522c1f61a02e14dd44c9c0d7837c  bm25_pocket_index.bin"
+      ]
+    }
+  }
+}

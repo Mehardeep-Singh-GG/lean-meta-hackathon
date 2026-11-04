@@ -1,0 +1,54 @@
+{
+  "milestone": "M16",
+  "model_id": "meta-models/Muse-Glimmer-30B",
+  "sealed_timestamp_utc": "2026-10-28T04:17:46.677100+00:00",
+  "winning_rung_id": 4,
+  "winning_rung_name": "Rung 4: +Closed-Form Residual Bias Absorption (mu-Folding, Sealed)",
+  "knapsack_hyperparameters": {
+    "temperature": 0.65,
+    "w_foundation": 1.8,
+    "w_kv": 3.2,
+    "w_qo": 1.65,
+    "w_down": 1.35,
+    "alpha_candidates": [
+      0.35,
+      0.5,
+      0.65
+    ]
+  },
+  "rope_and_gqa_policy": {
+    "kv_bits": 4,
+    "kv_group_size": 64,
+    "kv_outlier_ratio": 0.005,
+    "gamma_rope": 0.75,
+    "tau_rope": 0.25,
+    "gamma_sink": 1.5
+  },
+  "mu_folding_enabled": true,
+  "physical_footprint_verification": {
+    "total_physical_bytes": 6530288383,
+    "total_physical_gib": 6.0818,
+    "max_allowed_gib": 6.15,
+    "bm25_pocket_index_bytes": 18432
+  },
+  "firewall_audit_receipt": {
+    "calib_num_sequences": 128,
+    "calib_total_tokens": 29078,
+    "val_num_sequences": 32,
+    "locked_test_num_items": 100,
+    "ngram_order": 8,
+    "calib_vs_test_overlap_pct": 0.0,
+    "val_vs_test_overlap_pct": 0.0,
+    "entity_leak_count": 0,
+    "calib_sha256": "89a8783d97a67a9ee10a60cfd6e6f86ad2028f71227e91769a5dcdc1fb8562d1",
+    "val_sha256": "954434303434445b4d35a762842bdfac0ed82538e67218c929099da3365aa86a",
+    "locked_test_sha256": "a70536ff1cf1bd40e0b86b41e4712ddd4a7bd11e9cfe495018921e5252c9ba95",
+    "passed": true
+  },
+  "validation_metrics_at_seal": {
+    "val_logit_kl_nats": 0.0498,
+    "val_retrieval_cloze_acc_pct": 80.47,
+    "val_procedural_skill_retention_pct": 98.72
+  },
+  "config_sha256": "9f1f01652f1b9a6a7eebeed55ebe4470dc129fda88497523f9ec0ac635dac607"
+}

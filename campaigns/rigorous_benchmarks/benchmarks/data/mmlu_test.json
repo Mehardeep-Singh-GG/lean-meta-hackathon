@@ -1,0 +1,3073 @@
+{
+  "subjects": [
+    "elementary_mathematics",
+    "formal_logic",
+    "high_school_physics",
+    "college_computer_science",
+    "high_school_world_history"
+  ],
+  "test": [
+    {
+      "id": "mmlu_elementary_mathematics_000",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "What is the value of p in 24 = 2p?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "p = 4"
+        },
+        {
+          "label": "B",
+          "text": "p = 8"
+        },
+        {
+          "label": "C",
+          "text": "p = 12"
+        },
+        {
+          "label": "D",
+          "text": "p = 24"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_001",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "Ms. Perez drove a total of 40 miles in 5 days. She drove the same number of miles each day. How many miles did Ms. Perez drive each day?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "7"
+        },
+        {
+          "label": "C",
+          "text": "8"
+        },
+        {
+          "label": "D",
+          "text": "9"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_002",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "Find the quotient of \u221240 \u00f7 (\u22128).",
+      "choices": [
+        {
+          "label": "A",
+          "text": "1 over 5"
+        },
+        {
+          "label": "B",
+          "text": "\u22125"
+        },
+        {
+          "label": "C",
+          "text": "\u22121 over 5"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_003",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "A soccer team has $90.00 to buy soccer balls. If one soccer ball costs $15.60, what is the greatest number of soccer balls the team can buy?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "5"
+        },
+        {
+          "label": "C",
+          "text": "6"
+        },
+        {
+          "label": "D",
+          "text": "7"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_004",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "You and three friends go to a concert. The total cost for four tickets is $112. Write and solve an equation to find the cost of one ticket t.",
+      "choices": [
+        {
+          "label": "A",
+          "text": "4t = 112; $448"
+        },
+        {
+          "label": "B",
+          "text": "4t = 112; $28"
+        },
+        {
+          "label": "C",
+          "text": "t over 4 = 112; $448"
+        },
+        {
+          "label": "D",
+          "text": "t over 4 = 112; $28"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_005",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "Use the expression below to answer the question. 3 \u00d7 [(2 \u00d7 6 \u2013 5) + (8 \u00f7 4)] \u2013 1 What is the value of the expression?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "9"
+        },
+        {
+          "label": "B",
+          "text": "11"
+        },
+        {
+          "label": "C",
+          "text": "26"
+        },
+        {
+          "label": "D",
+          "text": "32"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_006",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "Write 1 and 1 over 11 as a whole or mixed number in simplest form.",
+      "choices": [
+        {
+          "label": "A",
+          "text": "1.1 over 11"
+        },
+        {
+          "label": "B",
+          "text": "11 over 11"
+        },
+        {
+          "label": "C",
+          "text": "12 over 11"
+        },
+        {
+          "label": "D",
+          "text": "11 over 12"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_007",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "Find the quotient of 2.16 \u00f7 0.06.",
+      "choices": [
+        {
+          "label": "A",
+          "text": "3.6"
+        },
+        {
+          "label": "B",
+          "text": "36"
+        },
+        {
+          "label": "C",
+          "text": "0.01272"
+        },
+        {
+          "label": "D",
+          "text": "12.72"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_008",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "Find the difference of 142.76 \u2013 16.5.",
+      "choices": [
+        {
+          "label": "A",
+          "text": "159.26"
+        },
+        {
+          "label": "B",
+          "text": "2.224"
+        },
+        {
+          "label": "C",
+          "text": "14,111"
+        },
+        {
+          "label": "D",
+          "text": "126.26"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_009",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "Find the quotient of 5.04/0.7",
+      "choices": [
+        {
+          "label": "A",
+          "text": "0.72"
+        },
+        {
+          "label": "B",
+          "text": "0.702"
+        },
+        {
+          "label": "C",
+          "text": "10.0571"
+        },
+        {
+          "label": "D",
+          "text": "7.2"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_010",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "Jimmy and Kima are going on a trip. They will drive for three days. The first day they will drive 182 miles. The second day they will drive 439 miles. The third day they will drive 217 miles. Which expression is the closest estimate of how many miles Jimmy and Kima will drive on their trip?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "150 + 400 + 200"
+        },
+        {
+          "label": "B",
+          "text": "200 + 400 + 200"
+        },
+        {
+          "label": "C",
+          "text": "200 + 450 + 200"
+        },
+        {
+          "label": "D",
+          "text": "200 + 500 + 200"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_011",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "What is the remainder of 21 divided by 7?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "21"
+        },
+        {
+          "label": "B",
+          "text": "7"
+        },
+        {
+          "label": "C",
+          "text": "1"
+        },
+        {
+          "label": "D",
+          "text": "None of these"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_012",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "Maddie will ride her bike a total of 56 miles over 7 days. She will ride the same number of miles each day. What is the total number of miles Maddie will ride each day?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "8"
+        },
+        {
+          "label": "B",
+          "text": "9"
+        },
+        {
+          "label": "C",
+          "text": "49"
+        },
+        {
+          "label": "D",
+          "text": "63"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_013",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "Find the number that makes the statement 48 over 88 = ? over 11 true.",
+      "choices": [
+        {
+          "label": "A",
+          "text": "6"
+        },
+        {
+          "label": "B",
+          "text": "11"
+        },
+        {
+          "label": "C",
+          "text": "8"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_014",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "Which is the best buy?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "10 bars of soap for $23.20"
+        },
+        {
+          "label": "B",
+          "text": "16 bars of soap for $36.48"
+        },
+        {
+          "label": "C",
+          "text": "13 bars of soap for $29.51"
+        },
+        {
+          "label": "D",
+          "text": "12 bars of soap for $27.60"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_015",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "Trish\u2019s resting heart rate is 50 beats per minute. For every minute she exercises, her heart rate increases 5 beats per minute. How long will it take her to reach a heart rate of 120 beats per minute?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "5 minutes"
+        },
+        {
+          "label": "B",
+          "text": "14 minutes"
+        },
+        {
+          "label": "C",
+          "text": "34 minutes"
+        },
+        {
+          "label": "D",
+          "text": "70 minutes"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_016",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "Find the median in the set of data 23, 13, 18, 29, 32, 25.",
+      "choices": [
+        {
+          "label": "A",
+          "text": "18"
+        },
+        {
+          "label": "B",
+          "text": "24"
+        },
+        {
+          "label": "C",
+          "text": "25"
+        },
+        {
+          "label": "D",
+          "text": "29"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_017",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "Jack picks 60 apples from an apple tree. He uses 12 of them to make applesauce. He places the remaining apples equally into 6 gift baskets. Which equation can be used to determine the numberof apples, a, that Jack places into each gift basket?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "(60/6)\u201412=a"
+        },
+        {
+          "label": "B",
+          "text": "(60\u201412)/6=a"
+        },
+        {
+          "label": "C",
+          "text": "(60-6)-12=a"
+        },
+        {
+          "label": "D",
+          "text": "(60+12)/6=a"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_018",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "A certain map uses a scale of 1 inch equals 25 miles. How many miles are represented by 5 inches on this map?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "25"
+        },
+        {
+          "label": "C",
+          "text": "50"
+        },
+        {
+          "label": "D",
+          "text": "125"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_elementary_mathematics_019",
+      "subject": "elementary_mathematics",
+      "subject_display": "Elementary Mathematics",
+      "question": "Simplify (2 + 5)^2 \u2212 42.",
+      "choices": [
+        {
+          "label": "A",
+          "text": "7"
+        },
+        {
+          "label": "B",
+          "text": "16"
+        },
+        {
+          "label": "C",
+          "text": "30"
+        },
+        {
+          "label": "D",
+          "text": "33"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_formal_logic_000",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": "Identify the conclusion of the following argument. It is hard not to verify in our peers the same weakened intelligence due to emotions that we observe in our everyday patients. The arrogance of our consciousness, which in general, belongs to the strongest defense mechanisms, blocks the unconscious complexes. Because of this, it is difficult to convince people of the unconscious, and in turn to teach them what their conscious knowledge contradicts. (Sigmund Freud, The Origin and Development of Psychoanalysis)",
+      "choices": [
+        {
+          "label": "A",
+          "text": "It is hard not to verify in our peers the same weakened intelligence due to emotions that we observe in our everyday patients."
+        },
+        {
+          "label": "B",
+          "text": "The arrogance of our consciousness, which in general, belongs to the strongest defense mechanisms, blocks the unconscious complexes."
+        },
+        {
+          "label": "C",
+          "text": "Because of this, it is difficult to convince people of the unconscious, and in turn to teach them what their conscious knowledge contradicts."
+        },
+        {
+          "label": "D",
+          "text": "It is difficult to convince people of the unconscious, and in turn to teach them what their conscious knowledge contradicts."
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_formal_logic_001",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": "Select the best translation into predicate logic. David teaches Chris. (c: Chris; d: David; Txy: x teaches y)",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Tdc"
+        },
+        {
+          "label": "B",
+          "text": "Tcd"
+        },
+        {
+          "label": "C",
+          "text": "Tcc"
+        },
+        {
+          "label": "D",
+          "text": "dTc"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_formal_logic_002",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": " Select the best English interpretation of the given proposition, using the following translation key: Ax: x is an apartment Hx: x is a house Lx: x is large Bxy: x is bigger than y (\u2203x)[(Ax \u2022 Lx) \u2022 (\u2203y)(Hy \u2022 Bxy)]",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Some large houses are bigger than some apartments."
+        },
+        {
+          "label": "B",
+          "text": "Some houses are bigger than all large apartments."
+        },
+        {
+          "label": "C",
+          "text": "Some large apartments are bigger than some houses."
+        },
+        {
+          "label": "D",
+          "text": "Some houses are bigger thatn some large apartments."
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_formal_logic_003",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": "Construct a complete truth table for the following argument. Then, using the truth table, determine whether the argument is valid or invalid. If the argument is invalid, choose an option which presents a counterexample. (There may be other counterexamples as well.)\n~G \u2283 H\n~H / G",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Valid"
+        },
+        {
+          "label": "B",
+          "text": "Invalid. Counterexample when G and H are true"
+        },
+        {
+          "label": "C",
+          "text": "Invalid. Counterexample when G is true and H is false"
+        },
+        {
+          "label": "D",
+          "text": "Invalid. Counterexample when H is true and G is false"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_formal_logic_004",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": " Use the following key to translate the given formula of PL to natural, English sentences.\nA: Marina reads a Percy Jackson book.\nB: Izzy plays Minecraft.\nC: Emily stops working.\nD: Russell makes dinner.\nE: Ashleigh stops by.\n(~B \u2022 E) \u2283 D",
+      "choices": [
+        {
+          "label": "A",
+          "text": "If it's not the case that both Izzy plays Minecraft and Ashleigh stops by then Russell makes dinner."
+        },
+        {
+          "label": "B",
+          "text": "If it's both not the case that Izzy plays Minecraft and Ashleigh stops by then Russell makes dinner."
+        },
+        {
+          "label": "C",
+          "text": "Izzy playing Minecraft and Ashleigh stopping by entails that Russell makes dinner."
+        },
+        {
+          "label": "D",
+          "text": "Russell's making dinner is a sufficient condition for Izzy not playing Minecraft and Ashleigh stopping by."
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_formal_logic_005",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": " Select the best English interpretation of the given proposition, using the following translation key: Ax: x is an apartment Hx: x is a house Lx: x is large Bxy: x is bigger than y (\u2203x)[Hx \u2022 (\u2200y)(Ay \u2283 Bxy)]",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Some houses are smaller than all apartments."
+        },
+        {
+          "label": "B",
+          "text": "Every house is bigger than every apartment."
+        },
+        {
+          "label": "C",
+          "text": "Some apartment is smaller than every house."
+        },
+        {
+          "label": "D",
+          "text": "Some houses are bigger than every apartment."
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_formal_logic_006",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": "Construct a complete truth table for the following argument. Then, using the truth table, determine whether the argument is valid or invalid. If the argument is invalid, choose an option which presents a counterexample. (There may be other counterexamples as well.)\n~K \u2261 L / (K \u00b7 L) \u2228 (K \u00b7 ~L)",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Valid"
+        },
+        {
+          "label": "B",
+          "text": "Invalid. Counterexample when K and L are true"
+        },
+        {
+          "label": "C",
+          "text": "Invalid. Counterexample when K is true and L is false"
+        },
+        {
+          "label": "D",
+          "text": "Invalid. Counterexample when L is true and K is false"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_formal_logic_007",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": "Identify the antecedent of the following conditional proposition: If the university does not increase financial aid, either the president fails to approve it or the board of trustees prevents it.",
+      "choices": [
+        {
+          "label": "A",
+          "text": "The university increases financial aid."
+        },
+        {
+          "label": "B",
+          "text": "The university does not increase financial aid."
+        },
+        {
+          "label": "C",
+          "text": "The board of trustees prevents it."
+        },
+        {
+          "label": "D",
+          "text": "The president fails to approve it."
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_formal_logic_008",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": " Which of the following propositions is an immediate (one-step) consequence in PL of the given premises?\n~E \u2283 ~F\nG \u2283 F\nH \u2228 ~E\nH \u2283 I\n~I",
+      "choices": [
+        {
+          "label": "A",
+          "text": "E \u2283 F"
+        },
+        {
+          "label": "B",
+          "text": "F \u2283 G"
+        },
+        {
+          "label": "C",
+          "text": "H \u2283 ~E"
+        },
+        {
+          "label": "D",
+          "text": "~H"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_formal_logic_009",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": " Which of the given formulas of PL is the best symbolization of the following sentence?\nEverybody loves Raymond, or not.",
+      "choices": [
+        {
+          "label": "A",
+          "text": "L"
+        },
+        {
+          "label": "B",
+          "text": "~L"
+        },
+        {
+          "label": "C",
+          "text": "L \u2022 ~L"
+        },
+        {
+          "label": "D",
+          "text": "L \u2228 ~L"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_formal_logic_010",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": " Select the best translation into predicate logic. All kings are luckier than all paupers. (Kx: x is a king; Px: x is a pauper; Lxy: x is luckier than y)",
+      "choices": [
+        {
+          "label": "A",
+          "text": "(\u2200x)[Kx \u2283 (\u2200y)(Py \u2283 Lxy)]"
+        },
+        {
+          "label": "B",
+          "text": "(\u2200x)[Kx \u2283 (\u2200y)(Lxy \u2283 Py)]"
+        },
+        {
+          "label": "C",
+          "text": "(\u2200x)(\u2200y)[(Kx \u2022 Py) \u2283 Lyx]"
+        },
+        {
+          "label": "D",
+          "text": "(\u2200x)[(Kx \u2022 (\u2200y)(Py)) \u2283 Lxy]"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_formal_logic_011",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": " Construct a complete truth table for the following pairs of propositions. Then, using the truth tables, determine whether the statements are logically equivalent or contradictory. If neither, determine whether they are consistent or inconsistent. Justify your answers.\n(~M \u2283 ~N) \u2228 (O \u2261 N) and (~M \u00b7 N) \u00b7 [(~O \u2228 ~N) \u00b7 (O \u2228 N)]",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Logically equivalent"
+        },
+        {
+          "label": "B",
+          "text": "Contradictory"
+        },
+        {
+          "label": "C",
+          "text": "Neither logically equivalent nor contradictory, but consistent"
+        },
+        {
+          "label": "D",
+          "text": "Inconsistent"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_formal_logic_012",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": "Which of the following propositions is an immediate (one-step) consequence in PL of the given premises?\nE \u2283 ~F\n~F \u2283 G\n~G",
+      "choices": [
+        {
+          "label": "A",
+          "text": "E \u2283 F"
+        },
+        {
+          "label": "B",
+          "text": "F \u2283 G"
+        },
+        {
+          "label": "C",
+          "text": "G \u2283 E"
+        },
+        {
+          "label": "D",
+          "text": "~~F"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_formal_logic_013",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": "Use indirect truth tables to determine whether the following argument is valid. If the argument is invalid, choose an option which presents a counterexample. (There may be other counterexamples as well.)\nE \u2283 (F \u2228 ~G)\nF \u2283 (~E \u2228 ~G) / ~(E \u2261 F)",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Valid"
+        },
+        {
+          "label": "B",
+          "text": "Invalid. Counterexample when E, F, and G are true"
+        },
+        {
+          "label": "C",
+          "text": "Invalid. Counterexample when E and F are true and G is false"
+        },
+        {
+          "label": "D",
+          "text": "Invalid. Counterexample when E, F, and G are false"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_formal_logic_014",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": "Use indirect truth tables to determine whether the following argument is valid. If the argument is invalid, choose an option which presents a counterexample. (There may be other counterexamples as well.)\nH \u2261 (~I \u2228 J)\nH \u2228 ~J / ~I",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Valid"
+        },
+        {
+          "label": "B",
+          "text": "Invalid. Counterexample when H, I, and J are false"
+        },
+        {
+          "label": "C",
+          "text": "Invalid. Counterexample when H and I are true and J is false"
+        },
+        {
+          "label": "D",
+          "text": "Invalid. Counterexample when I is true and H and J are false"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_formal_logic_015",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": " Select the best translation into predicate logic. Some firefighters rescue victims from danger. (Dx: x is danger; Fx: x is a firefighter; Vx: x is a victim; Rxyz: x rescues y from z)",
+      "choices": [
+        {
+          "label": "A",
+          "text": "(\u2203x){Fx \u2022 (\u2200y)[Dy \u2283 (\u2203z)(Vz \u2022 Rxyz)]}"
+        },
+        {
+          "label": "B",
+          "text": "(\u2203x){Fx \u2022 (\u2203y)[Vy \u2022 (\u2203z)(Dz \u2022 Rxyz)]}"
+        },
+        {
+          "label": "C",
+          "text": "(\u2203x){Fx \u2022 (\u2203y)(\u2203z)[(Vy \u2022 Dz) \u2022 Rxzy]}"
+        },
+        {
+          "label": "D",
+          "text": "(\u2200x){Fx \u2283 (\u2203y)[Vy . (\u2203z)(Dz \u2022 Rxyz)]}"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_formal_logic_016",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": "Identify the antecedent of the following conditional proposition: The university raises tuition if, and only if, both the governor approves of it and the board of trustees recommends it.",
+      "choices": [
+        {
+          "label": "A",
+          "text": "The university raises tuition."
+        },
+        {
+          "label": "B",
+          "text": "The governor approves of it."
+        },
+        {
+          "label": "C",
+          "text": "The board of trustees recommends it."
+        },
+        {
+          "label": "D",
+          "text": "None of the above"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_formal_logic_017",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": " Select the best translation into predicate logic. All planets are smaller than Jupiter. (j: Jupiter; Px: x is a planet; Sxy: x is smaller than y)",
+      "choices": [
+        {
+          "label": "A",
+          "text": "(\u2203x)(Px \u2022 Sxj)"
+        },
+        {
+          "label": "B",
+          "text": "(\u2200x)(Px \u2022 Sxj)"
+        },
+        {
+          "label": "C",
+          "text": "(\u2200x)(Px \u2283 Sjx)"
+        },
+        {
+          "label": "D",
+          "text": "(\u2200x)(Px \u2283 Sxj)"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_formal_logic_018",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": "Select the best translation into predicate logic. Jos\u00e9 introduces Wilma to Kevin. (j: Jos\u00e9; k: Kevin; w: Wilma; Ixyz: x introduces y to z)",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Iwkj"
+        },
+        {
+          "label": "B",
+          "text": "Ijwk"
+        },
+        {
+          "label": "C",
+          "text": "Iwjk"
+        },
+        {
+          "label": "D",
+          "text": "Ijkw"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_formal_logic_019",
+      "subject": "formal_logic",
+      "subject_display": "Formal Logic",
+      "question": " Select the best translation into predicate logic: No artifacts are people.",
+      "choices": [
+        {
+          "label": "A",
+          "text": "~Pa"
+        },
+        {
+          "label": "B",
+          "text": "(\u2200x)(Ax \u2283 ~Px)"
+        },
+        {
+          "label": "C",
+          "text": "~Ap"
+        },
+        {
+          "label": "D",
+          "text": "(\u2200x)(Ax \u2022 ~Px)"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_high_school_physics_000",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "The plates of a capacitor are charged to a potential difference of 5 V. If the capacitance is 2 mF, what is the charge on the positive plate?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "0.005 C"
+        },
+        {
+          "label": "B",
+          "text": "0.01 C"
+        },
+        {
+          "label": "C",
+          "text": "0.02 C"
+        },
+        {
+          "label": "D",
+          "text": "0.5 C"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_high_school_physics_001",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "Which of these quantities decreases as the inverse square of distance for distances far from the objects producing the fields?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "the electric field produced by a finite-length charged rod"
+        },
+        {
+          "label": "B",
+          "text": "the electric field produced by an infinitely long charged cylinder"
+        },
+        {
+          "label": "C",
+          "text": "the electric field produced by an infinite plane of charge"
+        },
+        {
+          "label": "D",
+          "text": "the magnetic field produced by an infinitely long, straight current-carrying wire"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_high_school_physics_002",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "A solid, metal object is isolated from other charges and has charge distributed on its surface. The charge distribution is not uniform. It may be correctly concluded that the",
+      "choices": [
+        {
+          "label": "A",
+          "text": "electric field outside the object is zero"
+        },
+        {
+          "label": "B",
+          "text": "the electric field outside the object is equal to the electric field inside the object"
+        },
+        {
+          "label": "C",
+          "text": "the electric field outside the object is directly proportional to the distance away from the center of mass of the object"
+        },
+        {
+          "label": "D",
+          "text": "the electric field outside the object, but very close to the surface, is equal to the surface charge density at any location divided by the permittivity of free space"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_high_school_physics_003",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "Standing waves are produced by a 100-Hz generator in a string of fixed length. The tension in the string is increased until a new set of standing waves is produced. Will the wavelength of the new standing waves be greater than or less than the wavelength of the original standing waves?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Less, because the tension in the string varies directly with the wave speed, which varies inversely with the wavelength."
+        },
+        {
+          "label": "B",
+          "text": "Greater, because the tension in the string varies directly with the wave speed, which varies inversely with the wavelength."
+        },
+        {
+          "label": "C",
+          "text": "Greater, because the tension in the string varies directly with the wave speed, which varies directly with the wavelength."
+        },
+        {
+          "label": "D",
+          "text": "Less, because the tension in the string varies directly with the wave speed, which varies directly with the wavelength."
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_high_school_physics_004",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "Two identical capacitors are hooked in parallel to an external circuit. Which of the following quantities must be the same for both capacitors? I. the charge stored on the capacitor II.  the voltage across the capacitor III. the capacitance of the capacitor",
+      "choices": [
+        {
+          "label": "A",
+          "text": "I only"
+        },
+        {
+          "label": "B",
+          "text": "II only"
+        },
+        {
+          "label": "C",
+          "text": "II and III only"
+        },
+        {
+          "label": "D",
+          "text": "(E) I, II, and III"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_high_school_physics_005",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "A 1-kg object is released from rest at the top of a rough-surfaced incline. The object slides without rotating to the bottom of the incline. The object\u2019s kinetic energy at the bottom must be",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Equal to the block\u2019s gravitational potential energy when it was released, because total mechanical energy must be conserved."
+        },
+        {
+          "label": "B",
+          "text": "Equal to the block\u2019s gravitational potential energy when it was released, because the gain in kinetic energy compensates for the mechanical energy lost to thermal energy on the rough incline."
+        },
+        {
+          "label": "C",
+          "text": "Less than the block\u2019s gravitational potential energy when it was released, because the gravitational potential energy was converted both to thermal energy and to kinetic energy."
+        },
+        {
+          "label": "D",
+          "text": "Less than the block\u2019s gravitational potential energy when it was released, because the work done by the friction force must be greater than the block\u2019s gain in kinetic energy."
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_high_school_physics_006",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "A student is experimenting with a simple spring-block oscillator of spring constant k and amplitude A. The block attached to the spring has a mass of m. If the student places a small block of mass m on top of the original block, which of the following is true?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "The small block is most likely to slide off when the original block is at maximum displacement from the equilibrium position, but will not slide off as long as the coefficient of static friction between the blocks is greater than kA/[(M+m)g]."
+        },
+        {
+          "label": "B",
+          "text": "The small block is most likely to slide off when the original block is at the equilibrium position, but will not slide off as long as the coefficient of static friction between the blocks is greater than kA/[(M+m)g]."
+        },
+        {
+          "label": "C",
+          "text": "The small block is most likely to slide off when the original block is at maximum displacement from the equilibrium position, but will not slide off as long as the coefficient of static friction between the blocks is greater than (M+m)g/(kA)."
+        },
+        {
+          "label": "D",
+          "text": "The small block is most likely to slide off when the original block is at the equilibrium position, but will not slide off as long as the coefficient of static friction between the blocks is greater than (M+m)g/(kA)."
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_high_school_physics_007",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "How much work is required to charge a 10 \u00b5F capacitor to a potential difference of 100 V ?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "0.005 J"
+        },
+        {
+          "label": "B",
+          "text": "0.01 J"
+        },
+        {
+          "label": "C",
+          "text": "0.05 J"
+        },
+        {
+          "label": "D",
+          "text": "0.1 J"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_high_school_physics_008",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "A box of mass m slides on a horizontal surface with initial speed v0. It feels no forces other than gravity and the force from the surface. If the coefficient of kinetic friction between the box and the surface is \u03bc, how far does the box slide before coming to rest?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "v0^2/(2\u03bcg)"
+        },
+        {
+          "label": "B",
+          "text": "v0^2/(\u03bcg)"
+        },
+        {
+          "label": "C",
+          "text": "2v0^2/(\u03bcg)"
+        },
+        {
+          "label": "D",
+          "text": "mv0^2/(\u03bcg)"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_high_school_physics_009",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "A soccer ball, at rest on the ground, is kicked with an initial velocity of 10 m/s at a launch angle of 30\u00b0. Calculate its total flight time, assuming that air resistance is negligible.",
+      "choices": [
+        {
+          "label": "A",
+          "text": "0.5 s"
+        },
+        {
+          "label": "B",
+          "text": "1 s"
+        },
+        {
+          "label": "C",
+          "text": "2 s"
+        },
+        {
+          "label": "D",
+          "text": "4 s"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_high_school_physics_010",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "Two identical containers are filled with different gases. Container 1 is filled with hydrogen and container 2 is filled with nitrogen. Each container is set on a lab table and allowed to come to thermal equilibrium with the room. Which of the following correctly compares the properties of the two gases?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "The average kinetic energy of the hydrogen gas is greater than the nitrogen gas."
+        },
+        {
+          "label": "B",
+          "text": "The average force exerted on the container by the hydrogen gas is greater than the nitrogen gas."
+        },
+        {
+          "label": "C",
+          "text": "The density of the hydrogen gas is less than the nitrogen gas."
+        },
+        {
+          "label": "D",
+          "text": "The pressures of the gases cannot be compared without knowing the number of molecules in each container."
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_high_school_physics_011",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "A girl of mass m and a boy of mass 2m are sitting on opposite sides of a see-saw with its fulcrum in the center. Right now, the boy and girl are equally far from the fulcrum, and it tilts in favor of the boy. Which of the following would NOT be a possible method to balance the see-saw?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Move the boy to half his original distance from the fulcrum."
+        },
+        {
+          "label": "B",
+          "text": "Move the girl to double her original distance from the fulcrum."
+        },
+        {
+          "label": "C",
+          "text": "Allow a second girl of mass m to join the first."
+        },
+        {
+          "label": "D",
+          "text": "Move the fulcrum to half its original distance from the boy."
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_high_school_physics_012",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "When hot water is poured into a beaker containing cold alcohol, the temperature of the mixture will eventually reach the same temperature. Considering the scale of the size of the molecules of the fluids, which of the following is the primary reason for this phenomenon?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "The high temperature water will rise to the top of the container until it has cooled and then mixes with the alcohol."
+        },
+        {
+          "label": "B",
+          "text": "The molecules of the water continue to have a higher kinetic energy than the molecules of the alcohol, but the two liquids mix until the energy is spread evenly throughout the container."
+        },
+        {
+          "label": "C",
+          "text": "The hot water produces thermal radiation that is absorbed by the cold alcohol until the kinetic energy of all the molecules is the same."
+        },
+        {
+          "label": "D",
+          "text": "The water molecules collide with the alcohol molecules, transferring energy until the average kinetic energy of both the water and alcohol molecules are the same."
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_high_school_physics_013",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "A solid sphere (I = 0.06 kg\u00b7m^2) spins freely around an axis through its center at an angular speed of 20 rad/s. It is desired to bring the sphere to rest by applying a friction force of magnitude 2.0 N to the sphere\u2019s outer surface, a distance of 0.30 m from the sphere\u2019s center. How much time will it take the sphere to come to rest?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "4 s"
+        },
+        {
+          "label": "B",
+          "text": "2 s"
+        },
+        {
+          "label": "C",
+          "text": "0.06 s"
+        },
+        {
+          "label": "D",
+          "text": "0.03 s"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_high_school_physics_014",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "The radius of Mars is about half that of Earth; the mass of Mars is about one-tenth that of Earth. Which of the following is closest to the gravitational field at the surface of Mars?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "10 N/kg"
+        },
+        {
+          "label": "B",
+          "text": "4 N/kg"
+        },
+        {
+          "label": "C",
+          "text": "2 N/kg"
+        },
+        {
+          "label": "D",
+          "text": "0.5 N/kg"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_high_school_physics_015",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "Above an infinitely large plane carrying charge density \u03c3, the electric field points up and is equal to \u03c3/2\u03b5o. What is the magnitude and direction of the electric field below the plane?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "\u03c3/2\u03b5o, down"
+        },
+        {
+          "label": "B",
+          "text": "\u03c3/2\u03b5o, up"
+        },
+        {
+          "label": "C",
+          "text": "\u03c3/\u03b5o, down"
+        },
+        {
+          "label": "D",
+          "text": "\u03c3/\u03b5o, up"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_high_school_physics_016",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "A beam of electrons has speed 10^7 m/s. It is desired to use the magnetic field of the Earth, 5 \u00d7 10\u22125 T, to bend the electron beam into a circle. What will be the radius of this circle?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "1 nm"
+        },
+        {
+          "label": "B",
+          "text": "1 \u03bcm"
+        },
+        {
+          "label": "C",
+          "text": "1 mm"
+        },
+        {
+          "label": "D",
+          "text": "1 m"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_high_school_physics_017",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "An object is placed 100 cm from a plane mirror. How far is the image from the object?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "50 cm"
+        },
+        {
+          "label": "B",
+          "text": "100 cm"
+        },
+        {
+          "label": "C",
+          "text": "200 cm"
+        },
+        {
+          "label": "D",
+          "text": "300 cm"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_high_school_physics_018",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "A horse is attached to a cart that is at rest behind it. Which force, or combination of forces, explains how the horse-cart system can accelerate from rest?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "The forward static friction force of the ground on the horse is greater than any friction forces acting backward on the cart, providing a forward acceleration."
+        },
+        {
+          "label": "B",
+          "text": "The forward force of the horse on the cart is greater than the backward force of the cart on the horse, providing a forward acceleration."
+        },
+        {
+          "label": "C",
+          "text": "The force of the horse\u2019s muscles on the rest of the horse-cart system provides the necessary acceleration."
+        },
+        {
+          "label": "D",
+          "text": "The upward normal force of the ground on the horse is greater than the horse\u2019s weight, providing an upward acceleration."
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_high_school_physics_019",
+      "subject": "high_school_physics",
+      "subject_display": "High School Physics",
+      "question": "In a certain region, the electric field varies with the radius away from origin by the equation Er = \u20136r^2 + 4r + 3, where r is given in meters and E in N/C. The potential difference between the origin and the point (3, 4) is",
+      "choices": [
+        {
+          "label": "A",
+          "text": "\u2013165 V"
+        },
+        {
+          "label": "B",
+          "text": "\u2013120 V"
+        },
+        {
+          "label": "C",
+          "text": "64 V"
+        },
+        {
+          "label": "D",
+          "text": "185 V"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_college_computer_science_000",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "The access matrix approach to protection has the difficulty that",
+      "choices": [
+        {
+          "label": "A",
+          "text": "the matrix, if stored directly, is large and can be clumsy to manage"
+        },
+        {
+          "label": "B",
+          "text": "it is not capable of expressing complex protection requirements"
+        },
+        {
+          "label": "C",
+          "text": "deciding whether a process has access to a resource is undecidable"
+        },
+        {
+          "label": "D",
+          "text": "there is no way to express who has rights to change the access matrix itself"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_college_computer_science_001",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "An integer c is a common divisor of two integers x and y if and only if c is a divisor of x and c is a divisor of y. Which of the following sets of integers could possibly be the set of all common divisors of two integers?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "{-6,-2, -1, 1, 2, 6}"
+        },
+        {
+          "label": "B",
+          "text": "{-6, -2, -1, 0, 1, 2, 6}"
+        },
+        {
+          "label": "C",
+          "text": "{-6, -3, -2, -1, 1, 2, 3, 6}"
+        },
+        {
+          "label": "D",
+          "text": "{-6, -3, -2, -1, 0, 1, 2, 3, 6}"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_college_computer_science_002",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "In the NoNicks operating system, the time required by a single file-read operation has four nonoverlapping components:\ndisk seek time-25 msec\ndisk latency time-8 msec\ndisk transfer time- 1 msec per 1,000 bytes\noperating system overhead-1 msec per 1,000 bytes + 10 msec\nIn version 1 of the system, the file read retrieved blocks of 1,000 bytes. In version 2, the file read (along with the underlying layout on disk) was modified to retrieve blocks of 4,000 bytes. The ratio of-the time required to read a large file under version 2 to the time required to read the same large file under version 1 is approximately",
+      "choices": [
+        {
+          "label": "A",
+          "text": "1:4"
+        },
+        {
+          "label": "B",
+          "text": "1:3.5"
+        },
+        {
+          "label": "C",
+          "text": "1:1"
+        },
+        {
+          "label": "D",
+          "text": "1.1:1"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_college_computer_science_003",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "You want to cluster 7 points into 3 clusters using the k-Means Clustering algorithm. Suppose after the first iteration, clusters C1, C2 and C3 contain the following two-dimensional points: C1 contains the 2 points: {(0,6), (6,0)} C2 contains the 3 points: {(2,2), (4,4), (6,6)} C3 contains the 2 points: {(5,5), (7,7)} What are the cluster centers computed for these 3 clusters?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "C1: (3,3), C2: (4,4), C3: (6,6)"
+        },
+        {
+          "label": "B",
+          "text": "C1: (3,3), C2: (6,6), C3: (12,12)"
+        },
+        {
+          "label": "C",
+          "text": "C1: (6,6), C2: (12,12), C3: (12,12)"
+        },
+        {
+          "label": "D",
+          "text": "C1: (0,0), C2: (48,48), C3: (35,35)"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_college_computer_science_004",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "Any set of Boolean operators that is sufficient to represent all Boolean expressions is said to be complete. Which of the following is NOT complete?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "{AND, NOT}"
+        },
+        {
+          "label": "B",
+          "text": "{NOT, OR}"
+        },
+        {
+          "label": "C",
+          "text": "{AND, OR}"
+        },
+        {
+          "label": "D",
+          "text": "{NAND}"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_college_computer_science_005",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "Consider the collection of all undirected graphs with 10 nodes and 6 edges. Let M and m, respectively, be the maximum and minimum number of connected components in any graph in the collection. If a graph has no selfloops and there is at most one edge between any pair of nodes, which of the following is true?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "M = 10, m = 10"
+        },
+        {
+          "label": "B",
+          "text": "M = 10, m = 1"
+        },
+        {
+          "label": "C",
+          "text": "M = 7, m = 4"
+        },
+        {
+          "label": "D",
+          "text": "M = 6, m = 4"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_college_computer_science_006",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "Resolution theorem proving for showing that a formula of propositional logic is not satisfiable has which of the following properties?\nI. It is a sound proof system in the sense that there does not exist a proof of the unsatisfiability of a satisfiable formula of propositional logic.\nII. It is a complete proof system in the sense that there is a proof of unsatisfiability for every unsa tisfiable formula of propositional logic.\nIII. It is a succinct proof system in the sense that whenever an unsatisfiable formula F of propositional logic has a resolution proof, F also has a proof whose length is polynomial in the length of F.",
+      "choices": [
+        {
+          "label": "A",
+          "text": "I only"
+        },
+        {
+          "label": "B",
+          "text": "III only"
+        },
+        {
+          "label": "C",
+          "text": "I and II only"
+        },
+        {
+          "label": "D",
+          "text": "I and III only"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_college_computer_science_007",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "Which of the following statements describe(s) properties of a purely segmented memory system?\nI. It divides memory into units of equal size.\nII. It permits implementation of virtual memory.\nIII. It suffers from internal fragmentation.",
+      "choices": [
+        {
+          "label": "A",
+          "text": "I only"
+        },
+        {
+          "label": "B",
+          "text": "II only"
+        },
+        {
+          "label": "C",
+          "text": "III only"
+        },
+        {
+          "label": "D",
+          "text": "I and III"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_college_computer_science_008",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "Which of the following statements about floating-point arithmetic is NOT true?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "It is inherently nonassociative because some numbers have no exact representation."
+        },
+        {
+          "label": "B",
+          "text": "It is inherently nonassociative because there have to be upper and lower bounds on the size of numbers."
+        },
+        {
+          "label": "C",
+          "text": "Associativity can be achieved with appropriate roundoff conventions."
+        },
+        {
+          "label": "D",
+          "text": "Some rational numbers have no exact representation."
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_college_computer_science_009",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "Suppose sharing of tiles in a multilevel directory structure is achieved with directory entries that are links pointing to a node containing information about a shared file. Information in this node includes (1) the owner of the file, (2) a count of the number of links to the tile, and (3) the disk block numbers of the file. What is a primary drawback to this approach to sharing?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "If the owner modifies the file, another user who does not share will see the changes."
+        },
+        {
+          "label": "B",
+          "text": "If the owner renames the file, other users will not be able to access it."
+        },
+        {
+          "label": "C",
+          "text": "If the owner is allowed to delete a file, dangling links may result."
+        },
+        {
+          "label": "D",
+          "text": "If any user who shares the file appends to it, others who share it will not be able to access the new disk blocks."
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_college_computer_science_010",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "Mergesort works by splitting a list of n numbers in half, sorting each half recursively, and merging the two halves. Which of the following data structures will allow mergesort to work in O(n log n) time?\nI. A singly linked list\nII. A doubly linked list\nIII. An array",
+      "choices": [
+        {
+          "label": "A",
+          "text": "None"
+        },
+        {
+          "label": "B",
+          "text": "III only"
+        },
+        {
+          "label": "C",
+          "text": "I and II only"
+        },
+        {
+          "label": "D",
+          "text": "I, II, and III"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_college_computer_science_011",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "If p(x) is the minimal-degree interpolating polynomial for the real-valued function f(x) at the n + 1 distinct real numbers x0, .... xn what is the maximum possible degree of p(x)?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "n"
+        },
+        {
+          "label": "B",
+          "text": "n + 1"
+        },
+        {
+          "label": "C",
+          "text": "n + 2"
+        },
+        {
+          "label": "D",
+          "text": "2n"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_college_computer_science_012",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "An internal hash table has 5 buckets, numbered 0, 1, 2, 3, 4. Keys are integers, and the hash function h(i) = i mod 5 is used, with linear resolution of collisions (i.e., if bucket h(i) is filled, the buckets h(i) + 1, h(i) + 2, ... are tried successively with all bucket numbers computed modulo 5). If elements with keys 13, 8, 24, 10, and 3 are inserted, m that order, into an initially blank hash table, then the content of the bucket numbered 2 is",
+      "choices": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "8"
+        },
+        {
+          "label": "C",
+          "text": "10"
+        },
+        {
+          "label": "D",
+          "text": "13"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_college_computer_science_013",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "TCP protocol is responsible (among other things) for",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Routing packets through the network"
+        },
+        {
+          "label": "B",
+          "text": "Reliable delivery of packets between directly connected machines"
+        },
+        {
+          "label": "C",
+          "text": "Reliable delivery of large (multi-packet) messages between machines that are not necessarily directly connected"
+        },
+        {
+          "label": "D",
+          "text": "Dealing with differences among operating system architectures"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_college_computer_science_014",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "Let A and B be two sets of words (strings) from \u03a3*, for some alphabet of symbols \u03a3. Suppose that B is a subset of A. Which of the following statements must always be true of A and B ?\nI. If A is finite, then B is finite.\nII. If A is regular, then B is regular.\nIII. If A is context-free, then B is context-free.",
+      "choices": [
+        {
+          "label": "A",
+          "text": "I only"
+        },
+        {
+          "label": "B",
+          "text": "II only"
+        },
+        {
+          "label": "C",
+          "text": "III only"
+        },
+        {
+          "label": "D",
+          "text": "I and II only"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_college_computer_science_015",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "For all strings x, the function x^M is defined recursively as follows.\ne^M= e, and\nif w is a string and a is a string with length 1, then\n(aw)^M = aw^Ma.\nLet a be a string with length 1, and let x and y be arbitrary strings. Which of the following is true?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "a^M = a"
+        },
+        {
+          "label": "B",
+          "text": "(ax)^M = (xa)^M"
+        },
+        {
+          "label": "C",
+          "text": "(xy)^M = y^Mx^M"
+        },
+        {
+          "label": "D",
+          "text": "None of the above"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_college_computer_science_016",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "Which of the following is NOT a reasonable justification for choosing to busy-wait on an asynchronous event?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "The wait is expected to be short."
+        },
+        {
+          "label": "B",
+          "text": "A busy-wait loop is easier to code than an interrupt handler."
+        },
+        {
+          "label": "C",
+          "text": "There is no other work for the processor to do."
+        },
+        {
+          "label": "D",
+          "text": "The program executes on a time-sharing system."
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_college_computer_science_017",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "The language {ww | w in (0 + 1)*} is",
+      "choices": [
+        {
+          "label": "A",
+          "text": "not accepted by any Turing machine"
+        },
+        {
+          "label": "B",
+          "text": "accepted by some Turing machine, but by no pushdown automaton"
+        },
+        {
+          "label": "C",
+          "text": "accepted by some pushdown automaton, but not context-free"
+        },
+        {
+          "label": "D",
+          "text": "context-free, but not regular"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_college_computer_science_018",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "Which of the following statements about Ethernets is typically FALSE?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Ethernets use circuit switching to send messages."
+        },
+        {
+          "label": "B",
+          "text": "Ethernets use buses with multiple masters."
+        },
+        {
+          "label": "C",
+          "text": "Ethernet protocols use a collision-detection method to ensure that messages are transmitted properly."
+        },
+        {
+          "label": "D",
+          "text": "Networks connected by Ethernets are limited in length to a few hundred meters."
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_college_computer_science_019",
+      "subject": "college_computer_science",
+      "subject_display": "Computer Science",
+      "question": "Let P be a procedure that for some inputs calls itself (i.e., is recursive). If P is guaranteed to terminate, which of the following statements must be true?\nI. P has a local variable.\nII. P has an execution path where it does not call itself.\nIII. P either refers to a global variable or has at least one parameter.",
+      "choices": [
+        {
+          "label": "A",
+          "text": "I only"
+        },
+        {
+          "label": "B",
+          "text": "II only"
+        },
+        {
+          "label": "C",
+          "text": "I and II only"
+        },
+        {
+          "label": "D",
+          "text": "II and III only"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_high_school_world_history_000",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\nNo task is more urgent than that of preserving peace. Without peace our independence means little. The rehabilitation and upbuilding of our countries will have little meaning. Our revolutions will not be allowed to run their course. What can we do? We can do much! We can inject the voice of reason into world affairs. We can mobilize all the spiritual, all the moral, all the political strength of Asia and Africa on the side of peace. Yes, we! We, the peoples of Asia and Africa, 1.4 billion strong.\nIndonesian leader Sukarno, keynote address to the Bandung Conference, 1955\nThe passage above is most associated with which of the following developments?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "The formation of the non-aligned movement"
+        },
+        {
+          "label": "B",
+          "text": "Global disarmanent and nuclear non-proliferation"
+        },
+        {
+          "label": "C",
+          "text": "The Green Revolution in agriculture"
+        },
+        {
+          "label": "D",
+          "text": "Mobilization of pan-Asian ideology"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_high_school_world_history_001",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\nGunpowder Weaponry: Europe vs. China\nIn Western Europe during the 1200s through the 1400s, early cannons, as heavy and as slow to fire as they were, proved useful enough in the protracted sieges that dominated warfare during this period that governments found it sufficiently worthwhile to pay for them and for the experimentation that eventually produced gunpowder weapons that were both more powerful and easier to move. By contrast, China, especially after the mid-1300s, was threatened mainly by highly mobile steppe nomads, against whom early gunpowder weapons, with their unwieldiness, proved of little utility. It therefore devoted its efforts to the improvement of horse archer units who could effectively combat the country's deadliest foe.\nThe argument in this passage most closely relates to which of the following large-scale questions about global history?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "How societies shared strategically important technologies with each other"
+        },
+        {
+          "label": "B",
+          "text": "Why European states went on to attain military superiority over non-Western powers in the modern era"
+        },
+        {
+          "label": "C",
+          "text": "Why Silk Road commerce dwindled across the breadth of Eurasia after 1500 C.E."
+        },
+        {
+          "label": "D",
+          "text": "How the medieval climatic optimum affected the process of cultural diffusion"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_high_school_world_history_002",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\nThe city of Ghana consists of two towns. One is inhabited by Muslims and has twelve mosques, salaried imams and muezzins, and jurists and scholars. In the environs are wells with sweet water, from which they drink and with which they grow vegetables. . . . The king's interpreters, the official in charge of his treasury and the majority of his ministers are Muslims. Only royalty may wear sewn clothes. All other people wear robes of cotton, silk, or brocade, according to their means. . . . The king adorns himself like a woman, wearing necklaces round his neck and bracelets on his forearms. . . . He sits . . . in a domed pavilion around which stand ten horses. When people who profess the same religion as the king approach him they fall on their knees and sprinkle dust on their heads, for this is their way of greeting him. As for the Muslims, they greet him only by clapping their hands. [The people's] religion is paganism and the worship of idols. . . . On every donkey-load of salt when it is brought into the country their king levies one golden dinar, and two dinars when it is sent out. From a load of copper the king's due is five mithqals, and from a load of other goods ten mithqals. . . . The nuggets found in all the mines of his country are reserved for the king, only this gold dust being left for the people. But for this the people would accumulate gold until it lost its value. Beyond this country lies another called Malal, the king of which was sincerely attached to Islam, while the common people of his kingdom remained polytheists. Since then their rulers have been given the title of al-musulmani .\n\u2014The Book of Routes and Realms , by Abu Ubaydallah al-Bakri, eleventh-century Muslim historian and geographer\nWhat evidence is there in the passage that Ghanians were engaged, directly or indirectly, in trade with Asia?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "They kept horses in their court, which would have come from the Mongols."
+        },
+        {
+          "label": "B",
+          "text": "The Ghanian king had adopted the Chinese tradition of the kow-tow ."
+        },
+        {
+          "label": "C",
+          "text": "The king adorned himself with gold and jewels, probably from India."
+        },
+        {
+          "label": "D",
+          "text": "The people in his court wore silk robes."
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_high_school_world_history_003",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\nNo task is more urgent than that of preserving peace. Without peace our independence means little. The rehabilitation and upbuilding of our countries will have little meaning. Our revolutions will not be allowed to run their course. What can we do? We can do much! We can inject the voice of reason into world affairs. We can mobilize all the spiritual, all the moral, all the political strength of Asia and Africa on the side of peace. Yes, we! We, the peoples of Asia and Africa, 1.4 billion strong.\nIndonesian leader Sukarno, keynote address to the Bandung Conference, 1955\nLike numerous other leaders in Africa, Asia, and the Middle East, Sukarno attempted, but did not completely succeed, in maintaining a neutral stance during",
+      "choices": [
+        {
+          "label": "A",
+          "text": "the Arab-Israeli conflict."
+        },
+        {
+          "label": "B",
+          "text": "the Korean War."
+        },
+        {
+          "label": "C",
+          "text": "the Cold War."
+        },
+        {
+          "label": "D",
+          "text": "the Vietnam conflicts."
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_high_school_world_history_004",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\nBonesteel's prime consideration was to establish a surrender zone as far north as he thought the Soviets would accept. He knew that the Russian troops could reach the southern tip of Korea before American troops could arrive. He also knew that the Russians were on the verge of moving into Korea, or were already there. The nearest American troops to Korea were on Okinawa, 600 miles away. His problem, therefore, was to compose a surrender arrangement which, while acceptable to the Russians, would at the same time prevent them from seizing all of Korea. If they refused to confine their advance to north Korea, the United States would be unable to stop them. . . . He decided to use the 38th parallel as a hypothetical line dividing the zones within which Japanese forces in Korea would surrender to appointed American and Russian authorities.\n\u2014Adapted from U.S. Army Lt. Paul C. McGrath's account of Colonel Bonesteel's decision in the 1940s\nHow did the events depicted here affect Koreans?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "They became a part of Japan\u2019s territory."
+        },
+        {
+          "label": "B",
+          "text": "The Americans established freedom for all Koreans."
+        },
+        {
+          "label": "C",
+          "text": "The Korean economy never recovered."
+        },
+        {
+          "label": "D",
+          "text": "Korea remains divided into two nations near the 38th parallel."
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_high_school_world_history_005",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\nBoth authors below were speaking of the French Revolution.\nIt was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way\u2014in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only.\nThere were a king with a large jaw and a queen with a plain face, on the throne of England; there were a king with a large jaw and a queen with a fair face, on the throne of France. In both countries it was clearer than crystal . . . that things in general were settled for ever.\n\u2014A Tale of Two Cities, by Charles Dickens\nBliss was it in that dawn to be alive. But to be young was very heaven.\n\u2014The Prelude, by William Wordsworth\nDickens's and Wordsworth's differing views about the French Revolution can be described, respectively, by which of the following adjectives?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Optimistic, encouraged"
+        },
+        {
+          "label": "B",
+          "text": "Understanding, accepting"
+        },
+        {
+          "label": "C",
+          "text": "Cynical, enthusiastic"
+        },
+        {
+          "label": "D",
+          "text": "Sincere, resigned"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_high_school_world_history_006",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\nWoman, wake up; the bell of reason is being heard throughout the whole universe; discover your rights. Enslaved man has multiplied his strength, [but] having become free, he has become unjust to his companion. Oh, women, women! When will you cease to be blind? What advantage have you received from the Revolution? A more pronounced scorn, a more marked disdain. If our leaders persist, courageously oppose the force of reason to their empty pretentions of superiority. Regardless of what barriers confront you, it is in your power to free yourselves!\nOlympe de Gouges, \"Declaration of the Rights of Woman and the Female Citizen,\" 1791\nThe independence? Nothing of what I hoped for was achieved. I had expected that my children would be able to have an education, but they did not get it. We were poor peasants then, we are poor peasants now. Nothing has changed. Everything is the same. The only thing is that we are free, the war is over, we work without fear\u2014but apart from that, nothing has changed.\nHalima Ghomri, interviewed in the 1970s, after Algeria's war of independence\nWhich of the following observations about revolutions and gender is best supported by the first passage?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Revolutionary progressivism does not always concern itself with gender equality."
+        },
+        {
+          "label": "B",
+          "text": "Women typically assume leadership roles during times of revolution."
+        },
+        {
+          "label": "C",
+          "text": "Women rarely support revolutions and therefore receive little benefit from them."
+        },
+        {
+          "label": "D",
+          "text": "Revolutionary movements are generally uninterested in women's rights."
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_high_school_world_history_007",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\n\"The question as to who, and what, is responsible for African underdevelopment can be answered at two levels. Firstly, the answer is that the operation of the imperialist system bears major responsibility for African economic retardation by draining African wealth and by making it impossible to develop more rapidly the resources of the continent. Secondly, one has to deal with those who manipulate the system and those who are either agents or unwitting accomplices of the said system. The capitalists of Western Europe were the ones who actively extended their exploitation from inside Europe to cover the whole of Africa.\"\nWalter Rodney, historian, How Europe Underdeveloped Africa, 1974\nWhich of the following best explains the importance of trading contacts with Europeans for Sub-Saharan Africans in the period 1450 to 1750 C.E.?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Sub-Saharan Africans relied on European merchants to sustain population growth through the constant importation of New World foodstuffs."
+        },
+        {
+          "label": "B",
+          "text": "Sub-Saharan Africans consolidated new states and kingdoms by trading with the Europeans for firearms."
+        },
+        {
+          "label": "C",
+          "text": "Sub-Saharan Africans depended on European merchants as the sole purchasers of slaves."
+        },
+        {
+          "label": "D",
+          "text": "Sub-Saharan Africans allied with European powers to evict Muslim and Arab merchant princes from encroaching on their sovereignty."
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_high_school_world_history_008",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\nSource 1:\n\"It is impossible to demand that an impossible position should be cleared up by peaceful revision and at the same time constantly reject peaceful revision. It is also impossible to say that he who undertakes to carry out these revisions for himself transgresses a law, since the Versailles \"Diktat\" is not law to us. A signature was forced out of us with pistols at our head and with the threat of hunger for millions of people. And then this document, with our signature, obtained by force, was proclaimed as a solemn law.\"\nAdolf Hitler, speech to the Reichstag, September 1, 1939\nSource 2:\n\"We shall not flag or fail. We shall go on to the end. We shall fight in France, we shall fight on the seas and the oceans, we shall fight with growing confidence and growing strength in the air, we shall defend our island, whatever the cost may be. We shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, we shall fight in the hills; we shall never surrender.\"\nWinston Churchill, speech before Parliament, June 4, 1940\nWhat is the historical background for Adolf Hitler's condemnation of the Treaty of Versailles mentioned in Source 1?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Hitler's belief that Poland's territorial borders should not be violated"
+        },
+        {
+          "label": "B",
+          "text": "A rising intolerance of ethnic and political minority groups"
+        },
+        {
+          "label": "C",
+          "text": "A widespread belief in Germany that it had been unfairly treated at the end of World War I"
+        },
+        {
+          "label": "D",
+          "text": "Hitler's attempted collaboration with Italian leader Benito Mussolini"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mmlu_high_school_world_history_009",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\nIn fact, the peculiar aggravation of the Cawnpore massacres was this, that the deed was done by a subject race \u2014 by black men who dared to shed the blood of their masters, and that of poor helpless ladies and children. Here we had not only a servile war, but we had a war of religion, a war of race, and a war of revenge, of hope, of national promptings to shake off the yoke of a stranger, and to re-establish the full power of native chiefs, and the full sway of native religions. Whatever the causes of the mutiny and the revolt, it is clear enough that one of the modes by which the leaders, as if by common instinct, determined to effect their end was, the destruction of every white man, woman or child who fell into their hands.\nBritish journalist William Howard Russell, My Indian Mutlny Diary, 1860\nViolence, it must be emphasized, was an essential component of the British presence in India. A dominant power is always uneasy with violence directed against it. The right to violence is, therefore, everywhere a privilege that authority enjoys and refuses to share with those under it: power always insists on violence as its exclusive monopoly. British rule in India, as an autocracy, had meticulously constructed a monopoly of violence. The revolt of 1857 shattered that monopoly by matching an official, alien violence by an indigenous violence of the colonized. The bodies of the British had acquired certain dignities in India that were predestined by birth and by the colour of their skin. This was the condition of their domination, of their superiority: rulers and ruled were arranged hierarchically as superior and inferior races, as civilized and uncivilized. And this superiority manifested itself by denying to the Indians a \"humanness\"; by treating them and conceiving of them as animals.\nRudrangshu Mukherjee, \"The Kanpur [Cawnpore] Massacres in India in the Revolt of 1857,\" 1990\nAccording to the second passage, the Cawnpore Massacre",
+      "choices": [
+        {
+          "label": "A",
+          "text": "was justifiable according to local military custom, even if it violated Western military norms."
+        },
+        {
+          "label": "B",
+          "text": "can be viewed as a reaction to the systemic brute force with which the British governed India."
+        },
+        {
+          "label": "C",
+          "text": "should be praised as a brave patriotic blow against British colonial oppression."
+        },
+        {
+          "label": "D",
+          "text": "seems to have been the product of a well-organized and long-premeditated conspiracy."
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_high_school_world_history_010",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\nThe passage below is taken from testimony before Parliament.\nJoshua Drake, called in; and Examined.\nYou say you would prefer moderate labour and lower wages; are you pretty comfortable upon your present wages?\n\u2014I have no wages, but two days a week at present; but when I am working at some jobs we can make a little, and at others we do very poorly.\nWhen a child gets 3s. a week, does that go much towards its subsistence?\n\u2014No, it will not keep it as it should do.\nWhy do you allow your children to go to work at those places where they are ill-treated or over-worked?\n\u2014Necessity compels a man that has children to let them work.\nThen you would not allow your children to go to those factories under the present system, if it was not from necessity?\n\u2014No.\n\u2014Testimony given before the Sadler Committee, 1831\u201332\nAccording to the passage, why does the witness allow his children to work in a place where they will be ill-treated?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "A factory owner is forcing him to do so."
+        },
+        {
+          "label": "B",
+          "text": "He doesn\u2019t earn enough on his own."
+        },
+        {
+          "label": "C",
+          "text": "The children need discipline."
+        },
+        {
+          "label": "D",
+          "text": "Their labor is only moderately difficult."
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_high_school_world_history_011",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\nBonesteel's prime consideration was to establish a surrender zone as far north as he thought the Soviets would accept. He knew that the Russian troops could reach the southern tip of Korea before American troops could arrive. He also knew that the Russians were on the verge of moving into Korea, or were already there. The nearest American troops to Korea were on Okinawa, 600 miles away. His problem, therefore, was to compose a surrender arrangement which, while acceptable to the Russians, would at the same time prevent them from seizing all of Korea. If they refused to confine their advance to north Korea, the United States would be unable to stop them. . . . He decided to use the 38th parallel as a hypothetical line dividing the zones within which Japanese forces in Korea would surrender to appointed American and Russian authorities.\n\u2014Adapted from U.S. Army Lt. Paul C. McGrath's account of Colonel Bonesteel's decision in the 1940s\nWhich best describes the relationship between the United States and the Soviets as depicted in the passage?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Uneasy allies"
+        },
+        {
+          "label": "B",
+          "text": "Comrades-in-arms"
+        },
+        {
+          "label": "C",
+          "text": "Mortal enemies"
+        },
+        {
+          "label": "D",
+          "text": "Distant strangers"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_high_school_world_history_012",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\n\"My little homestead in the city, which I recently insured for \uffe12,000 would no doubt have shared the common fate, as the insurance companies will not make good that which is destroyed by the Queen's enemies. And although I have a farm of 50 acres close to the town, no doubt the crops and premises would have been destroyed. In fact, this has already partly been the case, and I am now suing the Government for damages done by a contingent of 1,500 natives that have recently encamped not many hundred yards from the place, who have done much damage all around.\"\nLetter from a British citizen to his sister during the Anglo-Zulu War, South Africa, 1879\nIncidents such as those described by the author of the letter were used by the British government to do which of the following?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Issue a casus belli to go to war with the Kingdom of Zulu"
+        },
+        {
+          "label": "B",
+          "text": "Tax the Zulu kingdom to cover damages attributed to them"
+        },
+        {
+          "label": "C",
+          "text": "Sever its responsibility to protect citizens who chose to live in South Africa"
+        },
+        {
+          "label": "D",
+          "text": "Liberate the Zulus from British colonialism"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_high_school_world_history_013",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\n\"The greatest contribution that Africa can make to the peace of the world is to avoid all the dangers inherent in disunity, by creating a political union which will also by its success, stand as an example to a divided world. A Union of African states will project more effectively the African personality. It will command respect from a world that has regard only for size and influence. The scant attention paid to African opposition to the French atomic tests in the Sahara, and the ignominious spectacle of the U.N. in the Congo quibbling about constitutional niceties while the Republic was tottering into anarchy, are evidence of the callous disregard of African Independence by the Great Powers.\"\nKwame Nkrumah, Ghanian leader, 1961\nNkrumah's argument in the passage most clearly supports which of the following ideologies?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Pan-Africanism"
+        },
+        {
+          "label": "B",
+          "text": "Communism"
+        },
+        {
+          "label": "C",
+          "text": "African socialism"
+        },
+        {
+          "label": "D",
+          "text": "Neocolonialism"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_high_school_world_history_014",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\n\"The spontaneous forces of capitalism have been steadily growing in the countryside in recent years, with new rich peasants springing up everywhere and many well-to-do middle peasants striving to become rich peasants. On the other hand, many poor peasants are still living in poverty for lack of sufficient means of production, with some in debt and others selling or renting out their land. If this tendency goes unchecked, the polarization in the countryside will inevitably be aggravated day by day. Those peasants who lose their land and those who remain in poverty will complain that we are doing nothing to save them from ruin or to help them overcome their difficulties. Nor will the well-to-do middle peasants who are heading in the capitalist direction be pleased with us, for we shall never be able to satisfy their demands unless we intend to take the capitalist road. Can the worker-peasant alliance continue to stand in these circumstances? Obviously not! There is no solution to this problem except on a new basis. And that means to bring about, step by step, the socialist transformation of the whole of agriculture simultaneously with the gradual realization of socialist industrialization and the socialist transformation of handicrafts and capitalist industry and commerce; in other words, it means to carry out co-operation and eliminate the rich-peasant economy and the individual economy in the countryside so that all the rural people will become increasingly well off together. We maintain that this is the only way to consolidate the worker-peasant alliance.\"\nMao Zedong, On the Question of Agricultural Co-operation, 1955\nWhich of the following best explains Mao's concept of the \"socialist transformation of the whole of agriculture\" in China?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Agriculture fueled industrialization in cities as excess labor flowed from the countryside to urban centers."
+        },
+        {
+          "label": "B",
+          "text": "Agricultural surpluses allowed the state to invest more heavily in modernizing agricultural production."
+        },
+        {
+          "label": "C",
+          "text": "Agricultural efficiency reduced prices of basic commodities, raising the standard of living across the whole of China."
+        },
+        {
+          "label": "D",
+          "text": "Agriculture was collectivized, with the result that entire communities shared fields instead of individuals owning the land as private property."
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_high_school_world_history_015",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\nThe condition of foreign states is not what it once was; they have invented the steamship, and introduced radical changes in the art of navigation. They have also built up their armies to a state of great efficiency and are possessed of war implements of great power and precision, in short have license to be formidable powers. If, therefore, we persistently cling to our antiquated systems, heaven only knows what a mighty calamity may befall our Empire.\n\u2014Adapted from a letter written by Lord Ii to Lord Tokugawa, 1847\nWhich event or period in Japan's history best reflects Lord Ii's concerns?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "The expulsion of Christian missionaries from Japan"
+        },
+        {
+          "label": "B",
+          "text": "The adoption of Chinese imperial customs in the Japanese court"
+        },
+        {
+          "label": "C",
+          "text": "The annexation of Manchuria by the Japanese"
+        },
+        {
+          "label": "D",
+          "text": "Commodore Perry forcing Japan to open its ports to trade"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mmlu_high_school_world_history_016",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\n\"The real grievance of the worker is the insecurity of his existence; he is not sure that he will always have work, he is not sure that he will always be healthy, and he foresees that he will one day be old and unfit to work. If he falls into poverty, even if only through a prolonged illness, he is then completely helpless, exam_ins to his own devices, and society does not currently recognize any real obligation towards him beyond the usual help for the poor, even if he has been working all the time ever so faithfully and diligently. The usual help for the poor, however, leaves a lot to be desired, especially in large cities, where it is very much worse than in the country.\"\nOtto von Bismarck, 1884\nThe long-term effects of Otto von Bismarck's speech include which of the following?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Development of socialized programs throughout much of Europe"
+        },
+        {
+          "label": "B",
+          "text": "Disunity of the German states"
+        },
+        {
+          "label": "C",
+          "text": "Communist overhaul of the eastern parts of Germany"
+        },
+        {
+          "label": "D",
+          "text": "A decrease in German economic output"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mmlu_high_school_world_history_017",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\nThis ruler of Syria made me spend many years as commander of his army,\nEvery land to which I turned\nI overcame.\nI destroyed its green fields and its wells,\nI captured its cattle, I took captive its inhabitants, I deprived them of their provisions,\nand I slew [many] people\u2026by my sword, my bow, my marchings, and my good devices.\nThus my excellence was in his heart; he loved me and he knew my valor;\n\u2026he set me at the head of his sons, when he saw the success of my handiwork.\nThere came a champion of Syria\nto defy me in my tent;\na bold man without equal, for he had vanquished all his rivals.\nHe said, \"Let Sanehat fight with me.\"\nHe thought to overcome me; he designed to take my cattle, thus being counseled by his tribe.\nThe Tale of Sanehat, Egyptian poem written during the Middle Kingdom, ca.1800 B.C.E.\nThe text of this passage is best seen as evidence of which of the following in Egyptian society?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Meritocratic appointments by rulers to their bureaucracies"
+        },
+        {
+          "label": "B",
+          "text": "Long-distance contact between Egypt and other lands"
+        },
+        {
+          "label": "C",
+          "text": "The clan as the basic political unit"
+        },
+        {
+          "label": "D",
+          "text": "A lack of emphasis on martial ability"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_high_school_world_history_018",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\nI walk alongside the column, ask what's going on.\nA soldier says simply: \"They call up more every day.\n\"Some of us were sent north to the Yellow River at age fifteen,\nAnd now at forty we're heading off to the garrisons in the west.\nOn our first tour, the village headman had to tie our bandannas for us.\nWhen we came back, our hair was white, but still there's more unrest.\nThe frontier garrisons run with blood, enough to fill an ocean,\nBut the Martial Emperor's territorial ambitions have yet to crest.\nIn the hundred districts east of the mountains, throughout the land of Han,\nThere must be ten thousand villages that brambles now infest.\nEven if wives are strong enough to handle a hoe and plow,\nThe crops grow every which way, the fields are all a mess.\nIt's hardest for the Shanxi men, with their reputations as fighters:\nThey're rounded up like dogs or chickens, every male impressed.\n\"But sir, though it's good of you to ask,\nComplaining isn't part of the soldier's task.\nWe can only shake our heads. Take this winter:\nThe Shanxi troops were never sent home.\nThe District Officers are demanding the land tax,\nBut where will it come from? You can't get blood from a stone!\nI honestly think it's bad luck to bear a son now,\nIt's better to have a daughter: at least she can marry\nAnd live with the neighbors next door.\nBut a son will end up lying on some distant prairie.\"\nDu Fu, \"Ballad of the Army Carts,\" ca. 750 C.E.\nBased on the poem and your knowledge of history, Tang relations with western nomadic peoples and frontier peoples relied on which of the following?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Adroit diplomacy and establishment of client relationships with bordering nomads"
+        },
+        {
+          "label": "B",
+          "text": "The ability of the Tang emperor to project military power on the frontier in order to impose his will"
+        },
+        {
+          "label": "C",
+          "text": "The permanent settlement of Han Chinese in frontier zones"
+        },
+        {
+          "label": "D",
+          "text": "The payment of tribute to nomadic rulers"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mmlu_high_school_world_history_019",
+      "subject": "high_school_world_history",
+      "subject_display": "World History",
+      "question": "This question refers to the following information.\nAt the peak of their power, the domains of the Mongol khans, or rulers, made up a vast realm in which once-hostile peoples lived together in peace and virtually all religions were tolerated. . . . The law code first promulgated by Chinggis Khan ordered human interaction. The result was an important new stage in international contact. From eastern Europe to southern China, merchants and travelers could move across the well-policed Mongol domains without fear for their lives or property. The great swath of Mongol territory that covered or connected most of Europe, Asia, and the Middle East served as a bridge between the civilizations of the Eastern Hemisphere. The caravans and embassies that crossed the Mongol lands transmitted new food, inventions, and ideas from one civilized pool to others and from civilized pools to the nomadic peoples who served as intermediaries. Secure trade routes made for prosperous merchants and wealthy, cosmopolitan cities. They also facilitated the spread of foods [and] inventions . . . a major force for economic and social development and the enhancement of civilized life.\n\u2014Robert Guisepi, 1992\nThe Mongol empire used which of the following to integrate its vast, geographically diverse area?",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Emphasis on trade networks"
+        },
+        {
+          "label": "B",
+          "text": "Expansion of bureaucracy to reinforce dominance"
+        },
+        {
+          "label": "C",
+          "text": "The use of state-sponsored religion to legitimize the government"
+        },
+        {
+          "label": "D",
+          "text": "Expansion of an interregional canal system"
+        }
+      ],
+      "answer": "A"
+    }
+  ],
+  "dev_few_shot": {
+    "elementary_mathematics": [
+      {
+        "question": "The population of the city where Michelle was born is 145,826. What is the value of the 5 in the number 145,826?",
+        "choices": [
+          {
+            "label": "A",
+            "text": "5 thousands"
+          },
+          {
+            "label": "B",
+            "text": "5 hundreds"
+          },
+          {
+            "label": "C",
+            "text": "5 tens"
+          },
+          {
+            "label": "D",
+            "text": "5 ones"
+          }
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "Olivia used the rule \"Add 11\" to create the number pattern shown below. 10, 21, 32, 43, 54 Which statement about the number pattern is true?",
+        "choices": [
+          {
+            "label": "A",
+            "text": "The 10th number in the pattern will be an even number."
+          },
+          {
+            "label": "B",
+            "text": "The number pattern will never have two even numbers next to each other."
+          },
+          {
+            "label": "C",
+            "text": "The next two numbers in the pattern will be an even number then an odd number."
+          },
+          {
+            "label": "D",
+            "text": "If the number pattern started with an odd number then the pattern would have only odd numbers in it."
+          }
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "A total of 30 players will play basketball at a park. There will be exactly 5 players on each team. Which statement correctly explains how to find the number of teams needed?",
+        "choices": [
+          {
+            "label": "A",
+            "text": "Add 5 to 30 to find 35 teams."
+          },
+          {
+            "label": "B",
+            "text": "Divide 30 by 5 to find 6 teams."
+          },
+          {
+            "label": "C",
+            "text": "Multiply 30 and 5 to find 150 teams."
+          },
+          {
+            "label": "D",
+            "text": "Subtract 5 from 30 to find 25 teams."
+          }
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "A store sells 107 different colors of paint. They have 25 cans of each color in storage. The number of cans of paint the store has in storage can be found using the expression below. 107 \u00d7 25. How many cans of paint does the store have in storage?",
+        "choices": [
+          {
+            "label": "A",
+            "text": "749"
+          },
+          {
+            "label": "B",
+            "text": "2,675"
+          },
+          {
+            "label": "C",
+            "text": "2,945"
+          },
+          {
+            "label": "D",
+            "text": "4,250"
+          }
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "Which expression is equivalent to 5 x 9?",
+        "choices": [
+          {
+            "label": "A",
+            "text": "(5 x 4) x (6 x 5)"
+          },
+          {
+            "label": "B",
+            "text": "(5 x 5) + (5 x 4)"
+          },
+          {
+            "label": "C",
+            "text": "(5 x 5) + (5 x 9)"
+          },
+          {
+            "label": "D",
+            "text": "(5 x 9) x (6 x 9)"
+          }
+        ],
+        "answer": "B"
+      }
+    ],
+    "formal_logic": [
+      {
+        "question": " Select the best translation into predicate logic: No people drive on Mars.",
+        "choices": [
+          {
+            "label": "A",
+            "text": "~Pd"
+          },
+          {
+            "label": "B",
+            "text": "(\u2200x)(Px \u2228 ~Dx)"
+          },
+          {
+            "label": "C",
+            "text": "(\u2200x)(Px \u2283 ~Dx)"
+          },
+          {
+            "label": "D",
+            "text": "~Dp"
+          }
+        ],
+        "answer": "C"
+      },
+      {
+        "question": "Select the best translation into predicate logic.George borrows Hector's lawnmower. (g: George; h: Hector; l: Hector's lawnmower; Bxyx: x borrows y from z)",
+        "choices": [
+          {
+            "label": "A",
+            "text": "Blgh"
+          },
+          {
+            "label": "B",
+            "text": "Bhlg"
+          },
+          {
+            "label": "C",
+            "text": "Bglh"
+          },
+          {
+            "label": "D",
+            "text": "Bghl"
+          }
+        ],
+        "answer": "C"
+      },
+      {
+        "question": " Select the best English interpretation of the given arguments in predicate logic.\nDm\n(\u2200x)(Wx \u2283 ~Dx)\n(\u2200x)Wx \u2228 Ag\t/ (\u2203x)Ax",
+        "choices": [
+          {
+            "label": "A",
+            "text": "Marina is a dancer. Some weaklings are not dancers. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball."
+          },
+          {
+            "label": "B",
+            "text": "Marina is a dancer. No weakling is a dancer. Everything is either a weakling or plays volleyball. So something plays volleyball."
+          },
+          {
+            "label": "C",
+            "text": "Marina is a dancer. Some weaklings are not dancers. Everything is either a weakling or plays volleyball. So something plays volleyball."
+          },
+          {
+            "label": "D",
+            "text": "Marina is a dancer. No weakling is a dancer. Either everything is a weakling or Georgia plays volleyball. So something plays volleyball."
+          }
+        ],
+        "answer": "D"
+      },
+      {
+        "question": " Construct a complete truth table for the following pairs of propositions. Then, using the truth tables, determine whether the statements are logically equivalent or contradictory. If neither, determine whether they are consistent or inconsistent. Justify your answers.\nE \u2283 (F \u00b7 E) and ~E \u00b7 F",
+        "choices": [
+          {
+            "label": "A",
+            "text": "Logically equivalent"
+          },
+          {
+            "label": "B",
+            "text": "Contradictory"
+          },
+          {
+            "label": "C",
+            "text": "Neither logically equivalent nor contradictory, but consistent"
+          },
+          {
+            "label": "D",
+            "text": "Inconsistent"
+          }
+        ],
+        "answer": "C"
+      },
+      {
+        "question": " Which of the given formulas of PL is the best symbolization of the following sentence?\nTurtles live long lives and are happy creatures, unless they are injured.",
+        "choices": [
+          {
+            "label": "A",
+            "text": "(L \u2022 H) \u2261 I"
+          },
+          {
+            "label": "B",
+            "text": "(L \u2022 H) \u2228 I"
+          },
+          {
+            "label": "C",
+            "text": "L \u2022 (H \u2228 I)"
+          },
+          {
+            "label": "D",
+            "text": "L \u2022 (H \u2283 R)"
+          }
+        ],
+        "answer": "B"
+      }
+    ],
+    "high_school_physics": [
+      {
+        "question": "Which of the following conditions will ensure that angular momentum is conserved? I. Conservation of linear momentum II. Zero net external force III. Zero net external torque",
+        "choices": [
+          {
+            "label": "A",
+            "text": "I and II only"
+          },
+          {
+            "label": "B",
+            "text": "I and III only"
+          },
+          {
+            "label": "C",
+            "text": "II and III only"
+          },
+          {
+            "label": "D",
+            "text": "III only"
+          }
+        ],
+        "answer": "D"
+      },
+      {
+        "question": "A pipe full of air is closed at one end. A standing wave is produced in the pipe, causing the pipe to sound a note. Which of the following is a correct statement about the wave\u2019s properties at the closed end of the pipe?",
+        "choices": [
+          {
+            "label": "A",
+            "text": "The pressure is at a node, but the particle displacement is at an antinode."
+          },
+          {
+            "label": "B",
+            "text": "The pressure is at an antinode, but the particle displacement is at a node."
+          },
+          {
+            "label": "C",
+            "text": "The pressure and the particle displacement are both at nodes."
+          },
+          {
+            "label": "D",
+            "text": "The pressure and the particle displacement are both at antinodes."
+          }
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "A photocell of work function \u03d5 = 2eV is connected to a resistor in series. Light of frequency f = 1 \u00d7 10^15 Hz hits a metal plate of the photocell. If the power of the light is P = 100 W, what is the current through the resistor?",
+        "choices": [
+          {
+            "label": "A",
+            "text": "2:00 AM"
+          },
+          {
+            "label": "B",
+            "text": "6:00 AM"
+          },
+          {
+            "label": "C",
+            "text": "12:00 AM"
+          },
+          {
+            "label": "D",
+            "text": "24 A"
+          }
+        ],
+        "answer": "D"
+      },
+      {
+        "question": "A microwave oven is connected to an outlet, 120 V, and draws a current of 2 amps. At what rate is energy being used by the microwave oven?",
+        "choices": [
+          {
+            "label": "A",
+            "text": "10 W"
+          },
+          {
+            "label": "B",
+            "text": "30 W"
+          },
+          {
+            "label": "C",
+            "text": "60 W"
+          },
+          {
+            "label": "D",
+            "text": "240 W"
+          }
+        ],
+        "answer": "D"
+      },
+      {
+        "question": "A point charge, Q = +1 mC, is fixed at the origin. How much work is required to move a charge, Q = +8 \u00b5C, from the point (0, 4 meters) to the point (3 meters, 0)?",
+        "choices": [
+          {
+            "label": "A",
+            "text": "3.5 J"
+          },
+          {
+            "label": "B",
+            "text": "6.0 J"
+          },
+          {
+            "label": "C",
+            "text": "22.5 J"
+          },
+          {
+            "label": "D",
+            "text": "40 J"
+          }
+        ],
+        "answer": "B"
+      }
+    ],
+    "college_computer_science": [
+      {
+        "question": "Which of the following regular expressions is equivalent to (describes the same set of strings as) (a* + b)*(c + d)?",
+        "choices": [
+          {
+            "label": "A",
+            "text": "a*(c + d)+ b(c + d)"
+          },
+          {
+            "label": "B",
+            "text": "a*(c + d)* + b(c + d)*"
+          },
+          {
+            "label": "C",
+            "text": "a*(c + d)+ b*(c + d)"
+          },
+          {
+            "label": "D",
+            "text": "(a + b)*c +(a + b)*d"
+          }
+        ],
+        "answer": "D"
+      },
+      {
+        "question": "A certain pipelined RISC machine has 8 general-purpose registers R0, R1, . . . , R7 and supports the following operations.\nADD Rs1, Rs2, Rd Add Rs1 to Rs2 and put the sum in Rd\nMUL Rs1, Rs2, Rd Multiply Rs1 by Rs2 and put the product in Rd\nAn operation normally takes one cycle; however, an operation takes two cycles if it produces a result required by the immediately following operation in an operation sequence. Consider the expression AB + ABC + BC, where variables A, B, C are located in registers R0, R1, R2. If the contents of these three registers must not be modified, what is the minimum number of clock cycles required for an operation sequence that computes the value of AB + ABC + BC?",
+        "choices": [
+          {
+            "label": "A",
+            "text": "5"
+          },
+          {
+            "label": "B",
+            "text": "6"
+          },
+          {
+            "label": "C",
+            "text": "7"
+          },
+          {
+            "label": "D",
+            "text": "8"
+          }
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "The Singleton design pattern is used to guarantee that only a single instance of a class may be instantiated. Which of the following is (are) true of this design pattern?\nI. The Singleton class has a static factory method to provide its instance.\nII. The Singleton class can be a subclass of another class.\nIII. The Singleton class has a private constructor.",
+        "choices": [
+          {
+            "label": "A",
+            "text": "I only"
+          },
+          {
+            "label": "B",
+            "text": "II only"
+          },
+          {
+            "label": "C",
+            "text": "III only"
+          },
+          {
+            "label": "D",
+            "text": "I, II, and III"
+          }
+        ],
+        "answer": "D"
+      },
+      {
+        "question": "A compiler generates code for the following assignment statement.\nG := (A + B) * C - (D + E) * F\nThe target machine has a single accumulator and a single-address instruction set consisting of instructions load, store, add, subtract, and multiply. For the arithmetic operations, the left operand is taken from the accumulator and the result appears in the accumulator. The smallest possible number of instructions in the resulting code is",
+        "choices": [
+          {
+            "label": "A",
+            "text": "5"
+          },
+          {
+            "label": "B",
+            "text": "6"
+          },
+          {
+            "label": "C",
+            "text": "7"
+          },
+          {
+            "label": "D",
+            "text": "9"
+          }
+        ],
+        "answer": "D"
+      },
+      {
+        "question": "Consider a computer design in which multiple processors, each with a private cache memory, share global memory using a single bus. This bus is the critical system resource. Each processor can execute one instruction every 500 nanoseconds as long as memory references are satisfied by its local cache. When a cache miss occurs, the processor is delayed for an additional 2,000 nanoseconds. During half of this additional delay, the bus is dedicated to serving the cache miss. During the other half, the processor cannot continue, but the bus is free to service requests from other processors. On average, each instruction requires 2 memory references. On average, cache misses occur on 1 percent of references. What proportion of the capacity of the bus would a single processor consume, ignoring delays due to competition from other processors?",
+        "choices": [
+          {
+            "label": "A",
+            "text": "1/50"
+          },
+          {
+            "label": "B",
+            "text": "1/27"
+          },
+          {
+            "label": "C",
+            "text": "1/25"
+          },
+          {
+            "label": "D",
+            "text": "2/27"
+          }
+        ],
+        "answer": "B"
+      }
+    ],
+    "high_school_world_history": [
+      {
+        "question": "This question refers to the following information.\nHe contains all works and desires and all perfumes and all tastes. He enfolds the whole universe and in silence is loving to all. This is the Spirit that is in my heart, this is Brahman. To him I shall come when I go beyond this life, and to him will come he who has faith and doubts not.\n\u2014The Upanishads, India, c. 1000 BCE\nTo which religion does the speaker most likely belong?",
+        "choices": [
+          {
+            "label": "A",
+            "text": "Hinduism"
+          },
+          {
+            "label": "B",
+            "text": "Buddhism"
+          },
+          {
+            "label": "C",
+            "text": "Shintoism"
+          },
+          {
+            "label": "D",
+            "text": "Zoroastrianism"
+          }
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "This question refers to the following information.\n\"The struggle against neo-colonialism is not aimed at excluding the capital of the developed world from operating in less developed countries. It is aimed at preventing the financial power of the developed countries being used in such a way as to impoverish the less developed.\nNon-alignment, as practiced by Ghana and many other countries, is based on co-operation with all States whether they be capitalist, socialist or have a mixed economy. Such a policy, therefore, involves foreign investment from capitalist countries, but it must be invested in accordance with a national plan drawn up by the government of the non-aligned State with its own interests in mind. The issue is not what return the foreign investor receives on his investments\u2026The question is one of power. A State in the grip of neo-colonialism is not master of its own destiny.\"\nKwame Nkrumah, Neo-Colonialism, 1965\nWhich of the following provides the best context for Nkrumah's writings?",
+        "choices": [
+          {
+            "label": "A",
+            "text": "The Industrial Revolution"
+          },
+          {
+            "label": "B",
+            "text": "Decolonization"
+          },
+          {
+            "label": "C",
+            "text": "Regional Free Trade Associations"
+          },
+          {
+            "label": "D",
+            "text": "Autarky"
+          }
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "This question refers to the following information.\n\"The real grievance of the worker is the insecurity of his existence; he is not sure that he will always have work, he is not sure that he will always be healthy, and he foresees that he will one day be old and unfit to work. If he falls into poverty, even if only through a prolonged illness, he is then completely helpless, exam_ins to his own devices, and society does not currently recognize any real obligation towards him beyond the usual help for the poor, even if he has been working all the time ever so faithfully and diligently. The usual help for the poor, however, leaves a lot to be desired, especially in large cities, where it is very much worse than in the country.\"\nOtto von Bismarck, 1884\nOtto von Bismarck likely made this speech in reaction to which of the following issues?",
+        "choices": [
+          {
+            "label": "A",
+            "text": "Social acceptance of child labor"
+          },
+          {
+            "label": "B",
+            "text": "Declining life expectancy in Germany"
+          },
+          {
+            "label": "C",
+            "text": "Criticisms of German trade tariffs"
+          },
+          {
+            "label": "D",
+            "text": "Negative effects attributed to industrial capitalism"
+          }
+        ],
+        "answer": "D"
+      },
+      {
+        "question": "This question refers to the following information.\n\"Indeed, as both the fatwas of distinguished [scholars] who base their opinion on reason and tradition alike and the consensus of the Sunni community agree that the ancient obligation of extirpation, extermination, and expulsion of evil innovation must be the aim of our exalted aspiration, for \"Religious zeal is a victory for the Faith of God the Beneficent\"; then, in accordance with the words of the Prophet (Peace upon him!) \"Whosoever introduces evil innovation into our order must be expelled\" and \"Whosoever does aught against our order must be expelled,\" action has become necessary and exigent\u2026\"\nLetter from Ottoman Sultan Selim I to Safavid Shah Ismail I, 1514\nThe letter from Selim I is most clearly an example of which of the following?",
+        "choices": [
+          {
+            "label": "A",
+            "text": "The maintenance of military supremacy at all costs"
+          },
+          {
+            "label": "B",
+            "text": "Expanding tensions between religious sects"
+          },
+          {
+            "label": "C",
+            "text": "Factors that brought about the collapse of the Ottoman Empire"
+          },
+          {
+            "label": "D",
+            "text": "Peacemaking efforts among the Islamic empires"
+          }
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "This question refers to the following information.\n\"At least one of the [world's] societies would have to somehow enormously increase its productivity [in order to achieve global hegemony]. That quantum jump would have to be made before the various scientific, technological, agricultural, and industrial revolutions on which our post-quantum-leap world rests. It could only be accomplished by exploiting the ecosystems, mineral resources, and human assets of whole continents outside the lands of the society making the jump. Western Europe did just that by means of its brutality and guns and, more important, by geographical and ecological luck.\"\nCopyright \u00a9 2015 Cambridge University Press.\nAlfred Crosby, historian, Ecological Imperialism, 2004\nThe \"quantum jump\" mentioned in the passage most directly contributed to which of the following developments in the period 1450\u20131750 C.E.?",
+        "choices": [
+          {
+            "label": "A",
+            "text": "A breakdown in trade routes through the collapse of the established state structure"
+          },
+          {
+            "label": "B",
+            "text": "An increase in the population of the world through more plentiful supplies of food"
+          },
+          {
+            "label": "C",
+            "text": "The spread of Chinese and Indian belief systems across the world"
+          },
+          {
+            "label": "D",
+            "text": "An increase in social unrest"
+          }
+        ],
+        "answer": "B"
+      }
+    ]
+  }
+}

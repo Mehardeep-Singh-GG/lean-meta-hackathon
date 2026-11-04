@@ -1,0 +1,79 @@
+{
+  "server": "store-eu-par-6",
+  "files": {
+    "model_lean_30b-00001-of-00004.safetensors": {
+      "code": "4otYdXag",
+      "createTime": 1793176814,
+      "downloadPage": "https://gofile.io/d/Du1k8o5o",
+      "guestToken": "S5BMv7lCSs1KBeISUgPIq851t6J9airM",
+      "id": "d91cacbc-6154-48ea-874c-5415b662cfa0",
+      "md5": "b8c791df8828168aed05d3dac631202c",
+      "mimetype": "application/octet-stream",
+      "modTime": 1793176814,
+      "name": "model_lean_30b-00001-of-00004.safetensors",
+      "parentFolder": "cb48ffe0-34b2-4447-a4d5-bf8589627633",
+      "parentFolderCode": "Du1k8o5o",
+      "servers": [
+        "store-eu-par-6"
+      ],
+      "size": 2487682528,
+      "type": "file"
+    },
+    "model_lean_30b-00002-of-00004.safetensors": {
+      "code": "W8l2pBFg",
+      "createTime": 1793176990,
+      "downloadPage": "https://gofile.io/d/Du1k8o5o",
+      "guestToken": "S5BMv7lCSs1KBeISUgPIq851t6J9airM",
+      "id": "f60c659b-df16-48dc-b530-7db8a4b7298e",
+      "md5": "4628db6ce569cc609b0f4f45518367b5",
+      "mimetype": "application/octet-stream",
+      "modTime": 1793176990,
+      "name": "model_lean_30b-00002-of-00004.safetensors",
+      "parentFolder": "cb48ffe0-34b2-4447-a4d5-bf8589627633",
+      "parentFolderCode": "Du1k8o5o",
+      "servers": [
+        "store-eu-par-6"
+      ],
+      "size": 2101177264,
+      "type": "file"
+    },
+    "model_lean_30b-00003-of-00004.safetensors": {
+      "code": "ea1puX3v",
+      "createTime": 1793177160,
+      "downloadPage": "https://gofile.io/d/Du1k8o5o",
+      "guestToken": "S5BMv7lCSs1KBeISUgPIq851t6J9airM",
+      "id": "dae3d281-e50f-46c8-bcac-f5023bb92469",
+      "md5": "aab1ca05e18df2e45dcca010a0bb2257",
+      "mimetype": "application/octet-stream",
+      "modTime": 1793177160,
+      "name": "model_lean_30b-00003-of-00004.safetensors",
+      "parentFolder": "cb48ffe0-34b2-4447-a4d5-bf8589627633",
+      "parentFolderCode": "Du1k8o5o",
+      "servers": [
+        "store-eu-par-6"
+      ],
+      "size": 2101177264,
+      "type": "file"
+    },
+    "model_lean_30b-00004-of-00004.safetensors": {
+      "code": "Vgl1qL1o",
+      "createTime": 1793177357,
+      "downloadPage": "https://gofile.io/d/Du1k8o5o",
+      "guestToken": "S5BMv7lCSs1KBeISUgPIq851t6J9airM",
+      "id": "f664d601-0387-4d1d-af71-cfa51d903b07",
+      "md5": "589a750535d51ecf5eb401d31349ca25",
+      "mimetype": "application/octet-stream",
+      "modTime": 1793177357,
+      "name": "model_lean_30b-00004-of-00004.safetensors",
+      "parentFolder": "cb48ffe0-34b2-4447-a4d5-bf8589627633",
+      "parentFolderCode": "Du1k8o5o",
+      "servers": [
+        "store-eu-par-6"
+      ],
+      "size": 2513558664,
+      "type": "file"
+    }
+  },
+  "guestToken": "S5BMv7lCSs1KBeISUgPIq851t6J9airM",
+  "folderId": "cb48ffe0-34b2-4447-a4d5-bf8589627633"
+}

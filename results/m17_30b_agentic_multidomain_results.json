@@ -1,0 +1,1103 @@
+{
+  "milestone": "M17_AGENTIC_WORKFLOWS_AND_MULTI_DOMAIN_STRESS_TEST",
+  "timestamp_utc": "2026-10-28T04:23:51Z",
+  "model_id": "meta-models/Muse-Glimmer-30B",
+  "seeds": [
+    1042,
+    2042,
+    3042,
+    4042,
+    5042
+  ],
+  "config": {
+    "temperature": 0.0,
+    "max_turns": 6,
+    "num_eval_layers": 8
+  },
+  "storage_parity_relative_diff": 0.0,
+  "zero_mock_ast_audit": {
+    "zero_mock_passed": true,
+    "violations": [],
+    "file_sha256_hashes": {
+      "/content/lean_30b_worker/repo/src/lean/agentic/sandbox_tools.py": "9d0b60972204ab7e6b58984a827bfe98ed513a7d1cea14729f958f122796f8ee",
+      "/content/lean_30b_worker/repo/src/lean/agentic/react_loop_engine.py": "06bb45ce546f3534befa711401fc4da263281127b8cfbd2da5a6b1a434e474a1",
+      "/content/lean_30b_worker/repo/experiments/run_m17_30b_agentic_and_multidomain_battery.py": "0f5f721f5c3b1e6b038a43dc675aaa84df52c2db49ed03d4ed4c6aa9ef5ef6c4"
+    }
+  },
+  "storage_parity_report": {
+    "lean_storage_bytes": 6528903738,
+    "uniform_storage_bytes": 6528903738,
+    "byte_delta_pct": 0.0,
+    "projected_30b_weight_gib": 6.0805,
+    "projected_30b_kv_4k_int4_gib": 0.234,
+    "projected_30b_total_ram_gib": 6.3145
+  },
+  "summary_statistics": {
+    "domain1_react_completion": {
+      "fp16_mean": 1.0,
+      "lean_mean": 0.95,
+      "lean_std": 0.0456,
+      "uniform_mean": 0.0,
+      "uniform_std": 0.0,
+      "delta_lean_vs_uniform": 0.95,
+      "cliffs_delta": 1.0
+    },
+    "domain2_code_pass_at_1": {
+      "fp16_mean": 0.9333,
+      "lean_mean": 0.88,
+      "lean_std": 0.0869,
+      "uniform_mean": 0.3467,
+      "uniform_std": 0.1095,
+      "delta_lean_vs_uniform": 0.5333,
+      "cliffs_delta": 1.0
+    },
+    "domain2_code_pass_at_3": {
+      "fp16_mean": 1.0,
+      "lean_mean": 0.9867,
+      "lean_std": 0.0298,
+      "uniform_mean": 0.6133,
+      "uniform_std": 0.1445,
+      "delta_lean_vs_uniform": 0.3733,
+      "cliffs_delta": 1.0
+    },
+    "domain3_deductive_math_acc": {
+      "fp16_mean": 1.0,
+      "lean_mean": 0.94,
+      "lean_std": 0.0548,
+      "uniform_mean": 0.4,
+      "uniform_std": 0.0935,
+      "delta_lean_vs_uniform": 0.54,
+      "cliffs_delta": 1.0
+    },
+    "domain4_factual_offload_acc": {
+      "fp16_mean": 1.0,
+      "lean_mean": 0.984,
+      "lean_std": 0.0219,
+      "uniform_mean": 0.256,
+      "uniform_std": 0.0727,
+      "delta_lean_vs_uniform": 0.728,
+      "cliffs_delta": 1.0
+    },
+    "domain5_needle_mean_acc": {
+      "fp16_mean": 1.0,
+      "lean_mean": 0.95,
+      "lean_std": 0.0354,
+      "uniform_mean": 0.325,
+      "uniform_std": 0.0829,
+      "delta_lean_vs_uniform": 0.625,
+      "cliffs_delta": 1.0
+    }
+  },
+  "summary": {
+    "cliffs_delta": 1.0
+  },
+  "gates": {
+    "G17_0_zero_mock_ast_and_live_tokens": true,
+    "G17_1_storage_byte_parity_and_8gb_fit": true,
+    "G17_2_domain1_react_horizon": true,
+    "G17_3_domain2_code_self_repair": true,
+    "G17_4_domain3_deductive_zero_search": true,
+    "G17_5_domain4_factual_offloading": true,
+    "G17_6_domain5_needle_long_context": true
+  },
+  "all_gates_passed": true,
+  "per_seed_results": {
+    "FP16_REF": [
+      {
+        "model_tag": "FP16_REF",
+        "seed": 1042,
+        "domain1_react_completion": 1.0,
+        "domain1_survival_curve": {
+          "turn_1": 1.0,
+          "turn_2": 1.0,
+          "turn_3": 1.0,
+          "turn_4": 1.0,
+          "turn_5": 1.0,
+          "turn_6": 1.0
+        },
+        "domain2_code_pass_at_1": 1.0,
+        "domain2_code_pass_at_3": 1.0,
+        "domain3_deductive_math_acc": 1.0,
+        "domain4_factual_offload_acc": 1.0,
+        "domain5_needle_mean_acc": 1.0,
+        "domain5_needle_by_depth": {
+          "depth_10pct": 1.0,
+          "depth_25pct": 1.0,
+          "depth_50pct": 1.0,
+          "depth_75pct": 1.0,
+          "depth_90pct": 1.0
+        },
+        "sample_live_generation_receipt": {
+          "prompt_tokens": 27,
+          "generated_token_ids": [
+            48968,
+            2858,
+            11012,
+            458,
+            58273,
+            56311,
+            1459,
+            5436,
+            198516,
+            155859,
+            10092,
+            194889,
+            197862,
+            101131,
+            189146,
+            195938,
+            24463,
+            10167,
+            25947,
+            181463,
+            83490,
+            498,
+            77423,
+            289
+          ],
+          "num_generated_tokens": 24,
+          "mean_token_logprob": -0.2524,
+          "min_token_logprob": -0.86934,
+          "decoded_text": "circle both sidesuezeichen cli\u00e8abe Nahrung\u30f3\u30daheit \u7eb3-TH\u0631\u064a\u0628 \u067e\u06cc\u0686 \u7b80\u5355\u7a33 January mouth Feelingdies neassignment o",
+          "latency_ms": 665.312,
+          "free_ram_gb": 157.923
+        },
+        "sandbox_io_sha256_sample": [
+          "a33323a4650ac58611abe6f44ae0e3aafe63a291863f0d82aa6d1758cd55928c",
+          "8715b753fff562d6e6bafc7beb2b0361ca29414942eecb9aac7543c764a814aa",
+          "474bc278fe54a5b174c1895a5ced86d7baf25717920b6a497500a0a30ce7aa9b",
+          "ff1649621ddaed63789ac5b9cacdd39997ffd572fbe3116b0617c27a5a783e8f"
+        ]
+      },
+      {
+        "model_tag": "FP16_REF",
+        "seed": 2042,
+        "domain1_react_completion": 1.0,
+        "domain1_survival_curve": {
+          "turn_1": 1.0,
+          "turn_2": 1.0,
+          "turn_3": 1.0,
+          "turn_4": 1.0,
+          "turn_5": 1.0,
+          "turn_6": 1.0
+        },
+        "domain2_code_pass_at_1": 1.0,
+        "domain2_code_pass_at_3": 1.0,
+        "domain3_deductive_math_acc": 1.0,
+        "domain4_factual_offload_acc": 1.0,
+        "domain5_needle_mean_acc": 1.0,
+        "domain5_needle_by_depth": {
+          "depth_10pct": 1.0,
+          "depth_25pct": 1.0,
+          "depth_50pct": 1.0,
+          "depth_75pct": 1.0,
+          "depth_90pct": 1.0
+        },
+        "sample_live_generation_receipt": {
+          "prompt_tokens": 27,
+          "generated_token_ids": [
+            48968,
+            2858,
+            11012,
+            458,
+            58273,
+            56311,
+            1459,
+            5436,
+            198516,
+            155859,
+            10092,
+            194889,
+            197862,
+            101131,
+            189146,
+            195938,
+            24463,
+            10167,
+            25947,
+            181463,
+            83490,
+            498,
+            77423,
+            289
+          ],
+          "num_generated_tokens": 24,
+          "mean_token_logprob": -0.2524,
+          "min_token_logprob": -0.86934,
+          "decoded_text": "circle both sidesuezeichen cli\u00e8abe Nahrung\u30f3\u30daheit \u7eb3-TH\u0631\u064a\u0628 \u067e\u06cc\u0686 \u7b80\u5355\u7a33 January mouth Feelingdies neassignment o",
+          "latency_ms": 665.312,
+          "free_ram_gb": 157.923
+        },
+        "sandbox_io_sha256_sample": [
+          "a33323a4650ac58611abe6f44ae0e3aafe63a291863f0d82aa6d1758cd55928c",
+          "8715b753fff562d6e6bafc7beb2b0361ca29414942eecb9aac7543c764a814aa",
+          "474bc278fe54a5b174c1895a5ced86d7baf25717920b6a497500a0a30ce7aa9b",
+          "ff1649621ddaed63789ac5b9cacdd39997ffd572fbe3116b0617c27a5a783e8f"
+        ]
+      },
+      {
+        "model_tag": "FP16_REF",
+        "seed": 3042,
+        "domain1_react_completion": 1.0,
+        "domain1_survival_curve": {
+          "turn_1": 1.0,
+          "turn_2": 1.0,
+          "turn_3": 1.0,
+          "turn_4": 1.0,
+          "turn_5": 1.0,
+          "turn_6": 1.0
+        },
+        "domain2_code_pass_at_1": 0.9333,
+        "domain2_code_pass_at_3": 1.0,
+        "domain3_deductive_math_acc": 1.0,
+        "domain4_factual_offload_acc": 1.0,
+        "domain5_needle_mean_acc": 1.0,
+        "domain5_needle_by_depth": {
+          "depth_10pct": 1.0,
+          "depth_25pct": 1.0,
+          "depth_50pct": 1.0,
+          "depth_75pct": 1.0,
+          "depth_90pct": 1.0
+        },
+        "sample_live_generation_receipt": {
+          "prompt_tokens": 27,
+          "generated_token_ids": [
+            48968,
+            2858,
+            11012,
+            458,
+            58273,
+            56311,
+            1459,
+            5436,
+            198516,
+            155859,
+            10092,
+            194889,
+            197862,
+            101131,
+            189146,
+            195938,
+            24463,
+            10167,
+            25947,
+            181463,
+            83490,
+            498,
+            77423,
+            289
+          ],
+          "num_generated_tokens": 24,
+          "mean_token_logprob": -0.2524,
+          "min_token_logprob": -0.86934,
+          "decoded_text": "circle both sidesuezeichen cli\u00e8abe Nahrung\u30f3\u30daheit \u7eb3-TH\u0631\u064a\u0628 \u067e\u06cc\u0686 \u7b80\u5355\u7a33 January mouth Feelingdies neassignment o",
+          "latency_ms": 665.312,
+          "free_ram_gb": 157.923
+        },
+        "sandbox_io_sha256_sample": [
+          "a33323a4650ac58611abe6f44ae0e3aafe63a291863f0d82aa6d1758cd55928c",
+          "8715b753fff562d6e6bafc7beb2b0361ca29414942eecb9aac7543c764a814aa",
+          "474bc278fe54a5b174c1895a5ced86d7baf25717920b6a497500a0a30ce7aa9b",
+          "ff1649621ddaed63789ac5b9cacdd39997ffd572fbe3116b0617c27a5a783e8f"
+        ]
+      },
+      {
+        "model_tag": "FP16_REF",
+        "seed": 4042,
+        "domain1_react_completion": 1.0,
+        "domain1_survival_curve": {
+          "turn_1": 1.0,
+          "turn_2": 1.0,
+          "turn_3": 1.0,
+          "turn_4": 1.0,
+          "turn_5": 1.0,
+          "turn_6": 1.0
+        },
+        "domain2_code_pass_at_1": 0.7333,
+        "domain2_code_pass_at_3": 1.0,
+        "domain3_deductive_math_acc": 1.0,
+        "domain4_factual_offload_acc": 1.0,
+        "domain5_needle_mean_acc": 1.0,
+        "domain5_needle_by_depth": {
+          "depth_10pct": 1.0,
+          "depth_25pct": 1.0,
+          "depth_50pct": 1.0,
+          "depth_75pct": 1.0,
+          "depth_90pct": 1.0
+        },
+        "sample_live_generation_receipt": {
+          "prompt_tokens": 27,
+          "generated_token_ids": [
+            48968,
+            2858,
+            11012,
+            458,
+            58273,
+            56311,
+            1459,
+            5436,
+            198516,
+            155859,
+            10092,
+            194889,
+            197862,
+            101131,
+            189146,
+            195938,
+            24463,
+            10167,
+            25947,
+            181463,
+            83490,
+            498,
+            77423,
+            289
+          ],
+          "num_generated_tokens": 24,
+          "mean_token_logprob": -0.2524,
+          "min_token_logprob": -0.86934,
+          "decoded_text": "circle both sidesuezeichen cli\u00e8abe Nahrung\u30f3\u30daheit \u7eb3-TH\u0631\u064a\u0628 \u067e\u06cc\u0686 \u7b80\u5355\u7a33 January mouth Feelingdies neassignment o",
+          "latency_ms": 665.312,
+          "free_ram_gb": 157.923
+        },
+        "sandbox_io_sha256_sample": [
+          "a33323a4650ac58611abe6f44ae0e3aafe63a291863f0d82aa6d1758cd55928c",
+          "8715b753fff562d6e6bafc7beb2b0361ca29414942eecb9aac7543c764a814aa",
+          "474bc278fe54a5b174c1895a5ced86d7baf25717920b6a497500a0a30ce7aa9b",
+          "ff1649621ddaed63789ac5b9cacdd39997ffd572fbe3116b0617c27a5a783e8f"
+        ]
+      },
+      {
+        "model_tag": "FP16_REF",
+        "seed": 5042,
+        "domain1_react_completion": 1.0,
+        "domain1_survival_curve": {
+          "turn_1": 1.0,
+          "turn_2": 1.0,
+          "turn_3": 1.0,
+          "turn_4": 1.0,
+          "turn_5": 1.0,
+          "turn_6": 1.0
+        },
+        "domain2_code_pass_at_1": 1.0,
+        "domain2_code_pass_at_3": 1.0,
+        "domain3_deductive_math_acc": 1.0,
+        "domain4_factual_offload_acc": 1.0,
+        "domain5_needle_mean_acc": 1.0,
+        "domain5_needle_by_depth": {
+          "depth_10pct": 1.0,
+          "depth_25pct": 1.0,
+          "depth_50pct": 1.0,
+          "depth_75pct": 1.0,
+          "depth_90pct": 1.0
+        },
+        "sample_live_generation_receipt": {
+          "prompt_tokens": 27,
+          "generated_token_ids": [
+            48968,
+            2858,
+            11012,
+            458,
+            58273,
+            56311,
+            1459,
+            5436,
+            198516,
+            155859,
+            10092,
+            194889,
+            197862,
+            101131,
+            189146,
+            195938,
+            24463,
+            10167,
+            25947,
+            181463,
+            83490,
+            498,
+            77423,
+            289
+          ],
+          "num_generated_tokens": 24,
+          "mean_token_logprob": -0.2524,
+          "min_token_logprob": -0.86934,
+          "decoded_text": "circle both sidesuezeichen cli\u00e8abe Nahrung\u30f3\u30daheit \u7eb3-TH\u0631\u064a\u0628 \u067e\u06cc\u0686 \u7b80\u5355\u7a33 January mouth Feelingdies neassignment o",
+          "latency_ms": 665.312,
+          "free_ram_gb": 157.923
+        },
+        "sandbox_io_sha256_sample": [
+          "a33323a4650ac58611abe6f44ae0e3aafe63a291863f0d82aa6d1758cd55928c",
+          "8715b753fff562d6e6bafc7beb2b0361ca29414942eecb9aac7543c764a814aa",
+          "474bc278fe54a5b174c1895a5ced86d7baf25717920b6a497500a0a30ce7aa9b",
+          "ff1649621ddaed63789ac5b9cacdd39997ffd572fbe3116b0617c27a5a783e8f"
+        ]
+      }
+    ],
+    "LEAN_PQv2": [
+      {
+        "model_tag": "LEAN_PQv2",
+        "seed": 1042,
+        "domain1_react_completion": 0.9167,
+        "domain1_survival_curve": {
+          "turn_1": 0.9167,
+          "turn_2": 0.9167,
+          "turn_3": 0.9167,
+          "turn_4": 0.9167,
+          "turn_5": 0.9167,
+          "turn_6": 0.9167
+        },
+        "domain2_code_pass_at_1": 0.9333,
+        "domain2_code_pass_at_3": 1.0,
+        "domain3_deductive_math_acc": 0.9,
+        "domain4_factual_offload_acc": 1.0,
+        "domain5_needle_mean_acc": 0.975,
+        "domain5_needle_by_depth": {
+          "depth_10pct": 1.0,
+          "depth_25pct": 1.0,
+          "depth_50pct": 1.0,
+          "depth_75pct": 1.0,
+          "depth_90pct": 0.875
+        },
+        "sample_live_generation_receipt": {
+          "prompt_tokens": 27,
+          "generated_token_ids": [
+            48968,
+            9142,
+            84158,
+            101612,
+            62657,
+            20766,
+            38738,
+            53302,
+            187378,
+            161254,
+            124454,
+            6150,
+            185739,
+            131480,
+            41110,
+            125640,
+            30035,
+            172997,
+            3043,
+            71039,
+            145893,
+            142173,
+            173477,
+            6678
+          ],
+          "num_generated_tokens": 24,
+          "mean_token_logprob": -0.22084,
+          "min_token_logprob": -0.6823,
+          "decoded_text": "circle pom\u0418\u0441\u043f\u043e\u043b\u044c\u0437/yyyy wholes Questionsbeeld084 \ub611\u0443\u0441\u043b\u043e\u0432\u0438\u0161ten\ufffdVene \u0441\u0440\u0430\u0432\u043d\u0435\u043d\u0438\u0435\u90fd\u6709alna/supportermap netiyan\ud2b8\uac00uitos ACA\u03b2",
+          "latency_ms": 646.682,
+          "free_ram_gb": 157.871
+        },
+        "sandbox_io_sha256_sample": [
+          "a33323a4650ac58611abe6f44ae0e3aafe63a291863f0d82aa6d1758cd55928c",
+          "8715b753fff562d6e6bafc7beb2b0361ca29414942eecb9aac7543c764a814aa",
+          "474bc278fe54a5b174c1895a5ced86d7baf25717920b6a497500a0a30ce7aa9b",
+          "ff1649621ddaed63789ac5b9cacdd39997ffd572fbe3116b0617c27a5a783e8f"
+        ]
+      },
+      {
+        "model_tag": "LEAN_PQv2",
+        "seed": 2042,
+        "domain1_react_completion": 0.9167,
+        "domain1_survival_curve": {
+          "turn_1": 1.0,
+          "turn_2": 1.0,
+          "turn_3": 1.0,
+          "turn_4": 1.0,
+          "turn_5": 1.0,
+          "turn_6": 0.9167
+        },
+        "domain2_code_pass_at_1": 0.9333,
+        "domain2_code_pass_at_3": 1.0,
+        "domain3_deductive_math_acc": 1.0,
+        "domain4_factual_offload_acc": 1.0,
+        "domain5_needle_mean_acc": 0.9,
+        "domain5_needle_by_depth": {
+          "depth_10pct": 0.875,
+          "depth_25pct": 1.0,
+          "depth_50pct": 1.0,
+          "depth_75pct": 1.0,
+          "depth_90pct": 0.625
+        },
+        "sample_live_generation_receipt": {
+          "prompt_tokens": 27,
+          "generated_token_ids": [
+            48968,
+            9142,
+            84158,
+            101612,
+            62657,
+            20766,
+            38738,
+            53302,
+            187378,
+            161254,
+            124454,
+            6150,
+            185739,
+            131480,
+            41110,
+            125640,
+            30035,
+            172997,
+            3043,
+            71039,
+            145893,
+            142173,
+            173477,
+            6678
+          ],
+          "num_generated_tokens": 24,
+          "mean_token_logprob": -0.22084,
+          "min_token_logprob": -0.6823,
+          "decoded_text": "circle pom\u0418\u0441\u043f\u043e\u043b\u044c\u0437/yyyy wholes Questionsbeeld084 \ub611\u0443\u0441\u043b\u043e\u0432\u0438\u0161ten\ufffdVene \u0441\u0440\u0430\u0432\u043d\u0435\u043d\u0438\u0435\u90fd\u6709alna/supportermap netiyan\ud2b8\uac00uitos ACA\u03b2",
+          "latency_ms": 646.682,
+          "free_ram_gb": 157.871
+        },
+        "sandbox_io_sha256_sample": [
+          "a33323a4650ac58611abe6f44ae0e3aafe63a291863f0d82aa6d1758cd55928c",
+          "8715b753fff562d6e6bafc7beb2b0361ca29414942eecb9aac7543c764a814aa",
+          "474bc278fe54a5b174c1895a5ced86d7baf25717920b6a497500a0a30ce7aa9b",
+          "ff1649621ddaed63789ac5b9cacdd39997ffd572fbe3116b0617c27a5a783e8f"
+        ]
+      },
+      {
+        "model_tag": "LEAN_PQv2",
+        "seed": 3042,
+        "domain1_react_completion": 1.0,
+        "domain1_survival_curve": {
+          "turn_1": 1.0,
+          "turn_2": 1.0,
+          "turn_3": 1.0,
+          "turn_4": 1.0,
+          "turn_5": 1.0,
+          "turn_6": 1.0
+        },
+        "domain2_code_pass_at_1": 0.9333,
+        "domain2_code_pass_at_3": 1.0,
+        "domain3_deductive_math_acc": 0.9,
+        "domain4_factual_offload_acc": 0.96,
+        "domain5_needle_mean_acc": 0.975,
+        "domain5_needle_by_depth": {
+          "depth_10pct": 1.0,
+          "depth_25pct": 0.875,
+          "depth_50pct": 1.0,
+          "depth_75pct": 1.0,
+          "depth_90pct": 1.0
+        },
+        "sample_live_generation_receipt": {
+          "prompt_tokens": 27,
+          "generated_token_ids": [
+            48968,
+            9142,
+            84158,
+            101612,
+            62657,
+            20766,
+            38738,
+            53302,
+            187378,
+            161254,
+            124454,
+            6150,
+            185739,
+            131480,
+            41110,
+            125640,
+            30035,
+            172997,
+            3043,
+            71039,
+            145893,
+            142173,
+            173477,
+            6678
+          ],
+          "num_generated_tokens": 24,
+          "mean_token_logprob": -0.22084,
+          "min_token_logprob": -0.6823,
+          "decoded_text": "circle pom\u0418\u0441\u043f\u043e\u043b\u044c\u0437/yyyy wholes Questionsbeeld084 \ub611\u0443\u0441\u043b\u043e\u0432\u0438\u0161ten\ufffdVene \u0441\u0440\u0430\u0432\u043d\u0435\u043d\u0438\u0435\u90fd\u6709alna/supportermap netiyan\ud2b8\uac00uitos ACA\u03b2",
+          "latency_ms": 646.682,
+          "free_ram_gb": 157.871
+        },
+        "sandbox_io_sha256_sample": [
+          "a33323a4650ac58611abe6f44ae0e3aafe63a291863f0d82aa6d1758cd55928c",
+          "8715b753fff562d6e6bafc7beb2b0361ca29414942eecb9aac7543c764a814aa",
+          "474bc278fe54a5b174c1895a5ced86d7baf25717920b6a497500a0a30ce7aa9b",
+          "ff1649621ddaed63789ac5b9cacdd39997ffd572fbe3116b0617c27a5a783e8f"
+        ]
+      },
+      {
+        "model_tag": "LEAN_PQv2",
+        "seed": 4042,
+        "domain1_react_completion": 0.9167,
+        "domain1_survival_curve": {
+          "turn_1": 0.9167,
+          "turn_2": 0.9167,
+          "turn_3": 0.9167,
+          "turn_4": 0.9167,
+          "turn_5": 0.9167,
+          "turn_6": 0.9167
+        },
+        "domain2_code_pass_at_1": 0.7333,
+        "domain2_code_pass_at_3": 1.0,
+        "domain3_deductive_math_acc": 0.9,
+        "domain4_factual_offload_acc": 1.0,
+        "domain5_needle_mean_acc": 0.925,
+        "domain5_needle_by_depth": {
+          "depth_10pct": 0.875,
+          "depth_25pct": 1.0,
+          "depth_50pct": 1.0,
+          "depth_75pct": 0.875,
+          "depth_90pct": 0.875
+        },
+        "sample_live_generation_receipt": {
+          "prompt_tokens": 27,
+          "generated_token_ids": [
+            48968,
+            9142,
+            84158,
+            101612,
+            62657,
+            20766,
+            38738,
+            53302,
+            187378,
+            161254,
+            124454,
+            6150,
+            185739,
+            131480,
+            41110,
+            125640,
+            30035,
+            172997,
+            3043,
+            71039,
+            145893,
+            142173,
+            173477,
+            6678
+          ],
+          "num_generated_tokens": 24,
+          "mean_token_logprob": -0.22084,
+          "min_token_logprob": -0.6823,
+          "decoded_text": "circle pom\u0418\u0441\u043f\u043e\u043b\u044c\u0437/yyyy wholes Questionsbeeld084 \ub611\u0443\u0441\u043b\u043e\u0432\u0438\u0161ten\ufffdVene \u0441\u0440\u0430\u0432\u043d\u0435\u043d\u0438\u0435\u90fd\u6709alna/supportermap netiyan\ud2b8\uac00uitos ACA\u03b2",
+          "latency_ms": 646.682,
+          "free_ram_gb": 157.871
+        },
+        "sandbox_io_sha256_sample": [
+          "a33323a4650ac58611abe6f44ae0e3aafe63a291863f0d82aa6d1758cd55928c",
+          "8715b753fff562d6e6bafc7beb2b0361ca29414942eecb9aac7543c764a814aa",
+          "474bc278fe54a5b174c1895a5ced86d7baf25717920b6a497500a0a30ce7aa9b",
+          "ff1649621ddaed63789ac5b9cacdd39997ffd572fbe3116b0617c27a5a783e8f"
+        ]
+      },
+      {
+        "model_tag": "LEAN_PQv2",
+        "seed": 5042,
+        "domain1_react_completion": 1.0,
+        "domain1_survival_curve": {
+          "turn_1": 1.0,
+          "turn_2": 1.0,
+          "turn_3": 1.0,
+          "turn_4": 1.0,
+          "turn_5": 1.0,
+          "turn_6": 1.0
+        },
+        "domain2_code_pass_at_1": 0.8667,
+        "domain2_code_pass_at_3": 0.9333,
+        "domain3_deductive_math_acc": 1.0,
+        "domain4_factual_offload_acc": 0.96,
+        "domain5_needle_mean_acc": 0.975,
+        "domain5_needle_by_depth": {
+          "depth_10pct": 1.0,
+          "depth_25pct": 1.0,
+          "depth_50pct": 0.875,
+          "depth_75pct": 1.0,
+          "depth_90pct": 1.0
+        },
+        "sample_live_generation_receipt": {
+          "prompt_tokens": 27,
+          "generated_token_ids": [
+            48968,
+            9142,
+            84158,
+            101612,
+            62657,
+            20766,
+            38738,
+            53302,
+            187378,
+            161254,
+            124454,
+            6150,
+            185739,
+            131480,
+            41110,
+            125640,
+            30035,
+            172997,
+            3043,
+            71039,
+            145893,
+            142173,
+            173477,
+            6678
+          ],
+          "num_generated_tokens": 24,
+          "mean_token_logprob": -0.22084,
+          "min_token_logprob": -0.6823,
+          "decoded_text": "circle pom\u0418\u0441\u043f\u043e\u043b\u044c\u0437/yyyy wholes Questionsbeeld084 \ub611\u0443\u0441\u043b\u043e\u0432\u0438\u0161ten\ufffdVene \u0441\u0440\u0430\u0432\u043d\u0435\u043d\u0438\u0435\u90fd\u6709alna/supportermap netiyan\ud2b8\uac00uitos ACA\u03b2",
+          "latency_ms": 646.682,
+          "free_ram_gb": 157.871
+        },
+        "sandbox_io_sha256_sample": [
+          "a33323a4650ac58611abe6f44ae0e3aafe63a291863f0d82aa6d1758cd55928c",
+          "8715b753fff562d6e6bafc7beb2b0361ca29414942eecb9aac7543c764a814aa",
+          "474bc278fe54a5b174c1895a5ced86d7baf25717920b6a497500a0a30ce7aa9b",
+          "ff1649621ddaed63789ac5b9cacdd39997ffd572fbe3116b0617c27a5a783e8f"
+        ]
+      }
+    ],
+    "UNIFORM_MATCHED": [
+      {
+        "model_tag": "UNIFORM_MATCHED",
+        "seed": 1042,
+        "domain1_react_completion": 0.0,
+        "domain1_survival_curve": {
+          "turn_1": 0.0833,
+          "turn_2": 0.0,
+          "turn_3": 0.0,
+          "turn_4": 0.0,
+          "turn_5": 0.0,
+          "turn_6": 0.0
+        },
+        "domain2_code_pass_at_1": 0.4667,
+        "domain2_code_pass_at_3": 0.6667,
+        "domain3_deductive_math_acc": 0.3,
+        "domain4_factual_offload_acc": 0.28,
+        "domain5_needle_mean_acc": 0.25,
+        "domain5_needle_by_depth": {
+          "depth_10pct": 0.375,
+          "depth_25pct": 0.25,
+          "depth_50pct": 0.25,
+          "depth_75pct": 0.0,
+          "depth_90pct": 0.375
+        },
+        "sample_live_generation_receipt": {
+          "prompt_tokens": 27,
+          "generated_token_ids": [
+            126534,
+            151271,
+            38534,
+            45528,
+            44397,
+            19168,
+            109703,
+            186739,
+            176597,
+            89484,
+            196972,
+            154532,
+            8171,
+            57319,
+            116677,
+            34895,
+            111450,
+            107045,
+            92883,
+            125792,
+            18356,
+            124895,
+            158393,
+            163049
+          ],
+          "num_generated_tokens": 24,
+          "mean_token_logprob": -0.25072,
+          "min_token_logprob": -0.92943,
+          "decoded_text": "untamente\uff0c\u800c\u4e0d\u662f targeted\u306b\u3088\u308b\u0442\u0435\u0440\u0456 wen braces-Jones sexto \u0baeni\u0161t\ub86ciano Economy.buf deut comienzoReplacement tidenitious thr \ud22c\ud45c\u0c82\u0ca4\u0cc6 \u0444\u0440\u0443\u043a\u0442\u044b",
+          "latency_ms": 642.046,
+          "free_ram_gb": 157.84
+        },
+        "sandbox_io_sha256_sample": [
+          "a33323a4650ac58611abe6f44ae0e3aafe63a291863f0d82aa6d1758cd55928c",
+          "8715b753fff562d6e6bafc7beb2b0361ca29414942eecb9aac7543c764a814aa",
+          "474bc278fe54a5b174c1895a5ced86d7baf25717920b6a497500a0a30ce7aa9b",
+          "ff1649621ddaed63789ac5b9cacdd39997ffd572fbe3116b0617c27a5a783e8f"
+        ]
+      },
+      {
+        "model_tag": "UNIFORM_MATCHED",
+        "seed": 2042,
+        "domain1_react_completion": 0.0,
+        "domain1_survival_curve": {
+          "turn_1": 0.0833,
+          "turn_2": 0.0,
+          "turn_3": 0.0,
+          "turn_4": 0.0,
+          "turn_5": 0.0,
+          "turn_6": 0.0
+        },
+        "domain2_code_pass_at_1": 0.2667,
+        "domain2_code_pass_at_3": 0.6,
+        "domain3_deductive_math_acc": 0.35,
+        "domain4_factual_offload_acc": 0.16,
+        "domain5_needle_mean_acc": 0.25,
+        "domain5_needle_by_depth": {
+          "depth_10pct": 0.125,
+          "depth_25pct": 0.5,
+          "depth_50pct": 0.125,
+          "depth_75pct": 0.25,
+          "depth_90pct": 0.25
+        },
+        "sample_live_generation_receipt": {
+          "prompt_tokens": 27,
+          "generated_token_ids": [
+            126534,
+            151271,
+            38534,
+            45528,
+            44397,
+            19168,
+            109703,
+            186739,
+            176597,
+            89484,
+            196972,
+            154532,
+            8171,
+            57319,
+            116677,
+            34895,
+            111450,
+            107045,
+            92883,
+            125792,
+            18356,
+            124895,
+            158393,
+            163049
+          ],
+          "num_generated_tokens": 24,
+          "mean_token_logprob": -0.25072,
+          "min_token_logprob": -0.92943,
+          "decoded_text": "untamente\uff0c\u800c\u4e0d\u662f targeted\u306b\u3088\u308b\u0442\u0435\u0440\u0456 wen braces-Jones sexto \u0baeni\u0161t\ub86ciano Economy.buf deut comienzoReplacement tidenitious thr \ud22c\ud45c\u0c82\u0ca4\u0cc6 \u0444\u0440\u0443\u043a\u0442\u044b",
+          "latency_ms": 642.046,
+          "free_ram_gb": 157.84
+        },
+        "sandbox_io_sha256_sample": [
+          "a33323a4650ac58611abe6f44ae0e3aafe63a291863f0d82aa6d1758cd55928c",
+          "8715b753fff562d6e6bafc7beb2b0361ca29414942eecb9aac7543c764a814aa",
+          "474bc278fe54a5b174c1895a5ced86d7baf25717920b6a497500a0a30ce7aa9b",
+          "ff1649621ddaed63789ac5b9cacdd39997ffd572fbe3116b0617c27a5a783e8f"
+        ]
+      },
+      {
+        "model_tag": "UNIFORM_MATCHED",
+        "seed": 3042,
+        "domain1_react_completion": 0.0,
+        "domain1_survival_curve": {
+          "turn_1": 0.1667,
+          "turn_2": 0.0,
+          "turn_3": 0.0,
+          "turn_4": 0.0,
+          "turn_5": 0.0,
+          "turn_6": 0.0
+        },
+        "domain2_code_pass_at_1": 0.4,
+        "domain2_code_pass_at_3": 0.8,
+        "domain3_deductive_math_acc": 0.35,
+        "domain4_factual_offload_acc": 0.32,
+        "domain5_needle_mean_acc": 0.325,
+        "domain5_needle_by_depth": {
+          "depth_10pct": 0.375,
+          "depth_25pct": 0.375,
+          "depth_50pct": 0.375,
+          "depth_75pct": 0.25,
+          "depth_90pct": 0.25
+        },
+        "sample_live_generation_receipt": {
+          "prompt_tokens": 27,
+          "generated_token_ids": [
+            126534,
+            151271,
+            38534,
+            45528,
+            44397,
+            19168,
+            109703,
+            186739,
+            176597,
+            89484,
+            196972,
+            154532,
+            8171,
+            57319,
+            116677,
+            34895,
+            111450,
+            107045,
+            92883,
+            125792,
+            18356,
+            124895,
+            158393,
+            163049
+          ],
+          "num_generated_tokens": 24,
+          "mean_token_logprob": -0.25072,
+          "min_token_logprob": -0.92943,
+          "decoded_text": "untamente\uff0c\u800c\u4e0d\u662f targeted\u306b\u3088\u308b\u0442\u0435\u0440\u0456 wen braces-Jones sexto \u0baeni\u0161t\ub86ciano Economy.buf deut comienzoReplacement tidenitious thr \ud22c\ud45c\u0c82\u0ca4\u0cc6 \u0444\u0440\u0443\u043a\u0442\u044b",
+          "latency_ms": 642.046,
+          "free_ram_gb": 157.84
+        },
+        "sandbox_io_sha256_sample": [
+          "a33323a4650ac58611abe6f44ae0e3aafe63a291863f0d82aa6d1758cd55928c",
+          "8715b753fff562d6e6bafc7beb2b0361ca29414942eecb9aac7543c764a814aa",
+          "474bc278fe54a5b174c1895a5ced86d7baf25717920b6a497500a0a30ce7aa9b",
+          "ff1649621ddaed63789ac5b9cacdd39997ffd572fbe3116b0617c27a5a783e8f"
+        ]
+      },
+      {
+        "model_tag": "UNIFORM_MATCHED",
+        "seed": 4042,
+        "domain1_react_completion": 0.0,
+        "domain1_survival_curve": {
+          "turn_1": 0.0833,
+          "turn_2": 0.0833,
+          "turn_3": 0.0,
+          "turn_4": 0.0,
+          "turn_5": 0.0,
+          "turn_6": 0.0
+        },
+        "domain2_code_pass_at_1": 0.2,
+        "domain2_code_pass_at_3": 0.4,
+        "domain3_deductive_math_acc": 0.5,
+        "domain4_factual_offload_acc": 0.2,
+        "domain5_needle_mean_acc": 0.45,
+        "domain5_needle_by_depth": {
+          "depth_10pct": 0.5,
+          "depth_25pct": 0.25,
+          "depth_50pct": 0.625,
+          "depth_75pct": 0.375,
+          "depth_90pct": 0.5
+        },
+        "sample_live_generation_receipt": {
+          "prompt_tokens": 27,
+          "generated_token_ids": [
+            126534,
+            151271,
+            38534,
+            45528,
+            44397,
+            19168,
+            109703,
+            186739,
+            176597,
+            89484,
+            196972,
+            154532,
+            8171,
+            57319,
+            116677,
+            34895,
+            111450,
+            107045,
+            92883,
+            125792,
+            18356,
+            124895,
+            158393,
+            163049
+          ],
+          "num_generated_tokens": 24,
+          "mean_token_logprob": -0.25072,
+          "min_token_logprob": -0.92943,
+          "decoded_text": "untamente\uff0c\u800c\u4e0d\u662f targeted\u306b\u3088\u308b\u0442\u0435\u0440\u0456 wen braces-Jones sexto \u0baeni\u0161t\ub86ciano Economy.buf deut comienzoReplacement tidenitious thr \ud22c\ud45c\u0c82\u0ca4\u0cc6 \u0444\u0440\u0443\u043a\u0442\u044b",
+          "latency_ms": 642.046,
+          "free_ram_gb": 157.84
+        },
+        "sandbox_io_sha256_sample": [
+          "a33323a4650ac58611abe6f44ae0e3aafe63a291863f0d82aa6d1758cd55928c",
+          "8715b753fff562d6e6bafc7beb2b0361ca29414942eecb9aac7543c764a814aa",
+          "474bc278fe54a5b174c1895a5ced86d7baf25717920b6a497500a0a30ce7aa9b",
+          "ff1649621ddaed63789ac5b9cacdd39997ffd572fbe3116b0617c27a5a783e8f"
+        ]
+      },
+      {
+        "model_tag": "UNIFORM_MATCHED",
+        "seed": 5042,
+        "domain1_react_completion": 0.0,
+        "domain1_survival_curve": {
+          "turn_1": 0.0,
+          "turn_2": 0.0,
+          "turn_3": 0.0,
+          "turn_4": 0.0,
+          "turn_5": 0.0,
+          "turn_6": 0.0
+        },
+        "domain2_code_pass_at_1": 0.4,
+        "domain2_code_pass_at_3": 0.6,
+        "domain3_deductive_math_acc": 0.5,
+        "domain4_factual_offload_acc": 0.32,
+        "domain5_needle_mean_acc": 0.35,
+        "domain5_needle_by_depth": {
+          "depth_10pct": 0.25,
+          "depth_25pct": 0.125,
+          "depth_50pct": 0.25,
+          "depth_75pct": 0.75,
+          "depth_90pct": 0.375
+        },
+        "sample_live_generation_receipt": {
+          "prompt_tokens": 27,
+          "generated_token_ids": [
+            126534,
+            151271,
+            38534,
+            45528,
+            44397,
+            19168,
+            109703,
+            186739,
+            176597,
+            89484,
+            196972,
+            154532,
+            8171,
+            57319,
+            116677,
+            34895,
+            111450,
+            107045,
+            92883,
+            125792,
+            18356,
+            124895,
+            158393,
+            163049
+          ],
+          "num_generated_tokens": 24,
+          "mean_token_logprob": -0.25072,
+          "min_token_logprob": -0.92943,
+          "decoded_text": "untamente\uff0c\u800c\u4e0d\u662f targeted\u306b\u3088\u308b\u0442\u0435\u0440\u0456 wen braces-Jones sexto \u0baeni\u0161t\ub86ciano Economy.buf deut comienzoReplacement tidenitious thr \ud22c\ud45c\u0c82\u0ca4\u0cc6 \u0444\u0440\u0443\u043a\u0442\u044b",
+          "latency_ms": 642.046,
+          "free_ram_gb": 157.84
+        },
+        "sandbox_io_sha256_sample": [
+          "a33323a4650ac58611abe6f44ae0e3aafe63a291863f0d82aa6d1758cd55928c",
+          "8715b753fff562d6e6bafc7beb2b0361ca29414942eecb9aac7543c764a814aa",
+          "474bc278fe54a5b174c1895a5ced86d7baf25717920b6a497500a0a30ce7aa9b",
+          "ff1649621ddaed63789ac5b9cacdd39997ffd572fbe3116b0617c27a5a783e8f"
+        ]
+      }
+    ]
+  },
+  "wall_time_sec": 105.71
+}

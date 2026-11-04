@@ -1,0 +1,21 @@
+{
+  "campaign": "Project LEAN - The Priced-Quanta Equation & 30B Grand Challenge",
+  "target_model": "meta-models/Muse-Glimmer-30B",
+  "target_submission": "Meta Global AI Developer Hackathon",
+  "sealed_at_utc": "2026-10-28T04:35:22.448055+00:00",
+  "overall_status": "SEALED_GREEN",
+  "audits_a1_a15_green": true,
+  "red_team_30_of_30_passed": true,
+  "open_s0_s1_s2_failures": 0,
+  "pytest_passed": true,
+  "artifact_sha256_manifest": {
+    "results/m14_30b_anatomy_and_baseline_kac.json": "a87a0baa817279b1cde9b5559cf83390860472d1c2aa7bc900d5736c92892587",
+    "results/m15_30b_priced_quanta_v2_results.json": "6799d328f34df417bbba2aa589b134571097e16425c43fb7bdfc56c87ab45796",
+    "results/m16_30b_calibration_results.json": "cd6cefce845d5f85b81f9c622526c785c1dbb9d18ef1efba8cf175d75fe72cd2",
+    "results/m17_30b_agentic_multidomain_results.json": "dcd917b0ab3816e878eff5e2fc604da9c99aea1b9034a78ed12b1c30f3a19576",
+    "results/m18_8gb_runtime_proof.json": "96e9ffb28ffac2538e924c0738b021eccf4c34fcb37b37574601165d646f711a",
+    "results/m19_publication_figures_manifest.json": "3a879d1567beee63697a5c7f199a15ea9f9cd50c26a4d152201f6430c561e362",
+    "results/m20_final_audit_seal_results.json": "b0a505f503b6e29957aa5353862338353d7e69bc2432c07ea1dd51cf907a15f3",
+    "reports/GRAND_CHALLENGE_30B_report.md": "0ae7c6c184e243fb83bd84bfc7a9884faafc77c79270be7eafb9838b5791b57c"
+  }
+}

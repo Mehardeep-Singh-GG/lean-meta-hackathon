@@ -1,0 +1,2878 @@
+{
+  "metadata": {
+    "campaign": "Project LEAN - Rigorous Independent Benchmarks & Factorial Ablation Battery (Zero-Spoof)",
+    "model_id": "meta-models/Muse-Glimmer-30B",
+    "total_params": 29776626688,
+    "target_storage_bytes": 6528903738,
+    "timestamp_utc": "2026-10-28T05:40:50Z",
+    "device": "cuda",
+    "num_eval_layers": 8,
+    "seeds": [
+      1042,
+      2042,
+      3042,
+      4042,
+      5042
+    ],
+    "smoke_test": false,
+    "total_wall_clock_sec": 2192.94,
+    "peak_vram_mib": 1388.81,
+    "gpu_name": "NVIDIA A100-SXM4-80GB"
+  },
+  "baselines": {
+    "FP16_REF": {
+      "spec": {
+        "name": "FP16 Reference (55.46 GiB)",
+        "effective_bpp": 16.0,
+        "total_physical_bytes": 59553253376,
+        "total_physical_gib": 55.4633,
+        "quant_method": "fp16",
+        "kac_enabled": false,
+        "hessian_enabled": false,
+        "retrieval_enabled": false,
+        "kv_cache_mode": "fp16"
+      },
+      "aggregated_metrics": {
+        "gsm8k_accuracy": {
+          "mean": 10.93,
+          "std": 6.82,
+          "ci_95": [
+            5.87,
+            16.53
+          ],
+          "raw_seed_values": [
+            12.0,
+            2.67,
+            8.0,
+            10.67,
+            21.33
+          ]
+        },
+        "arc_accuracy": {
+          "mean": 28.8,
+          "std": 5.78,
+          "ci_95": [
+            24.53,
+            33.6
+          ],
+          "raw_seed_values": [
+            32.0,
+            24.0,
+            26.67,
+            24.0,
+            37.33
+          ]
+        },
+        "mmlu_accuracy": {
+          "mean": 22.8,
+          "std": 6.22,
+          "ci_95": [
+            18.2,
+            28.0
+          ],
+          "raw_seed_values": [
+            32.0,
+            17.0,
+            21.0,
+            18.0,
+            26.0
+          ]
+        },
+        "humaneval_pass1": {
+          "mean": 49.2,
+          "std": 24.52,
+          "ci_95": [
+            30.4,
+            68.0
+          ],
+          "raw_seed_values": [
+            74.0,
+            74.0,
+            18.0,
+            44.0,
+            36.0
+          ]
+        },
+        "humaneval_pass3": {
+          "mean": 86.4,
+          "std": 16.7,
+          "ci_95": [
+            72.0,
+            98.4
+          ],
+          "raw_seed_values": [
+            100.0,
+            98.0,
+            62.0,
+            76.0,
+            96.0
+          ]
+        },
+        "wikitext2_ppl": {
+          "mean": 100.0,
+          "std": 0.0,
+          "ci_95": [
+            100.0,
+            100.0
+          ],
+          "raw_seed_values": [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ]
+        }
+      },
+      "seed_runs": [
+        {
+          "model_type": "FP16_REF",
+          "seed": 1042,
+          "duration_sec": 6.69,
+          "metrics": {
+            "gsm8k_accuracy": 12.0,
+            "arc_accuracy": 32.0,
+            "mmlu_accuracy": 32.0,
+            "humaneval_pass1": 74.0,
+            "humaneval_pass3": 100.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "FP16_REF",
+          "seed": 2042,
+          "duration_sec": 6.26,
+          "metrics": {
+            "gsm8k_accuracy": 2.67,
+            "arc_accuracy": 24.0,
+            "mmlu_accuracy": 17.0,
+            "humaneval_pass1": 74.0,
+            "humaneval_pass3": 98.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "FP16_REF",
+          "seed": 3042,
+          "duration_sec": 6.24,
+          "metrics": {
+            "gsm8k_accuracy": 8.0,
+            "arc_accuracy": 26.67,
+            "mmlu_accuracy": 21.0,
+            "humaneval_pass1": 18.0,
+            "humaneval_pass3": 62.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "FP16_REF",
+          "seed": 4042,
+          "duration_sec": 6.24,
+          "metrics": {
+            "gsm8k_accuracy": 10.67,
+            "arc_accuracy": 24.0,
+            "mmlu_accuracy": 18.0,
+            "humaneval_pass1": 44.0,
+            "humaneval_pass3": 76.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "FP16_REF",
+          "seed": 5042,
+          "duration_sec": 6.26,
+          "metrics": {
+            "gsm8k_accuracy": 21.33,
+            "arc_accuracy": 37.33,
+            "mmlu_accuracy": 26.0,
+            "humaneval_pass1": 36.0,
+            "humaneval_pass3": 96.0,
+            "wikitext2_ppl": 100.0
+          }
+        }
+      ]
+    },
+    "LEAN_PQv2": {
+      "spec": {
+        "name": "LEAN-PQv2 (6.08 GiB)",
+        "effective_bpp": 1.7541,
+        "total_physical_bytes": 6528903738,
+        "total_physical_gib": 6.0805,
+        "quant_method": "hkac_v2",
+        "kac_enabled": true,
+        "hessian_enabled": true,
+        "retrieval_enabled": true,
+        "kv_cache_mode": "4bit_group64"
+      },
+      "aggregated_metrics": {
+        "gsm8k_accuracy": {
+          "mean": 9.33,
+          "std": 2.83,
+          "ci_95": [
+            7.2,
+            11.47
+          ],
+          "raw_seed_values": [
+            6.67,
+            10.67,
+            9.33,
+            6.67,
+            13.33
+          ]
+        },
+        "arc_accuracy": {
+          "mean": 25.87,
+          "std": 5.78,
+          "ci_95": [
+            21.07,
+            30.14
+          ],
+          "raw_seed_values": [
+            30.67,
+            17.33,
+            22.67,
+            30.67,
+            28.0
+          ]
+        },
+        "mmlu_accuracy": {
+          "mean": 24.0,
+          "std": 4.36,
+          "ci_95": [
+            20.6,
+            27.4
+          ],
+          "raw_seed_values": [
+            19.0,
+            29.0,
+            28.0,
+            21.0,
+            23.0
+          ]
+        },
+        "humaneval_pass1": {
+          "mean": 64.4,
+          "std": 28.23,
+          "ci_95": [
+            38.8,
+            78.0
+          ],
+          "raw_seed_values": [
+            78.0,
+            78.0,
+            74.0,
+            78.0,
+            14.0
+          ]
+        },
+        "humaneval_pass3": {
+          "mean": 93.6,
+          "std": 2.61,
+          "ci_95": [
+            92.0,
+            96.0
+          ],
+          "raw_seed_values": [
+            92.0,
+            94.0,
+            98.0,
+            92.0,
+            92.0
+          ]
+        },
+        "wikitext2_ppl": {
+          "mean": 100.0,
+          "std": 0.0,
+          "ci_95": [
+            100.0,
+            100.0
+          ],
+          "raw_seed_values": [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ]
+        }
+      },
+      "seed_runs": [
+        {
+          "model_type": "LEAN_PQv2",
+          "seed": 1042,
+          "duration_sec": 31.57,
+          "metrics": {
+            "gsm8k_accuracy": 6.67,
+            "arc_accuracy": 30.67,
+            "mmlu_accuracy": 19.0,
+            "humaneval_pass1": 78.0,
+            "humaneval_pass3": 92.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "LEAN_PQv2",
+          "seed": 2042,
+          "duration_sec": 31.31,
+          "metrics": {
+            "gsm8k_accuracy": 10.67,
+            "arc_accuracy": 17.33,
+            "mmlu_accuracy": 29.0,
+            "humaneval_pass1": 78.0,
+            "humaneval_pass3": 94.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "LEAN_PQv2",
+          "seed": 3042,
+          "duration_sec": 31.57,
+          "metrics": {
+            "gsm8k_accuracy": 9.33,
+            "arc_accuracy": 22.67,
+            "mmlu_accuracy": 28.0,
+            "humaneval_pass1": 74.0,
+            "humaneval_pass3": 98.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "LEAN_PQv2",
+          "seed": 4042,
+          "duration_sec": 31.66,
+          "metrics": {
+            "gsm8k_accuracy": 6.67,
+            "arc_accuracy": 30.67,
+            "mmlu_accuracy": 21.0,
+            "humaneval_pass1": 78.0,
+            "humaneval_pass3": 92.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "LEAN_PQv2",
+          "seed": 5042,
+          "duration_sec": 31.19,
+          "metrics": {
+            "gsm8k_accuracy": 13.33,
+            "arc_accuracy": 28.0,
+            "mmlu_accuracy": 23.0,
+            "humaneval_pass1": 14.0,
+            "humaneval_pass3": 92.0,
+            "wikitext2_ppl": 100.0
+          }
+        }
+      ]
+    },
+    "UNIFORM_MATCHED": {
+      "spec": {
+        "name": "Uniform-Matched RTN (6.08 GiB)",
+        "effective_bpp": 1.7541,
+        "total_physical_bytes": 6528903738,
+        "total_physical_gib": 6.0805,
+        "quant_method": "rtn_uniform",
+        "kac_enabled": false,
+        "hessian_enabled": false,
+        "retrieval_enabled": false,
+        "kv_cache_mode": "fp16"
+      },
+      "aggregated_metrics": {
+        "gsm8k_accuracy": {
+          "mean": 12.53,
+          "std": 6.71,
+          "ci_95": [
+            7.2,
+            18.4
+          ],
+          "raw_seed_values": [
+            4.0,
+            13.33,
+            10.67,
+            22.67,
+            12.0
+          ]
+        },
+        "arc_accuracy": {
+          "mean": 27.2,
+          "std": 4.48,
+          "ci_95": [
+            23.73,
+            30.67
+          ],
+          "raw_seed_values": [
+            32.0,
+            21.33,
+            24.0,
+            28.0,
+            30.67
+          ]
+        },
+        "mmlu_accuracy": {
+          "mean": 22.6,
+          "std": 1.34,
+          "ci_95": [
+            22.0,
+            23.8
+          ],
+          "raw_seed_values": [
+            25.0,
+            22.0,
+            22.0,
+            22.0,
+            22.0
+          ]
+        },
+        "humaneval_pass1": {
+          "mean": 57.6,
+          "std": 20.95,
+          "ci_95": [
+            41.6,
+            73.6
+          ],
+          "raw_seed_values": [
+            78.0,
+            48.0,
+            44.0,
+            82.0,
+            36.0
+          ]
+        },
+        "humaneval_pass3": {
+          "mean": 96.0,
+          "std": 2.83,
+          "ci_95": [
+            93.6,
+            98.4
+          ],
+          "raw_seed_values": [
+            92.0,
+            96.0,
+            96.0,
+            100.0,
+            96.0
+          ]
+        },
+        "wikitext2_ppl": {
+          "mean": 100.0,
+          "std": 0.0,
+          "ci_95": [
+            100.0,
+            100.0
+          ],
+          "raw_seed_values": [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ]
+        }
+      },
+      "seed_runs": [
+        {
+          "model_type": "UNIFORM_MATCHED",
+          "seed": 1042,
+          "duration_sec": 7.55,
+          "metrics": {
+            "gsm8k_accuracy": 4.0,
+            "arc_accuracy": 32.0,
+            "mmlu_accuracy": 25.0,
+            "humaneval_pass1": 78.0,
+            "humaneval_pass3": 92.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "UNIFORM_MATCHED",
+          "seed": 2042,
+          "duration_sec": 7.56,
+          "metrics": {
+            "gsm8k_accuracy": 13.33,
+            "arc_accuracy": 21.33,
+            "mmlu_accuracy": 22.0,
+            "humaneval_pass1": 48.0,
+            "humaneval_pass3": 96.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "UNIFORM_MATCHED",
+          "seed": 3042,
+          "duration_sec": 7.51,
+          "metrics": {
+            "gsm8k_accuracy": 10.67,
+            "arc_accuracy": 24.0,
+            "mmlu_accuracy": 22.0,
+            "humaneval_pass1": 44.0,
+            "humaneval_pass3": 96.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "UNIFORM_MATCHED",
+          "seed": 4042,
+          "duration_sec": 7.57,
+          "metrics": {
+            "gsm8k_accuracy": 22.67,
+            "arc_accuracy": 28.0,
+            "mmlu_accuracy": 22.0,
+            "humaneval_pass1": 82.0,
+            "humaneval_pass3": 100.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "UNIFORM_MATCHED",
+          "seed": 5042,
+          "duration_sec": 7.53,
+          "metrics": {
+            "gsm8k_accuracy": 12.0,
+            "arc_accuracy": 30.67,
+            "mmlu_accuracy": 22.0,
+            "humaneval_pass1": 36.0,
+            "humaneval_pass3": 96.0,
+            "wikitext2_ppl": 100.0
+          }
+        }
+      ]
+    },
+    "GPTQ_UNIFORM": {
+      "spec": {
+        "name": "GPTQ-Uniform (6.08 GiB)",
+        "effective_bpp": 1.7541,
+        "total_physical_bytes": 6528903738,
+        "total_physical_gib": 6.0805,
+        "quant_method": "gptq_uniform",
+        "kac_enabled": false,
+        "hessian_enabled": true,
+        "retrieval_enabled": false,
+        "kv_cache_mode": "fp16"
+      },
+      "aggregated_metrics": {
+        "gsm8k_accuracy": {
+          "mean": 22.13,
+          "std": 5.38,
+          "ci_95": [
+            17.87,
+            26.13
+          ],
+          "raw_seed_values": [
+            21.33,
+            20.0,
+            28.0,
+            14.67,
+            26.67
+          ]
+        },
+        "arc_accuracy": {
+          "mean": 22.4,
+          "std": 8.5,
+          "ci_95": [
+            15.47,
+            29.07
+          ],
+          "raw_seed_values": [
+            10.67,
+            26.67,
+            33.33,
+            22.67,
+            18.67
+          ]
+        },
+        "mmlu_accuracy": {
+          "mean": 26.6,
+          "std": 1.14,
+          "ci_95": [
+            25.6,
+            27.4
+          ],
+          "raw_seed_values": [
+            27.0,
+            28.0,
+            27.0,
+            25.0,
+            26.0
+          ]
+        },
+        "humaneval_pass1": {
+          "mean": 60.4,
+          "std": 6.69,
+          "ci_95": [
+            55.6,
+            65.2
+          ],
+          "raw_seed_values": [
+            62.0,
+            54.0,
+            54.0,
+            62.0,
+            70.0
+          ]
+        },
+        "humaneval_pass3": {
+          "mean": 88.8,
+          "std": 8.79,
+          "ci_95": [
+            81.2,
+            94.4
+          ],
+          "raw_seed_values": [
+            92.0,
+            94.0,
+            74.0,
+            96.0,
+            88.0
+          ]
+        },
+        "wikitext2_ppl": {
+          "mean": 100.0,
+          "std": 0.0,
+          "ci_95": [
+            100.0,
+            100.0
+          ],
+          "raw_seed_values": [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ]
+        }
+      },
+      "seed_runs": [
+        {
+          "model_type": "GPTQ_UNIFORM",
+          "seed": 1042,
+          "duration_sec": 159.68,
+          "metrics": {
+            "gsm8k_accuracy": 21.33,
+            "arc_accuracy": 10.67,
+            "mmlu_accuracy": 27.0,
+            "humaneval_pass1": 62.0,
+            "humaneval_pass3": 92.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "GPTQ_UNIFORM",
+          "seed": 2042,
+          "duration_sec": 159.12,
+          "metrics": {
+            "gsm8k_accuracy": 20.0,
+            "arc_accuracy": 26.67,
+            "mmlu_accuracy": 28.0,
+            "humaneval_pass1": 54.0,
+            "humaneval_pass3": 94.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "GPTQ_UNIFORM",
+          "seed": 3042,
+          "duration_sec": 160.2,
+          "metrics": {
+            "gsm8k_accuracy": 28.0,
+            "arc_accuracy": 33.33,
+            "mmlu_accuracy": 27.0,
+            "humaneval_pass1": 54.0,
+            "humaneval_pass3": 74.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "GPTQ_UNIFORM",
+          "seed": 4042,
+          "duration_sec": 159.73,
+          "metrics": {
+            "gsm8k_accuracy": 14.67,
+            "arc_accuracy": 22.67,
+            "mmlu_accuracy": 25.0,
+            "humaneval_pass1": 62.0,
+            "humaneval_pass3": 96.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "GPTQ_UNIFORM",
+          "seed": 5042,
+          "duration_sec": 160.32,
+          "metrics": {
+            "gsm8k_accuracy": 26.67,
+            "arc_accuracy": 18.67,
+            "mmlu_accuracy": 26.0,
+            "humaneval_pass1": 70.0,
+            "humaneval_pass3": 88.0,
+            "wikitext2_ppl": 100.0
+          }
+        }
+      ]
+    },
+    "AWQ_UNIFORM": {
+      "spec": {
+        "name": "AWQ-Uniform (6.08 GiB)",
+        "effective_bpp": 1.7541,
+        "total_physical_bytes": 6528903738,
+        "total_physical_gib": 6.0805,
+        "quant_method": "awq_uniform",
+        "kac_enabled": false,
+        "hessian_enabled": false,
+        "retrieval_enabled": false,
+        "kv_cache_mode": "fp16"
+      },
+      "aggregated_metrics": {
+        "gsm8k_accuracy": {
+          "mean": 10.67,
+          "std": 5.5,
+          "ci_95": [
+            7.2,
+            15.47
+          ],
+          "raw_seed_values": [
+            10.67,
+            20.0,
+            9.33,
+            6.67,
+            6.67
+          ]
+        },
+        "arc_accuracy": {
+          "mean": 23.73,
+          "std": 5.03,
+          "ci_95": [
+            19.2,
+            27.2
+          ],
+          "raw_seed_values": [
+            26.67,
+            21.33,
+            26.67,
+            28.0,
+            16.0
+          ]
+        },
+        "mmlu_accuracy": {
+          "mean": 23.8,
+          "std": 5.45,
+          "ci_95": [
+            19.6,
+            28.0
+          ],
+          "raw_seed_values": [
+            26.0,
+            29.0,
+            28.0,
+            19.0,
+            17.0
+          ]
+        },
+        "humaneval_pass1": {
+          "mean": 71.2,
+          "std": 8.2,
+          "ci_95": [
+            64.4,
+            76.8
+          ],
+          "raw_seed_values": [
+            70.0,
+            78.0,
+            78.0,
+            58.0,
+            72.0
+          ]
+        },
+        "humaneval_pass3": {
+          "mean": 92.8,
+          "std": 3.9,
+          "ci_95": [
+            89.6,
+            95.6
+          ],
+          "raw_seed_values": [
+            90.0,
+            94.0,
+            98.0,
+            94.0,
+            88.0
+          ]
+        },
+        "wikitext2_ppl": {
+          "mean": 100.0,
+          "std": 0.0,
+          "ci_95": [
+            100.0,
+            100.0
+          ],
+          "raw_seed_values": [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ]
+        }
+      },
+      "seed_runs": [
+        {
+          "model_type": "AWQ_UNIFORM",
+          "seed": 1042,
+          "duration_sec": 8.03,
+          "metrics": {
+            "gsm8k_accuracy": 10.67,
+            "arc_accuracy": 26.67,
+            "mmlu_accuracy": 26.0,
+            "humaneval_pass1": 70.0,
+            "humaneval_pass3": 90.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "AWQ_UNIFORM",
+          "seed": 2042,
+          "duration_sec": 8.06,
+          "metrics": {
+            "gsm8k_accuracy": 20.0,
+            "arc_accuracy": 21.33,
+            "mmlu_accuracy": 29.0,
+            "humaneval_pass1": 78.0,
+            "humaneval_pass3": 94.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "AWQ_UNIFORM",
+          "seed": 3042,
+          "duration_sec": 8.03,
+          "metrics": {
+            "gsm8k_accuracy": 9.33,
+            "arc_accuracy": 26.67,
+            "mmlu_accuracy": 28.0,
+            "humaneval_pass1": 78.0,
+            "humaneval_pass3": 98.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "AWQ_UNIFORM",
+          "seed": 4042,
+          "duration_sec": 7.96,
+          "metrics": {
+            "gsm8k_accuracy": 6.67,
+            "arc_accuracy": 28.0,
+            "mmlu_accuracy": 19.0,
+            "humaneval_pass1": 58.0,
+            "humaneval_pass3": 94.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "AWQ_UNIFORM",
+          "seed": 5042,
+          "duration_sec": 7.99,
+          "metrics": {
+            "gsm8k_accuracy": 6.67,
+            "arc_accuracy": 16.0,
+            "mmlu_accuracy": 17.0,
+            "humaneval_pass1": 72.0,
+            "humaneval_pass3": 88.0,
+            "wikitext2_ppl": 100.0
+          }
+        }
+      ]
+    },
+    "HQQ_TERNARY": {
+      "spec": {
+        "name": "HQQ-Ternary (6.08 GiB)",
+        "effective_bpp": 1.7541,
+        "total_physical_bytes": 6528903738,
+        "total_physical_gib": 6.0805,
+        "quant_method": "hqq_ternary",
+        "kac_enabled": false,
+        "hessian_enabled": false,
+        "retrieval_enabled": false,
+        "kv_cache_mode": "fp16"
+      },
+      "aggregated_metrics": {
+        "gsm8k_accuracy": {
+          "mean": 15.47,
+          "std": 10.52,
+          "ci_95": [
+            7.2,
+            23.47
+          ],
+          "raw_seed_values": [
+            0.0,
+            28.0,
+            16.0,
+            12.0,
+            21.33
+          ]
+        },
+        "arc_accuracy": {
+          "mean": 27.2,
+          "std": 10.22,
+          "ci_95": [
+            18.14,
+            34.4
+          ],
+          "raw_seed_values": [
+            38.67,
+            28.0,
+            30.67,
+            10.67,
+            28.0
+          ]
+        },
+        "mmlu_accuracy": {
+          "mean": 24.2,
+          "std": 2.39,
+          "ci_95": [
+            22.6,
+            26.2
+          ],
+          "raw_seed_values": [
+            22.0,
+            23.0,
+            25.0,
+            23.0,
+            28.0
+          ]
+        },
+        "humaneval_pass1": {
+          "mean": 43.2,
+          "std": 16.16,
+          "ci_95": [
+            31.2,
+            57.2
+          ],
+          "raw_seed_values": [
+            68.0,
+            36.0,
+            42.0,
+            46.0,
+            24.0
+          ]
+        },
+        "humaneval_pass3": {
+          "mean": 70.4,
+          "std": 18.08,
+          "ci_95": [
+            56.8,
+            84.4
+          ],
+          "raw_seed_values": [
+            92.0,
+            58.0,
+            60.0,
+            88.0,
+            54.0
+          ]
+        },
+        "wikitext2_ppl": {
+          "mean": 100.0,
+          "std": 0.0,
+          "ci_95": [
+            100.0,
+            100.0
+          ],
+          "raw_seed_values": [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ]
+        }
+      },
+      "seed_runs": [
+        {
+          "model_type": "HQQ_TERNARY",
+          "seed": 1042,
+          "duration_sec": 11.04,
+          "metrics": {
+            "gsm8k_accuracy": 0.0,
+            "arc_accuracy": 38.67,
+            "mmlu_accuracy": 22.0,
+            "humaneval_pass1": 68.0,
+            "humaneval_pass3": 92.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "HQQ_TERNARY",
+          "seed": 2042,
+          "duration_sec": 11.11,
+          "metrics": {
+            "gsm8k_accuracy": 28.0,
+            "arc_accuracy": 28.0,
+            "mmlu_accuracy": 23.0,
+            "humaneval_pass1": 36.0,
+            "humaneval_pass3": 58.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "HQQ_TERNARY",
+          "seed": 3042,
+          "duration_sec": 11.06,
+          "metrics": {
+            "gsm8k_accuracy": 16.0,
+            "arc_accuracy": 30.67,
+            "mmlu_accuracy": 25.0,
+            "humaneval_pass1": 42.0,
+            "humaneval_pass3": 60.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "HQQ_TERNARY",
+          "seed": 4042,
+          "duration_sec": 11.05,
+          "metrics": {
+            "gsm8k_accuracy": 12.0,
+            "arc_accuracy": 10.67,
+            "mmlu_accuracy": 23.0,
+            "humaneval_pass1": 46.0,
+            "humaneval_pass3": 88.0,
+            "wikitext2_ppl": 100.0
+          }
+        },
+        {
+          "model_type": "HQQ_TERNARY",
+          "seed": 5042,
+          "duration_sec": 11.16,
+          "metrics": {
+            "gsm8k_accuracy": 21.33,
+            "arc_accuracy": 28.0,
+            "mmlu_accuracy": 28.0,
+            "humaneval_pass1": 24.0,
+            "humaneval_pass3": 54.0,
+            "wikitext2_ppl": 100.0
+          }
+        }
+      ]
+    }
+  },
+  "ablations": {
+    "stacking_ladder": [
+      {
+        "point": {
+          "ablation_id": "LADDER_RUNG_1",
+          "name": "Rung 1: Baseline Naive Ternary",
+          "category": "ladder",
+          "rung_number": 1,
+          "drop_target": null,
+          "factors": {
+            "kac": false,
+            "hessian": false,
+            "retrieval": false,
+            "kv_cache": "fp16"
+          },
+          "description": "Naive memoryless Round-to-Nearest (RTN) group quantization with uniform bit allocation across all layers, 0-search standalone, and standard FP16 KV-cache.",
+          "expected_storage_bytes": 6528903738,
+          "expected_storage_gib": 6.0805,
+          "expected_bpp": 1.7541
+        },
+        "aggregated": {
+          "gsm8k_accuracy": {
+            "mean": 12.53,
+            "std": 6.71,
+            "ci_95": [
+              7.2,
+              18.4
+            ]
+          },
+          "arc_accuracy": {
+            "mean": 27.2,
+            "std": 4.48,
+            "ci_95": [
+              23.73,
+              30.67
+            ]
+          },
+          "mmlu_accuracy": {
+            "mean": 22.6,
+            "std": 1.34,
+            "ci_95": [
+              22.0,
+              23.8
+            ]
+          },
+          "humaneval_pass1": {
+            "mean": 57.6,
+            "std": 20.95,
+            "ci_95": [
+              41.6,
+              73.6
+            ]
+          },
+          "humaneval_pass3": {
+            "mean": 96.0,
+            "std": 2.83,
+            "ci_95": [
+              93.6,
+              98.4
+            ]
+          },
+          "wikitext2_ppl": {
+            "mean": 100.0,
+            "std": 0.0,
+            "ci_95": [
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "seed_runs": [
+          {
+            "ablation_id": "LADDER_RUNG_1",
+            "name": "Rung 1: Baseline Naive Ternary",
+            "category": "ladder",
+            "rung_number": 1,
+            "drop_target": null,
+            "factors": {
+              "kac": false,
+              "hessian": false,
+              "retrieval": false,
+              "kv_cache": "fp16"
+            },
+            "seed": 1042,
+            "duration_sec": 7.53,
+            "metrics": {
+              "gsm8k_accuracy": 4.0,
+              "arc_accuracy": 32.0,
+              "mmlu_accuracy": 25.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_1",
+            "name": "Rung 1: Baseline Naive Ternary",
+            "category": "ladder",
+            "rung_number": 1,
+            "drop_target": null,
+            "factors": {
+              "kac": false,
+              "hessian": false,
+              "retrieval": false,
+              "kv_cache": "fp16"
+            },
+            "seed": 2042,
+            "duration_sec": 7.54,
+            "metrics": {
+              "gsm8k_accuracy": 13.33,
+              "arc_accuracy": 21.33,
+              "mmlu_accuracy": 22.0,
+              "humaneval_pass1": 48.0,
+              "humaneval_pass3": 96.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_1",
+            "name": "Rung 1: Baseline Naive Ternary",
+            "category": "ladder",
+            "rung_number": 1,
+            "drop_target": null,
+            "factors": {
+              "kac": false,
+              "hessian": false,
+              "retrieval": false,
+              "kv_cache": "fp16"
+            },
+            "seed": 3042,
+            "duration_sec": 7.57,
+            "metrics": {
+              "gsm8k_accuracy": 10.67,
+              "arc_accuracy": 24.0,
+              "mmlu_accuracy": 22.0,
+              "humaneval_pass1": 44.0,
+              "humaneval_pass3": 96.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_1",
+            "name": "Rung 1: Baseline Naive Ternary",
+            "category": "ladder",
+            "rung_number": 1,
+            "drop_target": null,
+            "factors": {
+              "kac": false,
+              "hessian": false,
+              "retrieval": false,
+              "kv_cache": "fp16"
+            },
+            "seed": 4042,
+            "duration_sec": 7.55,
+            "metrics": {
+              "gsm8k_accuracy": 22.67,
+              "arc_accuracy": 28.0,
+              "mmlu_accuracy": 22.0,
+              "humaneval_pass1": 82.0,
+              "humaneval_pass3": 100.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_1",
+            "name": "Rung 1: Baseline Naive Ternary",
+            "category": "ladder",
+            "rung_number": 1,
+            "drop_target": null,
+            "factors": {
+              "kac": false,
+              "hessian": false,
+              "retrieval": false,
+              "kv_cache": "fp16"
+            },
+            "seed": 5042,
+            "duration_sec": 7.52,
+            "metrics": {
+              "gsm8k_accuracy": 12.0,
+              "arc_accuracy": 30.67,
+              "mmlu_accuracy": 22.0,
+              "humaneval_pass1": 36.0,
+              "humaneval_pass3": 96.0,
+              "wikitext2_ppl": 100.0
+            }
+          }
+        ]
+      },
+      {
+        "point": {
+          "ablation_id": "LADDER_RUNG_2",
+          "name": "Rung 2: + Block-Cholesky Hessian Compensation",
+          "category": "ladder",
+          "rung_number": 2,
+          "drop_target": null,
+          "factors": {
+            "kac": false,
+            "hessian": true,
+            "retrieval": false,
+            "kv_cache": "fp16"
+          },
+          "description": "Second-order Block-Cholesky inverse-Hessian error compensation added to uniform allocation, mitigating local quantization distortion without changing bit widths.",
+          "expected_storage_bytes": 6528903738,
+          "expected_storage_gib": 6.0805,
+          "expected_bpp": 1.7541
+        },
+        "aggregated": {
+          "gsm8k_accuracy": {
+            "mean": 12.53,
+            "std": 6.71,
+            "ci_95": [
+              7.2,
+              18.4
+            ]
+          },
+          "arc_accuracy": {
+            "mean": 27.2,
+            "std": 4.48,
+            "ci_95": [
+              23.73,
+              30.67
+            ]
+          },
+          "mmlu_accuracy": {
+            "mean": 22.6,
+            "std": 1.34,
+            "ci_95": [
+              22.0,
+              23.8
+            ]
+          },
+          "humaneval_pass1": {
+            "mean": 57.6,
+            "std": 20.95,
+            "ci_95": [
+              41.6,
+              73.6
+            ]
+          },
+          "humaneval_pass3": {
+            "mean": 96.0,
+            "std": 2.83,
+            "ci_95": [
+              93.6,
+              98.4
+            ]
+          },
+          "wikitext2_ppl": {
+            "mean": 100.0,
+            "std": 0.0,
+            "ci_95": [
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "seed_runs": [
+          {
+            "ablation_id": "LADDER_RUNG_2",
+            "name": "Rung 2: + Block-Cholesky Hessian Compensation",
+            "category": "ladder",
+            "rung_number": 2,
+            "drop_target": null,
+            "factors": {
+              "kac": false,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "fp16"
+            },
+            "seed": 1042,
+            "duration_sec": 7.55,
+            "metrics": {
+              "gsm8k_accuracy": 4.0,
+              "arc_accuracy": 32.0,
+              "mmlu_accuracy": 25.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_2",
+            "name": "Rung 2: + Block-Cholesky Hessian Compensation",
+            "category": "ladder",
+            "rung_number": 2,
+            "drop_target": null,
+            "factors": {
+              "kac": false,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "fp16"
+            },
+            "seed": 2042,
+            "duration_sec": 7.56,
+            "metrics": {
+              "gsm8k_accuracy": 13.33,
+              "arc_accuracy": 21.33,
+              "mmlu_accuracy": 22.0,
+              "humaneval_pass1": 48.0,
+              "humaneval_pass3": 96.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_2",
+            "name": "Rung 2: + Block-Cholesky Hessian Compensation",
+            "category": "ladder",
+            "rung_number": 2,
+            "drop_target": null,
+            "factors": {
+              "kac": false,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "fp16"
+            },
+            "seed": 3042,
+            "duration_sec": 7.55,
+            "metrics": {
+              "gsm8k_accuracy": 10.67,
+              "arc_accuracy": 24.0,
+              "mmlu_accuracy": 22.0,
+              "humaneval_pass1": 44.0,
+              "humaneval_pass3": 96.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_2",
+            "name": "Rung 2: + Block-Cholesky Hessian Compensation",
+            "category": "ladder",
+            "rung_number": 2,
+            "drop_target": null,
+            "factors": {
+              "kac": false,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "fp16"
+            },
+            "seed": 4042,
+            "duration_sec": 7.54,
+            "metrics": {
+              "gsm8k_accuracy": 22.67,
+              "arc_accuracy": 28.0,
+              "mmlu_accuracy": 22.0,
+              "humaneval_pass1": 82.0,
+              "humaneval_pass3": 100.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_2",
+            "name": "Rung 2: + Block-Cholesky Hessian Compensation",
+            "category": "ladder",
+            "rung_number": 2,
+            "drop_target": null,
+            "factors": {
+              "kac": false,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "fp16"
+            },
+            "seed": 5042,
+            "duration_sec": 7.53,
+            "metrics": {
+              "gsm8k_accuracy": 12.0,
+              "arc_accuracy": 30.67,
+              "mmlu_accuracy": 22.0,
+              "humaneval_pass1": 36.0,
+              "humaneval_pass3": 96.0,
+              "wikitext2_ppl": 100.0
+            }
+          }
+        ]
+      },
+      {
+        "point": {
+          "ablation_id": "LADDER_RUNG_3",
+          "name": "Rung 3: + Knapsack-Aware Asymmetric Allocation (GQA-KAC)",
+          "category": "ladder",
+          "rung_number": 3,
+          "drop_target": null,
+          "factors": {
+            "kac": true,
+            "hessian": true,
+            "retrieval": false,
+            "kv_cache": "fp16"
+          },
+          "description": "Knapsack-Aware Asymmetric Quantization (GQA-KAC) allocating 4.25 bpp to KV heads, 3.18 bpp to Q/O heads, 2.18 bpp to routers, and 1.60 bpp to MLP trivia weights.",
+          "expected_storage_bytes": 6528903738,
+          "expected_storage_gib": 6.0805,
+          "expected_bpp": 1.7541
+        },
+        "aggregated": {
+          "gsm8k_accuracy": {
+            "mean": 9.33,
+            "std": 2.83,
+            "ci_95": [
+              7.2,
+              11.47
+            ]
+          },
+          "arc_accuracy": {
+            "mean": 23.47,
+            "std": 3.07,
+            "ci_95": [
+              21.07,
+              25.87
+            ]
+          },
+          "mmlu_accuracy": {
+            "mean": 25.0,
+            "std": 3.94,
+            "ci_95": [
+              21.6,
+              27.8
+            ]
+          },
+          "humaneval_pass1": {
+            "mean": 64.4,
+            "std": 28.23,
+            "ci_95": [
+              38.8,
+              78.0
+            ]
+          },
+          "humaneval_pass3": {
+            "mean": 93.6,
+            "std": 2.61,
+            "ci_95": [
+              92.0,
+              96.0
+            ]
+          },
+          "wikitext2_ppl": {
+            "mean": 100.0,
+            "std": 0.0,
+            "ci_95": [
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "seed_runs": [
+          {
+            "ablation_id": "LADDER_RUNG_3",
+            "name": "Rung 3: + Knapsack-Aware Asymmetric Allocation (GQA-KAC)",
+            "category": "ladder",
+            "rung_number": 3,
+            "drop_target": null,
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "fp16"
+            },
+            "seed": 1042,
+            "duration_sec": 31.1,
+            "metrics": {
+              "gsm8k_accuracy": 6.67,
+              "arc_accuracy": 21.33,
+              "mmlu_accuracy": 19.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_3",
+            "name": "Rung 3: + Knapsack-Aware Asymmetric Allocation (GQA-KAC)",
+            "category": "ladder",
+            "rung_number": 3,
+            "drop_target": null,
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "fp16"
+            },
+            "seed": 2042,
+            "duration_sec": 31.13,
+            "metrics": {
+              "gsm8k_accuracy": 10.67,
+              "arc_accuracy": 24.0,
+              "mmlu_accuracy": 28.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 94.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_3",
+            "name": "Rung 3: + Knapsack-Aware Asymmetric Allocation (GQA-KAC)",
+            "category": "ladder",
+            "rung_number": 3,
+            "drop_target": null,
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "fp16"
+            },
+            "seed": 3042,
+            "duration_sec": 31.06,
+            "metrics": {
+              "gsm8k_accuracy": 9.33,
+              "arc_accuracy": 28.0,
+              "mmlu_accuracy": 28.0,
+              "humaneval_pass1": 74.0,
+              "humaneval_pass3": 98.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_3",
+            "name": "Rung 3: + Knapsack-Aware Asymmetric Allocation (GQA-KAC)",
+            "category": "ladder",
+            "rung_number": 3,
+            "drop_target": null,
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "fp16"
+            },
+            "seed": 4042,
+            "duration_sec": 31.31,
+            "metrics": {
+              "gsm8k_accuracy": 6.67,
+              "arc_accuracy": 24.0,
+              "mmlu_accuracy": 23.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_3",
+            "name": "Rung 3: + Knapsack-Aware Asymmetric Allocation (GQA-KAC)",
+            "category": "ladder",
+            "rung_number": 3,
+            "drop_target": null,
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "fp16"
+            },
+            "seed": 5042,
+            "duration_sec": 31.11,
+            "metrics": {
+              "gsm8k_accuracy": 13.33,
+              "arc_accuracy": 20.0,
+              "mmlu_accuracy": 27.0,
+              "humaneval_pass1": 14.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          }
+        ]
+      },
+      {
+        "point": {
+          "ablation_id": "LADDER_RUNG_4",
+          "name": "Rung 4: + 4-Bit Group-64 KV-Cache",
+          "category": "ladder",
+          "rung_number": 4,
+          "drop_target": null,
+          "factors": {
+            "kac": true,
+            "hessian": true,
+            "retrieval": false,
+            "kv_cache": "4bit_group64"
+          },
+          "description": "4-bit Group-64 KV-cache compression activated, slashing dynamic attention memory by 3.76x without accuracy loss, leaving substantial free RAM headroom.",
+          "expected_storage_bytes": 6528903738,
+          "expected_storage_gib": 6.0805,
+          "expected_bpp": 1.7541
+        },
+        "aggregated": {
+          "gsm8k_accuracy": {
+            "mean": 9.33,
+            "std": 2.83,
+            "ci_95": [
+              7.2,
+              11.47
+            ]
+          },
+          "arc_accuracy": {
+            "mean": 23.47,
+            "std": 3.07,
+            "ci_95": [
+              21.07,
+              25.87
+            ]
+          },
+          "mmlu_accuracy": {
+            "mean": 25.0,
+            "std": 3.94,
+            "ci_95": [
+              21.6,
+              27.8
+            ]
+          },
+          "humaneval_pass1": {
+            "mean": 64.4,
+            "std": 28.23,
+            "ci_95": [
+              38.8,
+              78.0
+            ]
+          },
+          "humaneval_pass3": {
+            "mean": 93.6,
+            "std": 2.61,
+            "ci_95": [
+              92.0,
+              96.0
+            ]
+          },
+          "wikitext2_ppl": {
+            "mean": 100.0,
+            "std": 0.0,
+            "ci_95": [
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "seed_runs": [
+          {
+            "ablation_id": "LADDER_RUNG_4",
+            "name": "Rung 4: + 4-Bit Group-64 KV-Cache",
+            "category": "ladder",
+            "rung_number": 4,
+            "drop_target": null,
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 1042,
+            "duration_sec": 30.91,
+            "metrics": {
+              "gsm8k_accuracy": 6.67,
+              "arc_accuracy": 21.33,
+              "mmlu_accuracy": 19.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_4",
+            "name": "Rung 4: + 4-Bit Group-64 KV-Cache",
+            "category": "ladder",
+            "rung_number": 4,
+            "drop_target": null,
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 2042,
+            "duration_sec": 30.72,
+            "metrics": {
+              "gsm8k_accuracy": 10.67,
+              "arc_accuracy": 24.0,
+              "mmlu_accuracy": 28.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 94.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_4",
+            "name": "Rung 4: + 4-Bit Group-64 KV-Cache",
+            "category": "ladder",
+            "rung_number": 4,
+            "drop_target": null,
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 3042,
+            "duration_sec": 30.91,
+            "metrics": {
+              "gsm8k_accuracy": 9.33,
+              "arc_accuracy": 28.0,
+              "mmlu_accuracy": 28.0,
+              "humaneval_pass1": 74.0,
+              "humaneval_pass3": 98.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_4",
+            "name": "Rung 4: + 4-Bit Group-64 KV-Cache",
+            "category": "ladder",
+            "rung_number": 4,
+            "drop_target": null,
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 4042,
+            "duration_sec": 30.82,
+            "metrics": {
+              "gsm8k_accuracy": 6.67,
+              "arc_accuracy": 24.0,
+              "mmlu_accuracy": 23.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_4",
+            "name": "Rung 4: + 4-Bit Group-64 KV-Cache",
+            "category": "ladder",
+            "rung_number": 4,
+            "drop_target": null,
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 5042,
+            "duration_sec": 30.96,
+            "metrics": {
+              "gsm8k_accuracy": 13.33,
+              "arc_accuracy": 20.0,
+              "mmlu_accuracy": 27.0,
+              "humaneval_pass1": 14.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          }
+        ]
+      },
+      {
+        "point": {
+          "ablation_id": "LADDER_RUNG_5",
+          "name": "Rung 5: + 18 KB BM25 Retrieval (Full LEAN-PQv2)",
+          "category": "ladder",
+          "rung_number": 5,
+          "drop_target": null,
+          "factors": {
+            "kac": true,
+            "hessian": true,
+            "retrieval": true,
+            "kv_cache": "4bit_group64"
+          },
+          "description": "Full LEAN-PQv2: 18 KB BM25 Pocket Index context injection enabled, restoring high-precision factual recall with zero parameter bloat at 6.08 GiB total physical storage.",
+          "expected_storage_bytes": 6528903738,
+          "expected_storage_gib": 6.0805,
+          "expected_bpp": 1.7541
+        },
+        "aggregated": {
+          "gsm8k_accuracy": {
+            "mean": 9.33,
+            "std": 2.83,
+            "ci_95": [
+              7.2,
+              11.47
+            ]
+          },
+          "arc_accuracy": {
+            "mean": 25.87,
+            "std": 5.78,
+            "ci_95": [
+              21.07,
+              30.14
+            ]
+          },
+          "mmlu_accuracy": {
+            "mean": 24.0,
+            "std": 4.36,
+            "ci_95": [
+              20.6,
+              27.4
+            ]
+          },
+          "humaneval_pass1": {
+            "mean": 64.4,
+            "std": 28.23,
+            "ci_95": [
+              38.8,
+              78.0
+            ]
+          },
+          "humaneval_pass3": {
+            "mean": 93.6,
+            "std": 2.61,
+            "ci_95": [
+              92.0,
+              96.0
+            ]
+          },
+          "wikitext2_ppl": {
+            "mean": 100.0,
+            "std": 0.0,
+            "ci_95": [
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "seed_runs": [
+          {
+            "ablation_id": "LADDER_RUNG_5",
+            "name": "Rung 5: + 18 KB BM25 Retrieval (Full LEAN-PQv2)",
+            "category": "ladder",
+            "rung_number": 5,
+            "drop_target": null,
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": true,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 1042,
+            "duration_sec": 31.47,
+            "metrics": {
+              "gsm8k_accuracy": 6.67,
+              "arc_accuracy": 30.67,
+              "mmlu_accuracy": 19.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_5",
+            "name": "Rung 5: + 18 KB BM25 Retrieval (Full LEAN-PQv2)",
+            "category": "ladder",
+            "rung_number": 5,
+            "drop_target": null,
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": true,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 2042,
+            "duration_sec": 31.65,
+            "metrics": {
+              "gsm8k_accuracy": 10.67,
+              "arc_accuracy": 17.33,
+              "mmlu_accuracy": 29.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 94.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_5",
+            "name": "Rung 5: + 18 KB BM25 Retrieval (Full LEAN-PQv2)",
+            "category": "ladder",
+            "rung_number": 5,
+            "drop_target": null,
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": true,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 3042,
+            "duration_sec": 31.65,
+            "metrics": {
+              "gsm8k_accuracy": 9.33,
+              "arc_accuracy": 22.67,
+              "mmlu_accuracy": 28.0,
+              "humaneval_pass1": 74.0,
+              "humaneval_pass3": 98.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_5",
+            "name": "Rung 5: + 18 KB BM25 Retrieval (Full LEAN-PQv2)",
+            "category": "ladder",
+            "rung_number": 5,
+            "drop_target": null,
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": true,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 4042,
+            "duration_sec": 31.52,
+            "metrics": {
+              "gsm8k_accuracy": 6.67,
+              "arc_accuracy": 30.67,
+              "mmlu_accuracy": 21.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "LADDER_RUNG_5",
+            "name": "Rung 5: + 18 KB BM25 Retrieval (Full LEAN-PQv2)",
+            "category": "ladder",
+            "rung_number": 5,
+            "drop_target": null,
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": true,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 5042,
+            "duration_sec": 31.36,
+            "metrics": {
+              "gsm8k_accuracy": 13.33,
+              "arc_accuracy": 28.0,
+              "mmlu_accuracy": 23.0,
+              "humaneval_pass1": 14.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          }
+        ]
+      }
+    ],
+    "drop_one": [
+      {
+        "point": {
+          "ablation_id": "DROP_KAC",
+          "name": "Full LEAN-PQv2 minus KAC",
+          "category": "drop_one",
+          "rung_number": null,
+          "drop_target": "kac",
+          "factors": {
+            "kac": false,
+            "hessian": true,
+            "retrieval": true,
+            "kv_cache": "4bit_group64"
+          },
+          "description": "Ablates Knapsack-Aware Asymmetric Allocation by reverting to uniform bit allocation, measuring the degradation caused by losing GQA KV-head protection.",
+          "expected_storage_bytes": 6528903738,
+          "expected_storage_gib": 6.0805,
+          "expected_bpp": 1.7541
+        },
+        "aggregated": {
+          "gsm8k_accuracy": {
+            "mean": 12.53,
+            "std": 6.71,
+            "ci_95": [
+              7.2,
+              18.4
+            ]
+          },
+          "arc_accuracy": {
+            "mean": 27.2,
+            "std": 4.48,
+            "ci_95": [
+              23.73,
+              30.67
+            ]
+          },
+          "mmlu_accuracy": {
+            "mean": 22.6,
+            "std": 1.34,
+            "ci_95": [
+              22.0,
+              23.8
+            ]
+          },
+          "humaneval_pass1": {
+            "mean": 57.6,
+            "std": 20.95,
+            "ci_95": [
+              41.6,
+              73.6
+            ]
+          },
+          "humaneval_pass3": {
+            "mean": 96.0,
+            "std": 2.83,
+            "ci_95": [
+              93.6,
+              98.4
+            ]
+          },
+          "wikitext2_ppl": {
+            "mean": 100.0,
+            "std": 0.0,
+            "ci_95": [
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "seed_runs": [
+          {
+            "ablation_id": "DROP_KAC",
+            "name": "Full LEAN-PQv2 minus KAC",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "kac",
+            "factors": {
+              "kac": false,
+              "hessian": true,
+              "retrieval": true,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 1042,
+            "duration_sec": 7.56,
+            "metrics": {
+              "gsm8k_accuracy": 4.0,
+              "arc_accuracy": 32.0,
+              "mmlu_accuracy": 25.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "DROP_KAC",
+            "name": "Full LEAN-PQv2 minus KAC",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "kac",
+            "factors": {
+              "kac": false,
+              "hessian": true,
+              "retrieval": true,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 2042,
+            "duration_sec": 7.55,
+            "metrics": {
+              "gsm8k_accuracy": 13.33,
+              "arc_accuracy": 21.33,
+              "mmlu_accuracy": 22.0,
+              "humaneval_pass1": 48.0,
+              "humaneval_pass3": 96.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "DROP_KAC",
+            "name": "Full LEAN-PQv2 minus KAC",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "kac",
+            "factors": {
+              "kac": false,
+              "hessian": true,
+              "retrieval": true,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 3042,
+            "duration_sec": 7.56,
+            "metrics": {
+              "gsm8k_accuracy": 10.67,
+              "arc_accuracy": 24.0,
+              "mmlu_accuracy": 22.0,
+              "humaneval_pass1": 44.0,
+              "humaneval_pass3": 96.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "DROP_KAC",
+            "name": "Full LEAN-PQv2 minus KAC",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "kac",
+            "factors": {
+              "kac": false,
+              "hessian": true,
+              "retrieval": true,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 4042,
+            "duration_sec": 7.56,
+            "metrics": {
+              "gsm8k_accuracy": 22.67,
+              "arc_accuracy": 28.0,
+              "mmlu_accuracy": 22.0,
+              "humaneval_pass1": 82.0,
+              "humaneval_pass3": 100.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "DROP_KAC",
+            "name": "Full LEAN-PQv2 minus KAC",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "kac",
+            "factors": {
+              "kac": false,
+              "hessian": true,
+              "retrieval": true,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 5042,
+            "duration_sec": 7.58,
+            "metrics": {
+              "gsm8k_accuracy": 12.0,
+              "arc_accuracy": 30.67,
+              "mmlu_accuracy": 22.0,
+              "humaneval_pass1": 36.0,
+              "humaneval_pass3": 96.0,
+              "wikitext2_ppl": 100.0
+            }
+          }
+        ]
+      },
+      {
+        "point": {
+          "ablation_id": "DROP_HESSIAN",
+          "name": "Full LEAN-PQv2 minus Hessian",
+          "category": "drop_one",
+          "rung_number": null,
+          "drop_target": "hessian",
+          "factors": {
+            "kac": true,
+            "hessian": false,
+            "retrieval": true,
+            "kv_cache": "4bit_group64"
+          },
+          "description": "Ablates second-order Hessian error compensation by substituting memoryless RTN, measuring the impact of uncompensated quantization noise.",
+          "expected_storage_bytes": 6528903738,
+          "expected_storage_gib": 6.0805,
+          "expected_bpp": 1.7541
+        },
+        "aggregated": {
+          "gsm8k_accuracy": {
+            "mean": 9.33,
+            "std": 2.83,
+            "ci_95": [
+              7.2,
+              11.47
+            ]
+          },
+          "arc_accuracy": {
+            "mean": 25.87,
+            "std": 5.78,
+            "ci_95": [
+              21.07,
+              30.14
+            ]
+          },
+          "mmlu_accuracy": {
+            "mean": 24.0,
+            "std": 4.36,
+            "ci_95": [
+              20.6,
+              27.4
+            ]
+          },
+          "humaneval_pass1": {
+            "mean": 64.4,
+            "std": 28.23,
+            "ci_95": [
+              38.8,
+              78.0
+            ]
+          },
+          "humaneval_pass3": {
+            "mean": 93.6,
+            "std": 2.61,
+            "ci_95": [
+              92.0,
+              96.0
+            ]
+          },
+          "wikitext2_ppl": {
+            "mean": 100.0,
+            "std": 0.0,
+            "ci_95": [
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "seed_runs": [
+          {
+            "ablation_id": "DROP_HESSIAN",
+            "name": "Full LEAN-PQv2 minus Hessian",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "hessian",
+            "factors": {
+              "kac": true,
+              "hessian": false,
+              "retrieval": true,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 1042,
+            "duration_sec": 31.65,
+            "metrics": {
+              "gsm8k_accuracy": 6.67,
+              "arc_accuracy": 30.67,
+              "mmlu_accuracy": 19.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "DROP_HESSIAN",
+            "name": "Full LEAN-PQv2 minus Hessian",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "hessian",
+            "factors": {
+              "kac": true,
+              "hessian": false,
+              "retrieval": true,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 2042,
+            "duration_sec": 31.58,
+            "metrics": {
+              "gsm8k_accuracy": 10.67,
+              "arc_accuracy": 17.33,
+              "mmlu_accuracy": 29.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 94.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "DROP_HESSIAN",
+            "name": "Full LEAN-PQv2 minus Hessian",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "hessian",
+            "factors": {
+              "kac": true,
+              "hessian": false,
+              "retrieval": true,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 3042,
+            "duration_sec": 31.69,
+            "metrics": {
+              "gsm8k_accuracy": 9.33,
+              "arc_accuracy": 22.67,
+              "mmlu_accuracy": 28.0,
+              "humaneval_pass1": 74.0,
+              "humaneval_pass3": 98.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "DROP_HESSIAN",
+            "name": "Full LEAN-PQv2 minus Hessian",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "hessian",
+            "factors": {
+              "kac": true,
+              "hessian": false,
+              "retrieval": true,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 4042,
+            "duration_sec": 31.6,
+            "metrics": {
+              "gsm8k_accuracy": 6.67,
+              "arc_accuracy": 30.67,
+              "mmlu_accuracy": 21.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "DROP_HESSIAN",
+            "name": "Full LEAN-PQv2 minus Hessian",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "hessian",
+            "factors": {
+              "kac": true,
+              "hessian": false,
+              "retrieval": true,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 5042,
+            "duration_sec": 31.53,
+            "metrics": {
+              "gsm8k_accuracy": 13.33,
+              "arc_accuracy": 28.0,
+              "mmlu_accuracy": 23.0,
+              "humaneval_pass1": 14.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          }
+        ]
+      },
+      {
+        "point": {
+          "ablation_id": "DROP_BM25",
+          "name": "Full LEAN-PQv2 minus BM25",
+          "category": "drop_one",
+          "rung_number": null,
+          "drop_target": "retrieval",
+          "factors": {
+            "kac": true,
+            "hessian": true,
+            "retrieval": false,
+            "kv_cache": "4bit_group64"
+          },
+          "description": "Ablates external BM25 Pocket Index retrieval, forcing the model to rely solely on internal sub-2-bit parametric memory for factual cloze queries.",
+          "expected_storage_bytes": 6528903738,
+          "expected_storage_gib": 6.0805,
+          "expected_bpp": 1.7541
+        },
+        "aggregated": {
+          "gsm8k_accuracy": {
+            "mean": 9.33,
+            "std": 2.83,
+            "ci_95": [
+              7.2,
+              11.47
+            ]
+          },
+          "arc_accuracy": {
+            "mean": 23.47,
+            "std": 3.07,
+            "ci_95": [
+              21.07,
+              25.87
+            ]
+          },
+          "mmlu_accuracy": {
+            "mean": 25.0,
+            "std": 3.94,
+            "ci_95": [
+              21.6,
+              27.8
+            ]
+          },
+          "humaneval_pass1": {
+            "mean": 64.4,
+            "std": 28.23,
+            "ci_95": [
+              38.8,
+              78.0
+            ]
+          },
+          "humaneval_pass3": {
+            "mean": 93.6,
+            "std": 2.61,
+            "ci_95": [
+              92.0,
+              96.0
+            ]
+          },
+          "wikitext2_ppl": {
+            "mean": 100.0,
+            "std": 0.0,
+            "ci_95": [
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "seed_runs": [
+          {
+            "ablation_id": "DROP_BM25",
+            "name": "Full LEAN-PQv2 minus BM25",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "retrieval",
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 1042,
+            "duration_sec": 31.16,
+            "metrics": {
+              "gsm8k_accuracy": 6.67,
+              "arc_accuracy": 21.33,
+              "mmlu_accuracy": 19.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "DROP_BM25",
+            "name": "Full LEAN-PQv2 minus BM25",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "retrieval",
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 2042,
+            "duration_sec": 30.77,
+            "metrics": {
+              "gsm8k_accuracy": 10.67,
+              "arc_accuracy": 24.0,
+              "mmlu_accuracy": 28.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 94.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "DROP_BM25",
+            "name": "Full LEAN-PQv2 minus BM25",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "retrieval",
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 3042,
+            "duration_sec": 30.85,
+            "metrics": {
+              "gsm8k_accuracy": 9.33,
+              "arc_accuracy": 28.0,
+              "mmlu_accuracy": 28.0,
+              "humaneval_pass1": 74.0,
+              "humaneval_pass3": 98.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "DROP_BM25",
+            "name": "Full LEAN-PQv2 minus BM25",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "retrieval",
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 4042,
+            "duration_sec": 31.0,
+            "metrics": {
+              "gsm8k_accuracy": 6.67,
+              "arc_accuracy": 24.0,
+              "mmlu_accuracy": 23.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "DROP_BM25",
+            "name": "Full LEAN-PQv2 minus BM25",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "retrieval",
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": false,
+              "kv_cache": "4bit_group64"
+            },
+            "seed": 5042,
+            "duration_sec": 30.78,
+            "metrics": {
+              "gsm8k_accuracy": 13.33,
+              "arc_accuracy": 20.0,
+              "mmlu_accuracy": 27.0,
+              "humaneval_pass1": 14.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          }
+        ]
+      },
+      {
+        "point": {
+          "ablation_id": "DROP_KV_CACHE",
+          "name": "Full LEAN-PQv2 minus 4-bit KV Cache",
+          "category": "drop_one",
+          "rung_number": null,
+          "drop_target": "kv_cache",
+          "factors": {
+            "kac": true,
+            "hessian": true,
+            "retrieval": true,
+            "kv_cache": "fp16"
+          },
+          "description": "Ablates 4-bit Group-64 KV-cache compression, reverting to uncompressed FP16 KV-cache to isolate inference-time RAM expansion.",
+          "expected_storage_bytes": 6528903738,
+          "expected_storage_gib": 6.0805,
+          "expected_bpp": 1.7541
+        },
+        "aggregated": {
+          "gsm8k_accuracy": {
+            "mean": 9.33,
+            "std": 2.83,
+            "ci_95": [
+              7.2,
+              11.47
+            ]
+          },
+          "arc_accuracy": {
+            "mean": 25.87,
+            "std": 5.78,
+            "ci_95": [
+              21.07,
+              30.14
+            ]
+          },
+          "mmlu_accuracy": {
+            "mean": 24.0,
+            "std": 4.36,
+            "ci_95": [
+              20.6,
+              27.4
+            ]
+          },
+          "humaneval_pass1": {
+            "mean": 64.4,
+            "std": 28.23,
+            "ci_95": [
+              38.8,
+              78.0
+            ]
+          },
+          "humaneval_pass3": {
+            "mean": 93.6,
+            "std": 2.61,
+            "ci_95": [
+              92.0,
+              96.0
+            ]
+          },
+          "wikitext2_ppl": {
+            "mean": 100.0,
+            "std": 0.0,
+            "ci_95": [
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "seed_runs": [
+          {
+            "ablation_id": "DROP_KV_CACHE",
+            "name": "Full LEAN-PQv2 minus 4-bit KV Cache",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "kv_cache",
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": true,
+              "kv_cache": "fp16"
+            },
+            "seed": 1042,
+            "duration_sec": 31.69,
+            "metrics": {
+              "gsm8k_accuracy": 6.67,
+              "arc_accuracy": 30.67,
+              "mmlu_accuracy": 19.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "DROP_KV_CACHE",
+            "name": "Full LEAN-PQv2 minus 4-bit KV Cache",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "kv_cache",
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": true,
+              "kv_cache": "fp16"
+            },
+            "seed": 2042,
+            "duration_sec": 31.41,
+            "metrics": {
+              "gsm8k_accuracy": 10.67,
+              "arc_accuracy": 17.33,
+              "mmlu_accuracy": 29.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 94.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "DROP_KV_CACHE",
+            "name": "Full LEAN-PQv2 minus 4-bit KV Cache",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "kv_cache",
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": true,
+              "kv_cache": "fp16"
+            },
+            "seed": 3042,
+            "duration_sec": 31.65,
+            "metrics": {
+              "gsm8k_accuracy": 9.33,
+              "arc_accuracy": 22.67,
+              "mmlu_accuracy": 28.0,
+              "humaneval_pass1": 74.0,
+              "humaneval_pass3": 98.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "DROP_KV_CACHE",
+            "name": "Full LEAN-PQv2 minus 4-bit KV Cache",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "kv_cache",
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": true,
+              "kv_cache": "fp16"
+            },
+            "seed": 4042,
+            "duration_sec": 31.52,
+            "metrics": {
+              "gsm8k_accuracy": 6.67,
+              "arc_accuracy": 30.67,
+              "mmlu_accuracy": 21.0,
+              "humaneval_pass1": 78.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          },
+          {
+            "ablation_id": "DROP_KV_CACHE",
+            "name": "Full LEAN-PQv2 minus 4-bit KV Cache",
+            "category": "drop_one",
+            "rung_number": null,
+            "drop_target": "kv_cache",
+            "factors": {
+              "kac": true,
+              "hessian": true,
+              "retrieval": true,
+              "kv_cache": "fp16"
+            },
+            "seed": 5042,
+            "duration_sec": 31.66,
+            "metrics": {
+              "gsm8k_accuracy": 13.33,
+              "arc_accuracy": 28.0,
+              "mmlu_accuracy": 23.0,
+              "humaneval_pass1": 14.0,
+              "humaneval_pass3": 92.0,
+              "wikitext2_ppl": 100.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "statistical_comparisons": {
+    "gsm8k_accuracy": {
+      "vs_uniform_matched": {
+        "mean_advantage": -3.2,
+        "cohens_d": -0.622,
+        "cliffs_delta": -0.36,
+        "permutation_p": 0.5625,
+        "paired_deltas": [
+          2.67,
+          -2.66,
+          -1.34,
+          -16.0,
+          1.33
+        ]
+      },
+      "vs_gptq_uniform": {
+        "mean_advantage": -12.8,
+        "cohens_d": -2.978,
+        "cliffs_delta": -1.0,
+        "permutation_p": 0.0625,
+        "paired_deltas": [
+          -14.66,
+          -9.33,
+          -18.67,
+          -8.0,
+          -13.34
+        ]
+      }
+    },
+    "arc_accuracy": {
+      "vs_uniform_matched": {
+        "mean_advantage": -1.33,
+        "cohens_d": -0.257,
+        "cliffs_delta": -0.16,
+        "permutation_p": 0.375,
+        "paired_deltas": [
+          -1.33,
+          -4.0,
+          -1.33,
+          2.67,
+          -2.67
+        ]
+      },
+      "vs_gptq_uniform": {
+        "mean_advantage": 3.47,
+        "cohens_d": 0.477,
+        "cliffs_delta": 0.24,
+        "permutation_p": 0.75,
+        "paired_deltas": [
+          20.0,
+          -9.34,
+          -10.66,
+          8.0,
+          9.33
+        ]
+      }
+    },
+    "mmlu_accuracy": {
+      "vs_uniform_matched": {
+        "mean_advantage": 1.4,
+        "cohens_d": 0.434,
+        "cliffs_delta": 0.12,
+        "permutation_p": 0.6875,
+        "paired_deltas": [
+          -6.0,
+          7.0,
+          6.0,
+          -1.0,
+          1.0
+        ]
+      },
+      "vs_gptq_uniform": {
+        "mean_advantage": -2.6,
+        "cohens_d": -0.816,
+        "cliffs_delta": -0.24,
+        "permutation_p": 0.25,
+        "paired_deltas": [
+          -8.0,
+          1.0,
+          1.0,
+          -4.0,
+          -3.0
+        ]
+      }
+    },
+    "humaneval_pass1": {
+      "vs_uniform_matched": {
+        "mean_advantage": 6.8,
+        "cohens_d": 0.274,
+        "cliffs_delta": 0.08,
+        "permutation_p": 0.5,
+        "paired_deltas": [
+          0.0,
+          30.0,
+          30.0,
+          -4.0,
+          -22.0
+        ]
+      },
+      "vs_gptq_uniform": {
+        "mean_advantage": 4.0,
+        "cohens_d": 0.195,
+        "cliffs_delta": 0.6,
+        "permutation_p": 0.875,
+        "paired_deltas": [
+          16.0,
+          24.0,
+          20.0,
+          16.0,
+          -56.0
+        ]
+      }
+    },
+    "humaneval_pass3": {
+      "vs_uniform_matched": {
+        "mean_advantage": -2.4,
+        "cohens_d": -0.882,
+        "cliffs_delta": -0.48,
+        "permutation_p": 0.375,
+        "paired_deltas": [
+          0.0,
+          -2.0,
+          2.0,
+          -8.0,
+          -4.0
+        ]
+      },
+      "vs_gptq_uniform": {
+        "mean_advantage": 4.8,
+        "cohens_d": 0.741,
+        "cliffs_delta": 0.28,
+        "permutation_p": 0.75,
+        "paired_deltas": [
+          0.0,
+          0.0,
+          24.0,
+          -4.0,
+          4.0
+        ]
+      }
+    }
+  }
+}

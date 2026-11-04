@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FailureRecord",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^F-[0-9]{4}$"
+    },
+    "milestone": {
+      "type": "string",
+      "pattern": "^M[0-9]{1,2}$"
+    },
+    "opened": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "closed": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["F-BUG", "F-MEAS", "F-STAT", "F-LEAK", "F-REPRO", "F-THEORY", "F-COMPUTE", "F-SCOPE"]
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["S0", "S1", "S2", "S3"]
+    },
+    "symptom": {
+      "type": "string"
+    },
+    "detected_by": {
+      "type": "string"
+    },
+    "root_cause": {
+      "type": "string"
+    },
+    "five_whys": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 5,
+      "maxItems": 5
+    },
+    "fix": {
+      "type": "string"
+    },
+    "verification": {
+      "type": "string"
+    },
+    "regression_test": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["OPEN", "INVESTIGATING", "FIXING", "VERIFYING", "CLOSED"]
+    },
+    "escalation_level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    }
+  },
+  "required": [
+    "id",
+    "milestone",
+    "opened",
+    "category",
+    "severity",
+    "symptom",
+    "detected_by",
+    "root_cause",
+    "five_whys",
+    "fix",
+    "verification",
+    "regression_test",
+    "status",
+    "escalation_level"
+  ]
+}

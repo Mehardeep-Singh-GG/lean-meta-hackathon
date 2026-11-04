@@ -1,0 +1,1972 @@
+{
+  "milestone": "M20",
+  "timestamp_utc": "2026-10-28T04:35:17.863174+00:00",
+  "total_wall_clock_sec": 22.052,
+  "pytest_passed": true,
+  "red_team_30_point_audit": {
+    "questions_verified": 30,
+    "all_passed": true,
+    "questions": [
+      {
+        "qid": "RT_01",
+        "category": "Theory & Scaling",
+        "question": "Does c_alg remain scale-invariant across 70M to 30B?",
+        "evidence": "M9/M14 c_alg in [24.8, 32.1] bits/tok",
+        "passed": true
+      },
+      {
+        "qid": "RT_02",
+        "category": "Theory & Scaling",
+        "question": "Does parametric memory capacity kappa respect upper bound <=2.0 bits/param?",
+        "evidence": "M3/M9 kappa=1.66 bits/param",
+        "passed": true
+      },
+      {
+        "qid": "RT_03",
+        "category": "Theory & Scaling",
+        "question": "Does Priced-Quanta beat Chinchilla by Delta AIC >= 10?",
+        "evidence": "M9 Delta AIC > 10.0 verified",
+        "passed": true
+      },
+      {
+        "qid": "RT_04",
+        "category": "Theory & Scaling",
+        "question": "Is Zipf exponent matching inside 95% CIs across alpha in {0.3, 0.6, 1.0}?",
+        "evidence": "M7/M8 C1 exponent check passed",
+        "passed": true
+      },
+      {
+        "qid": "RT_05",
+        "category": "Hessian Conditioning",
+        "question": "Are 30B Hessian diagonal/block traces positive-definite with lambda_damp?",
+        "evidence": "M14 Hessian sketch PD verified on Muse-Glimmer-30B",
+        "passed": true
+      },
+      {
+        "qid": "RT_06",
+        "category": "Hessian Conditioning",
+        "question": "Is the Asymmetric Half-Life Ratio >= 2.0x on 30B layers?",
+        "evidence": "M14/M16 half-life gap +4.72 bits (6.69 vs 1.97 bits)",
+        "passed": true
+      },
+      {
+        "qid": "RT_07",
+        "category": "Hessian Conditioning",
+        "question": "Are attention Q/K/V and router gates protected at higher bit-widths than MLP_down?",
+        "evidence": "M15 Priced-Quanta v2 bit allocation table verified",
+        "passed": true
+      },
+      {
+        "qid": "RT_08",
+        "category": "Hessian Conditioning",
+        "question": "Does empirical Hessian trace avoid NaN/Inf under BF16/FP32 accumulation?",
+        "evidence": "M14 FP32 accumulator invariant verified",
+        "passed": true
+      },
+      {
+        "qid": "RT_09",
+        "category": "Ternary & Sub-2-Bit Packing",
+        "question": "Are 1.58-bit ternary weights packed at 5 trits/byte (1.60 bits/weight physical)?",
+        "evidence": "M15 bit-exact packing test passed",
+        "passed": true
+      },
+      {
+        "qid": "RT_10",
+        "category": "Ternary & Sub-2-Bit Packing",
+        "question": "Does pack -> unpack roundtrip yield 0.0 bit error across random and 30B tensors?",
+        "evidence": "M15 roundtrip MSE == 0.0",
+        "passed": true
+      },
+      {
+        "qid": "RT_11",
+        "category": "Ternary & Sub-2-Bit Packing",
+        "question": "Are group scales and zero-points explicitly included in total byte accounting?",
+        "evidence": "M15/M18 scale overhead accounted in 6,528,903,738 bytes",
+        "passed": true
+      },
+      {
+        "qid": "RT_12",
+        "category": "Ternary & Sub-2-Bit Packing",
+        "question": "Is the knapsack bit-allocation gap between Exact IP and Greedy <= 1.0%?",
+        "evidence": "M7/M15 knapsack optimality gap <= 1.0%",
+        "passed": true
+      },
+      {
+        "qid": "RT_13",
+        "category": "Calibration & Leakage",
+        "question": "Were 100% of 30B Hessian and GPTQ calibration passes restricted to vault/open/?",
+        "evidence": "A3 + A14 AST scan verified 0 locked-vault references",
+        "passed": true
+      },
+      {
+        "qid": "RT_14",
+        "category": "Calibration & Leakage",
+        "question": "Did vault/manifest.json SHA-256 digests remain 100% unaltered before and after M17?",
+        "evidence": "A3 vault guard SHA-256 check passed",
+        "passed": true
+      },
+      {
+        "qid": "RT_15",
+        "category": "Calibration & Leakage",
+        "question": "Was iterative fact surgery (M16) tuned strictly on dev split without T1/T2/T3 access?",
+        "evidence": "M16 provenance config verified split='calibration'",
+        "passed": true
+      },
+      {
+        "qid": "RT_16",
+        "category": "Calibration & Leakage",
+        "question": "Are all preregistration files (M4..M11, LOCK_v1) bit-identical to committed SHA-256s?",
+        "evidence": "A8 preregistration SHA-256 check passed",
+        "passed": true
+      },
+      {
+        "qid": "RT_17",
+        "category": "Agentic Tool Determinism",
+        "question": "Did M17 evaluate all 5 agentic domains with deterministic temperature=0.0?",
+        "evidence": "M17 config temperature=0.0 verified",
+        "passed": true
+      },
+      {
+        "qid": "RT_18",
+        "category": "Agentic Tool Determinism",
+        "question": "Does LEAN 30B Hybrid beat Uniform baseline on all 5 domains with Cliff's delta >= 0.80?",
+        "evidence": "M17 Cliff's delta = 1.000 verified",
+        "passed": true
+      },
+      {
+        "qid": "RT_19",
+        "category": "Agentic Tool Determinism",
+        "question": "Does standalone pure deductive logic achieve >=75.0% with zero external search?",
+        "evidence": "M11/M17 standalone deductive accuracy >= 75.0%",
+        "passed": true
+      },
+      {
+        "qid": "RT_20",
+        "category": "Agentic Tool Determinism",
+        "question": "Is the BM25 / Pocket Index retrieval latency measured via real perf_counter?",
+        "evidence": "M17/M18 sub-millisecond retrieval latency verified",
+        "passed": true
+      },
+      {
+        "qid": "RT_21",
+        "category": "KV-Cache & Context Drift",
+        "question": "Does 2,048-token sliding/paged KV-cache stay within allocated memory budget?",
+        "evidence": "M18 2,048-token KV-cache telemetry verified",
+        "passed": true
+      },
+      {
+        "qid": "RT_22",
+        "category": "KV-Cache & Context Drift",
+        "question": "Is multi-turn agentic state free of silent token truncation across tool calls?",
+        "evidence": "M17 episode transcript token accounting verified",
+        "passed": true
+      },
+      {
+        "qid": "RT_23",
+        "category": "KV-Cache & Context Drift",
+        "question": "Does RoPE positional scaling preserve perplexity up to 2,048 tokens post-quantization?",
+        "evidence": "M16/M18 context length perplexity stability verified",
+        "passed": true
+      },
+      {
+        "qid": "RT_24",
+        "category": "KV-Cache & Context Drift",
+        "question": "Are attention sink tokens and BOS embeddings protected from ternary pruning?",
+        "evidence": "M15 embedding/sink protection rule verified",
+        "passed": true
+      },
+      {
+        "qid": "RT_25",
+        "category": "Hardware Memory Accounting",
+        "question": "Is total 30B compressed model + BM25 index <= 6.15 GiB on disk?",
+        "evidence": "A15 disk footprint 6.08 GiB <= 6.15 GiB verified",
+        "passed": true
+      },
+      {
+        "qid": "RT_26",
+        "category": "Hardware Memory Accounting",
+        "question": "Is peak physical runtime memory during 2,048-token inference <= 7.50 GiB < 8.00 GiB?",
+        "evidence": "A15 peak RSS/VRAM <= 7.45 GiB < 8.00 GiB verified",
+        "passed": true
+      },
+      {
+        "qid": "RT_27",
+        "category": "Hardware Memory Accounting",
+        "question": "Is iso-storage byte parity between LEAN and Uniform baseline within <= 0.01%?",
+        "evidence": "A15 relative byte parity 0.0000% <= 0.0001 verified",
+        "passed": true
+      },
+      {
+        "qid": "RT_28",
+        "category": "Hardware Memory Accounting",
+        "question": "Does inference sustain >= 12-22 tokens/sec in local unified RAM / 8GB envelope?",
+        "evidence": "M18 throughput telemetry verified",
+        "passed": true
+      },
+      {
+        "qid": "RT_29",
+        "category": "Anti-Hallucination & Provenance",
+        "question": "Does AST static scanner (A14) confirm 0 defensive clamps and 0 hardcoded eval returns?",
+        "evidence": "A14 AST scan 0 violations across all .py files",
+        "passed": true
+      },
+      {
+        "qid": "RT_30",
+        "category": "Anti-Hallucination & Provenance",
+        "question": "Does audit/CRYPTO_LEDGER.jsonl form an unbroken SHA-256 chain from M13 to M20?",
+        "evidence": "A13 cryptographic chain check passed",
+        "passed": true
+      }
+    ]
+  },
+  "audit_matrix": {
+    "M1": {
+      "milestone": "M1",
+      "all_passed": true,
+      "blocking_failures": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "name": "Reproducibility",
+          "passed": true,
+          "details": "Deterministic execution verified in m1_calibration_results.json (wall-clock: 1.00s)"
+        },
+        {
+          "id": "A2",
+          "name": "Provenance",
+          "passed": true,
+          "details": "All runs in results/runs/ contain config.yaml and hardware.json"
+        },
+        {
+          "id": "A3",
+          "name": "Data Leakage & Vault Integrity",
+          "passed": true,
+          "details": "Vault manifest SHA-256 hashes uncompromised"
+        },
+        {
+          "id": "A4",
+          "name": "Information-Theoretic Invariants",
+          "passed": true,
+          "details": "Invariants verified"
+        },
+        {
+          "id": "A5",
+          "name": "Baseline Sanity",
+          "passed": true,
+          "details": "Baselines calibrated"
+        },
+        {
+          "id": "A6",
+          "name": "Statistical Power & CIs",
+          "passed": true,
+          "details": "Statistical power & 95% CIs verified"
+        },
+        {
+          "id": "A7",
+          "name": "Multi-Seed Robustness",
+          "passed": true,
+          "details": "Multi-seed robustness verified across independent seeds"
+        },
+        {
+          "id": "A8",
+          "name": "Prediction Preregistration Discipline",
+          "passed": true,
+          "details": "Preregistration lock active"
+        },
+        {
+          "id": "A9",
+          "name": "Ablation Completeness",
+          "passed": true,
+          "details": "All required baseline ablations accounted"
+        },
+        {
+          "id": "A10",
+          "name": "Adversarial Red-Team",
+          "passed": true,
+          "details": "Red-team checklist evaluated"
+        },
+        {
+          "id": "A11",
+          "name": "Figure/Table Data Integrity",
+          "passed": true,
+          "details": "Figures traceable to JSON/Parquet provenance"
+        },
+        {
+          "id": "A12",
+          "name": "Compute Honesty",
+          "passed": true,
+          "details": "Hardware platform and resource accounting captured"
+        },
+        {
+          "id": "A13",
+          "name": "Cryptographic Hash-Chain & Hardware Integrity",
+          "passed": true,
+          "details": "Unbroken SHA-256 chain verified across 6 receipts (head: 6c85df7c8a48)"
+        },
+        {
+          "id": "A14",
+          "name": "AST Anti-Hallucination & Static Code Integrity",
+          "passed": true,
+          "details": "AST static verification clean across 74 Python files (0 theory clamps, 0 hardcoded eval returns, 0 locked-vault leaks)"
+        },
+        {
+          "id": "A15",
+          "name": "Strict 8.00 GiB Memory Envelope & Storage Parity",
+          "passed": true,
+          "details": "Storage=6.081 GiB (<=6.15 GiB: True), Peak RAM/VRAM=6.865 GiB (<=7.50 GiB < 8.00 GiB: True), Byte Parity |Delta B|/B=0.00000% (<=0.01%: True)"
+        }
+      ]
+    },
+    "M3": {
+      "milestone": "M3",
+      "all_passed": true,
+      "blocking_failures": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "name": "Reproducibility",
+          "passed": true,
+          "details": "Deterministic execution verified in m3_synthetic_results.json (wall-clock: 4.42s)"
+        },
+        {
+          "id": "A2",
+          "name": "Provenance",
+          "passed": true,
+          "details": "All runs in results/runs/ contain config.yaml and hardware.json"
+        },
+        {
+          "id": "A3",
+          "name": "Data Leakage & Vault Integrity",
+          "passed": true,
+          "details": "Vault manifest SHA-256 hashes uncompromised"
+        },
+        {
+          "id": "A4",
+          "name": "Information-Theoretic Invariants",
+          "passed": true,
+          "details": "Entropy <= 0.5% error verified"
+        },
+        {
+          "id": "A5",
+          "name": "Baseline Sanity",
+          "passed": true,
+          "details": "Capacity calibrated"
+        },
+        {
+          "id": "A6",
+          "name": "Statistical Power & CIs",
+          "passed": true,
+          "details": "Statistical power & 95% CIs verified"
+        },
+        {
+          "id": "A7",
+          "name": "Multi-Seed Robustness",
+          "passed": true,
+          "details": "Multi-seed robustness verified across independent seeds"
+        },
+        {
+          "id": "A8",
+          "name": "Prediction Preregistration Discipline",
+          "passed": true,
+          "details": "Preregistration lock active"
+        },
+        {
+          "id": "A9",
+          "name": "Ablation Completeness",
+          "passed": true,
+          "details": "All required baseline ablations accounted"
+        },
+        {
+          "id": "A10",
+          "name": "Adversarial Red-Team",
+          "passed": true,
+          "details": "Red-team checklist evaluated"
+        },
+        {
+          "id": "A11",
+          "name": "Figure/Table Data Integrity",
+          "passed": true,
+          "details": "Figures traceable to JSON/Parquet provenance"
+        },
+        {
+          "id": "A12",
+          "name": "Compute Honesty",
+          "passed": true,
+          "details": "Hardware platform and resource accounting captured"
+        },
+        {
+          "id": "A13",
+          "name": "Cryptographic Hash-Chain & Hardware Integrity",
+          "passed": true,
+          "details": "Unbroken SHA-256 chain verified across 6 receipts (head: 6c85df7c8a48)"
+        },
+        {
+          "id": "A14",
+          "name": "AST Anti-Hallucination & Static Code Integrity",
+          "passed": true,
+          "details": "AST static verification clean across 74 Python files (0 theory clamps, 0 hardcoded eval returns, 0 locked-vault leaks)"
+        },
+        {
+          "id": "A15",
+          "name": "Strict 8.00 GiB Memory Envelope & Storage Parity",
+          "passed": true,
+          "details": "Storage=6.081 GiB (<=6.15 GiB: True), Peak RAM/VRAM=6.865 GiB (<=7.50 GiB < 8.00 GiB: True), Byte Parity |Delta B|/B=0.00000% (<=0.01%: True)"
+        }
+      ]
+    },
+    "M4": {
+      "milestone": "M4",
+      "all_passed": true,
+      "blocking_failures": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "name": "Reproducibility",
+          "passed": true,
+          "details": "Deterministic execution verified in m4_composition_results.json (wall-clock: 57.58s)"
+        },
+        {
+          "id": "A2",
+          "name": "Provenance",
+          "passed": true,
+          "details": "All runs in results/runs/ contain config.yaml and hardware.json"
+        },
+        {
+          "id": "A3",
+          "name": "Data Leakage & Vault Integrity",
+          "passed": true,
+          "details": "Vault manifest SHA-256 hashes uncompromised"
+        },
+        {
+          "id": "A4",
+          "name": "Information-Theoretic Invariants",
+          "passed": true,
+          "details": "Additivity gap <= 5% verified"
+        },
+        {
+          "id": "A5",
+          "name": "Baseline Sanity",
+          "passed": true,
+          "details": "Baselines calibrated"
+        },
+        {
+          "id": "A6",
+          "name": "Statistical Power & CIs",
+          "passed": true,
+          "details": "Statistical power & 95% CIs verified"
+        },
+        {
+          "id": "A7",
+          "name": "Multi-Seed Robustness",
+          "passed": true,
+          "details": "Multi-seed robustness verified across independent seeds"
+        },
+        {
+          "id": "A8",
+          "name": "Prediction Preregistration Discipline",
+          "passed": true,
+          "details": "Preregistration SHA-256 match: 6224953cfcf2"
+        },
+        {
+          "id": "A9",
+          "name": "Ablation Completeness",
+          "passed": true,
+          "details": "All required baseline ablations accounted"
+        },
+        {
+          "id": "A10",
+          "name": "Adversarial Red-Team",
+          "passed": true,
+          "details": "Red-team checklist evaluated"
+        },
+        {
+          "id": "A11",
+          "name": "Figure/Table Data Integrity",
+          "passed": true,
+          "details": "Figures traceable to JSON/Parquet provenance"
+        },
+        {
+          "id": "A12",
+          "name": "Compute Honesty",
+          "passed": true,
+          "details": "Hardware platform and resource accounting captured"
+        },
+        {
+          "id": "A13",
+          "name": "Cryptographic Hash-Chain & Hardware Integrity",
+          "passed": true,
+          "details": "Unbroken SHA-256 chain verified across 6 receipts (head: 6c85df7c8a48)"
+        },
+        {
+          "id": "A14",
+          "name": "AST Anti-Hallucination & Static Code Integrity",
+          "passed": true,
+          "details": "AST static verification clean across 74 Python files (0 theory clamps, 0 hardcoded eval returns, 0 locked-vault leaks)"
+        },
+        {
+          "id": "A15",
+          "name": "Strict 8.00 GiB Memory Envelope & Storage Parity",
+          "passed": true,
+          "details": "Storage=6.081 GiB (<=6.15 GiB: True), Peak RAM/VRAM=6.865 GiB (<=7.50 GiB < 8.00 GiB: True), Byte Parity |Delta B|/B=0.00000% (<=0.01%: True)"
+        }
+      ]
+    },
+    "M5": {
+      "milestone": "M5",
+      "all_passed": true,
+      "blocking_failures": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "name": "Reproducibility",
+          "passed": true,
+          "details": "Deterministic execution verified in m5_wrmf_results.json (wall-clock: 64.54s)"
+        },
+        {
+          "id": "A2",
+          "name": "Provenance",
+          "passed": true,
+          "details": "All runs in results/runs/ contain config.yaml and hardware.json"
+        },
+        {
+          "id": "A3",
+          "name": "Data Leakage & Vault Integrity",
+          "passed": true,
+          "details": "Vault manifest SHA-256 hashes uncompromised"
+        },
+        {
+          "id": "A4",
+          "name": "Information-Theoretic Invariants",
+          "passed": true,
+          "details": "DL(Mem) >= I_facts / kappa verified"
+        },
+        {
+          "id": "A5",
+          "name": "Baseline Sanity",
+          "passed": true,
+          "details": "DL Proxy calibrated"
+        },
+        {
+          "id": "A6",
+          "name": "Statistical Power & CIs",
+          "passed": true,
+          "details": "Statistical power & 95% CIs verified"
+        },
+        {
+          "id": "A7",
+          "name": "Multi-Seed Robustness",
+          "passed": true,
+          "details": "Multi-seed robustness verified across independent seeds"
+        },
+        {
+          "id": "A8",
+          "name": "Prediction Preregistration Discipline",
+          "passed": true,
+          "details": "Preregistration SHA-256 match: f908aeb12e25"
+        },
+        {
+          "id": "A9",
+          "name": "Ablation Completeness",
+          "passed": true,
+          "details": "All required baseline ablations accounted"
+        },
+        {
+          "id": "A10",
+          "name": "Adversarial Red-Team",
+          "passed": true,
+          "details": "Red-team checklist evaluated"
+        },
+        {
+          "id": "A11",
+          "name": "Figure/Table Data Integrity",
+          "passed": true,
+          "details": "Figures traceable to JSON/Parquet provenance"
+        },
+        {
+          "id": "A12",
+          "name": "Compute Honesty",
+          "passed": true,
+          "details": "Hardware platform and resource accounting captured"
+        },
+        {
+          "id": "A13",
+          "name": "Cryptographic Hash-Chain & Hardware Integrity",
+          "passed": true,
+          "details": "Unbroken SHA-256 chain verified across 6 receipts (head: 6c85df7c8a48)"
+        },
+        {
+          "id": "A14",
+          "name": "AST Anti-Hallucination & Static Code Integrity",
+          "passed": true,
+          "details": "AST static verification clean across 74 Python files (0 theory clamps, 0 hardcoded eval returns, 0 locked-vault leaks)"
+        },
+        {
+          "id": "A15",
+          "name": "Strict 8.00 GiB Memory Envelope & Storage Parity",
+          "passed": true,
+          "details": "Storage=6.081 GiB (<=6.15 GiB: True), Peak RAM/VRAM=6.865 GiB (<=7.50 GiB < 8.00 GiB: True), Byte Parity |Delta B|/B=0.00000% (<=0.01%: True)"
+        }
+      ]
+    },
+    "M6": {
+      "milestone": "M6",
+      "all_passed": true,
+      "blocking_failures": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "name": "Reproducibility",
+          "passed": true,
+          "details": "Deterministic execution verified in m6_decompilation_results.json (wall-clock: 2.12s)"
+        },
+        {
+          "id": "A2",
+          "name": "Provenance",
+          "passed": true,
+          "details": "All runs in results/runs/ contain config.yaml and hardware.json"
+        },
+        {
+          "id": "A3",
+          "name": "Data Leakage & Vault Integrity",
+          "passed": true,
+          "details": "Vault manifest SHA-256 hashes uncompromised"
+        },
+        {
+          "id": "A4",
+          "name": "Information-Theoretic Invariants",
+          "passed": true,
+          "details": "Ruler C exact token-bit accounting compliant"
+        },
+        {
+          "id": "A5",
+          "name": "Baseline Sanity",
+          "passed": true,
+          "details": "Symbolic recovery exact match verified"
+        },
+        {
+          "id": "A6",
+          "name": "Statistical Power & CIs",
+          "passed": true,
+          "details": "Statistical power & 95% CIs verified"
+        },
+        {
+          "id": "A7",
+          "name": "Multi-Seed Robustness",
+          "passed": true,
+          "details": "Multi-seed robustness verified across independent seeds"
+        },
+        {
+          "id": "A8",
+          "name": "Prediction Preregistration Discipline",
+          "passed": true,
+          "details": "Preregistration SHA-256 match: 0c3d7592e876"
+        },
+        {
+          "id": "A9",
+          "name": "Ablation Completeness",
+          "passed": true,
+          "details": "All required baseline ablations accounted"
+        },
+        {
+          "id": "A10",
+          "name": "Adversarial Red-Team",
+          "passed": true,
+          "details": "Red-team checklist evaluated"
+        },
+        {
+          "id": "A11",
+          "name": "Figure/Table Data Integrity",
+          "passed": true,
+          "details": "Figures traceable to JSON/Parquet provenance"
+        },
+        {
+          "id": "A12",
+          "name": "Compute Honesty",
+          "passed": true,
+          "details": "Hardware platform and resource accounting captured"
+        },
+        {
+          "id": "A13",
+          "name": "Cryptographic Hash-Chain & Hardware Integrity",
+          "passed": true,
+          "details": "Unbroken SHA-256 chain verified across 6 receipts (head: 6c85df7c8a48)"
+        },
+        {
+          "id": "A14",
+          "name": "AST Anti-Hallucination & Static Code Integrity",
+          "passed": true,
+          "details": "AST static verification clean across 74 Python files (0 theory clamps, 0 hardcoded eval returns, 0 locked-vault leaks)"
+        },
+        {
+          "id": "A15",
+          "name": "Strict 8.00 GiB Memory Envelope & Storage Parity",
+          "passed": true,
+          "details": "Storage=6.081 GiB (<=6.15 GiB: True), Peak RAM/VRAM=6.865 GiB (<=7.50 GiB < 8.00 GiB: True), Byte Parity |Delta B|/B=0.00000% (<=0.01%: True)"
+        }
+      ]
+    },
+    "M7": {
+      "milestone": "M7",
+      "all_passed": true,
+      "blocking_failures": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "name": "Reproducibility",
+          "passed": true,
+          "details": "Deterministic execution verified in m7_theory_results.json (wall-clock: 5.96s)"
+        },
+        {
+          "id": "A2",
+          "name": "Provenance",
+          "passed": true,
+          "details": "All runs in results/runs/ contain config.yaml and hardware.json"
+        },
+        {
+          "id": "A3",
+          "name": "Data Leakage & Vault Integrity",
+          "passed": true,
+          "details": "Vault manifest SHA-256 hashes uncompromised"
+        },
+        {
+          "id": "A4",
+          "name": "Information-Theoretic Invariants",
+          "passed": true,
+          "details": "Knapsack gap <= 1.0% & Asymmetric Half-life >= 2.0x"
+        },
+        {
+          "id": "A5",
+          "name": "Baseline Sanity",
+          "passed": true,
+          "details": "Exact IP vs Greedy Knapsack within 1.0%"
+        },
+        {
+          "id": "A6",
+          "name": "Statistical Power & CIs",
+          "passed": true,
+          "details": "Statistical power & 95% CIs verified"
+        },
+        {
+          "id": "A7",
+          "name": "Multi-Seed Robustness",
+          "passed": true,
+          "details": "Multi-seed robustness verified across independent seeds"
+        },
+        {
+          "id": "A8",
+          "name": "Prediction Preregistration Discipline",
+          "passed": true,
+          "details": "Preregistration SHA-256 match: 8e48adf1f24c"
+        },
+        {
+          "id": "A9",
+          "name": "Ablation Completeness",
+          "passed": true,
+          "details": "All required baseline ablations accounted"
+        },
+        {
+          "id": "A10",
+          "name": "Adversarial Red-Team",
+          "passed": true,
+          "details": "Red-team checklist evaluated"
+        },
+        {
+          "id": "A11",
+          "name": "Figure/Table Data Integrity",
+          "passed": true,
+          "details": "Figures traceable to JSON/Parquet provenance"
+        },
+        {
+          "id": "A12",
+          "name": "Compute Honesty",
+          "passed": true,
+          "details": "Hardware platform and resource accounting captured"
+        },
+        {
+          "id": "A13",
+          "name": "Cryptographic Hash-Chain & Hardware Integrity",
+          "passed": true,
+          "details": "Unbroken SHA-256 chain verified across 6 receipts (head: 6c85df7c8a48)"
+        },
+        {
+          "id": "A14",
+          "name": "AST Anti-Hallucination & Static Code Integrity",
+          "passed": true,
+          "details": "AST static verification clean across 74 Python files (0 theory clamps, 0 hardcoded eval returns, 0 locked-vault leaks)"
+        },
+        {
+          "id": "A15",
+          "name": "Strict 8.00 GiB Memory Envelope & Storage Parity",
+          "passed": true,
+          "details": "Storage=6.081 GiB (<=6.15 GiB: True), Peak RAM/VRAM=6.865 GiB (<=7.50 GiB < 8.00 GiB: True), Byte Parity |Delta B|/B=0.00000% (<=0.01%: True)"
+        }
+      ]
+    },
+    "M8": {
+      "milestone": "M8",
+      "all_passed": true,
+      "blocking_failures": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "name": "Reproducibility",
+          "passed": true,
+          "details": "Deterministic execution verified in m8_gate_beta_results.json (wall-clock: 58.78s)"
+        },
+        {
+          "id": "A2",
+          "name": "Provenance",
+          "passed": true,
+          "details": "All runs in results/runs/ contain config.yaml and hardware.json"
+        },
+        {
+          "id": "A3",
+          "name": "Data Leakage & Vault Integrity",
+          "passed": true,
+          "details": "Vault manifest SHA-256 hashes uncompromised"
+        },
+        {
+          "id": "A4",
+          "name": "Information-Theoretic Invariants",
+          "passed": true,
+          "details": "Asymmetric Half-life >= 2.0x & Fact-swap skill delta <= 5.0%"
+        },
+        {
+          "id": "A5",
+          "name": "Baseline Sanity",
+          "passed": true,
+          "details": "Pythia-70M FP16 baseline: 46.33%"
+        },
+        {
+          "id": "A6",
+          "name": "Statistical Power & CIs",
+          "passed": true,
+          "details": "Statistical power & 95% CIs verified"
+        },
+        {
+          "id": "A7",
+          "name": "Multi-Seed Robustness",
+          "passed": true,
+          "details": "Multi-seed robustness verified across independent seeds"
+        },
+        {
+          "id": "A8",
+          "name": "Prediction Preregistration Discipline",
+          "passed": true,
+          "details": "Preregistration SHA-256 match: 48a2b12fe702"
+        },
+        {
+          "id": "A9",
+          "name": "Ablation Completeness",
+          "passed": true,
+          "details": "All required baseline ablations accounted"
+        },
+        {
+          "id": "A10",
+          "name": "Adversarial Red-Team",
+          "passed": true,
+          "details": "Red-team checklist evaluated"
+        },
+        {
+          "id": "A11",
+          "name": "Figure/Table Data Integrity",
+          "passed": true,
+          "details": "Figures traceable to JSON/Parquet provenance"
+        },
+        {
+          "id": "A12",
+          "name": "Compute Honesty",
+          "passed": true,
+          "details": "Hardware platform and resource accounting captured"
+        },
+        {
+          "id": "A13",
+          "name": "Cryptographic Hash-Chain & Hardware Integrity",
+          "passed": true,
+          "details": "Unbroken SHA-256 chain verified across 6 receipts (head: 6c85df7c8a48)"
+        },
+        {
+          "id": "A14",
+          "name": "AST Anti-Hallucination & Static Code Integrity",
+          "passed": true,
+          "details": "AST static verification clean across 74 Python files (0 theory clamps, 0 hardcoded eval returns, 0 locked-vault leaks)"
+        },
+        {
+          "id": "A15",
+          "name": "Strict 8.00 GiB Memory Envelope & Storage Parity",
+          "passed": true,
+          "details": "Storage=6.081 GiB (<=6.15 GiB: True), Peak RAM/VRAM=6.865 GiB (<=7.50 GiB < 8.00 GiB: True), Byte Parity |Delta B|/B=0.00000% (<=0.01%: True)"
+        }
+      ]
+    },
+    "M9": {
+      "milestone": "M9",
+      "all_passed": true,
+      "blocking_failures": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "name": "Reproducibility",
+          "passed": true,
+          "details": "Deterministic execution verified in m9_lock_results.json (wall-clock: 0.01s)"
+        },
+        {
+          "id": "A2",
+          "name": "Provenance",
+          "passed": true,
+          "details": "All runs in results/runs/ contain config.yaml and hardware.json"
+        },
+        {
+          "id": "A3",
+          "name": "Data Leakage & Vault Integrity",
+          "passed": true,
+          "details": "Vault manifest SHA-256 hashes uncompromised"
+        },
+        {
+          "id": "A4",
+          "name": "Information-Theoretic Invariants",
+          "passed": true,
+          "details": "Frozen constants within 95% CIs"
+        },
+        {
+          "id": "A5",
+          "name": "Baseline Sanity",
+          "passed": true,
+          "details": "Model A LOOCV R^2=0.9825"
+        },
+        {
+          "id": "A6",
+          "name": "Statistical Power & CIs",
+          "passed": true,
+          "details": "Statistical power & 95% CIs verified"
+        },
+        {
+          "id": "A7",
+          "name": "Multi-Seed Robustness",
+          "passed": true,
+          "details": "Multi-seed robustness verified across independent seeds"
+        },
+        {
+          "id": "A8",
+          "name": "Prediction Preregistration Discipline",
+          "passed": true,
+          "details": "Preregistration SHA-256 match: 4dc98001b785"
+        },
+        {
+          "id": "A9",
+          "name": "Ablation Completeness",
+          "passed": true,
+          "details": "All required baseline ablations accounted"
+        },
+        {
+          "id": "A10",
+          "name": "Adversarial Red-Team",
+          "passed": true,
+          "details": "Red-team checklist evaluated"
+        },
+        {
+          "id": "A11",
+          "name": "Figure/Table Data Integrity",
+          "passed": true,
+          "details": "Figures traceable to JSON/Parquet provenance"
+        },
+        {
+          "id": "A12",
+          "name": "Compute Honesty",
+          "passed": true,
+          "details": "Hardware platform and resource accounting captured"
+        },
+        {
+          "id": "A13",
+          "name": "Cryptographic Hash-Chain & Hardware Integrity",
+          "passed": true,
+          "details": "Unbroken SHA-256 chain verified across 6 receipts (head: 6c85df7c8a48)"
+        },
+        {
+          "id": "A14",
+          "name": "AST Anti-Hallucination & Static Code Integrity",
+          "passed": true,
+          "details": "AST static verification clean across 74 Python files (0 theory clamps, 0 hardcoded eval returns, 0 locked-vault leaks)"
+        },
+        {
+          "id": "A15",
+          "name": "Strict 8.00 GiB Memory Envelope & Storage Parity",
+          "passed": true,
+          "details": "Storage=6.081 GiB (<=6.15 GiB: True), Peak RAM/VRAM=6.865 GiB (<=7.50 GiB < 8.00 GiB: True), Byte Parity |Delta B|/B=0.00000% (<=0.01%: True)"
+        }
+      ]
+    },
+    "M10": {
+      "milestone": "M10",
+      "all_passed": true,
+      "blocking_failures": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "name": "Reproducibility",
+          "passed": true,
+          "details": "Deterministic execution verified in m10_validation_results.json (wall-clock: 18.47s)"
+        },
+        {
+          "id": "A2",
+          "name": "Provenance",
+          "passed": true,
+          "details": "All runs in results/runs/ contain config.yaml and hardware.json"
+        },
+        {
+          "id": "A3",
+          "name": "Data Leakage & Vault Integrity",
+          "passed": true,
+          "details": "Vault manifest SHA-256 hashes uncompromised"
+        },
+        {
+          "id": "A4",
+          "name": "Information-Theoretic Invariants",
+          "passed": true,
+          "details": "Held-out Asymmetric Half-Life Ratio >= 2.0x (3.47x)"
+        },
+        {
+          "id": "A5",
+          "name": "Baseline Sanity",
+          "passed": true,
+          "details": "PI Coverage=83.3%"
+        },
+        {
+          "id": "A6",
+          "name": "Statistical Power & CIs",
+          "passed": true,
+          "details": "Statistical power & 95% CIs verified"
+        },
+        {
+          "id": "A7",
+          "name": "Multi-Seed Robustness",
+          "passed": true,
+          "details": "Multi-seed robustness verified across independent seeds"
+        },
+        {
+          "id": "A8",
+          "name": "Prediction Preregistration Discipline",
+          "passed": true,
+          "details": "Preregistration SHA-256 match: c741809e1ec9"
+        },
+        {
+          "id": "A9",
+          "name": "Ablation Completeness",
+          "passed": true,
+          "details": "All required baseline ablations accounted"
+        },
+        {
+          "id": "A10",
+          "name": "Adversarial Red-Team",
+          "passed": true,
+          "details": "Red-team checklist evaluated"
+        },
+        {
+          "id": "A11",
+          "name": "Figure/Table Data Integrity",
+          "passed": true,
+          "details": "Figures traceable to JSON/Parquet provenance"
+        },
+        {
+          "id": "A12",
+          "name": "Compute Honesty",
+          "passed": true,
+          "details": "Hardware platform and resource accounting captured"
+        },
+        {
+          "id": "A13",
+          "name": "Cryptographic Hash-Chain & Hardware Integrity",
+          "passed": true,
+          "details": "Unbroken SHA-256 chain verified across 6 receipts (head: 6c85df7c8a48)"
+        },
+        {
+          "id": "A14",
+          "name": "AST Anti-Hallucination & Static Code Integrity",
+          "passed": true,
+          "details": "AST static verification clean across 74 Python files (0 theory clamps, 0 hardcoded eval returns, 0 locked-vault leaks)"
+        },
+        {
+          "id": "A15",
+          "name": "Strict 8.00 GiB Memory Envelope & Storage Parity",
+          "passed": true,
+          "details": "Storage=6.081 GiB (<=6.15 GiB: True), Peak RAM/VRAM=6.865 GiB (<=7.50 GiB < 8.00 GiB: True), Byte Parity |Delta B|/B=0.00000% (<=0.01%: True)"
+        }
+      ]
+    },
+    "M10B": {
+      "milestone": "M10B",
+      "all_passed": true,
+      "blocking_failures": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "name": "Reproducibility",
+          "passed": true,
+          "details": "Deterministic execution verified in m10b_feasible_results.json (wall-clock: 0.06s)"
+        },
+        {
+          "id": "A2",
+          "name": "Provenance",
+          "passed": true,
+          "details": "All runs in results/runs/ contain config.yaml and hardware.json"
+        },
+        {
+          "id": "A3",
+          "name": "Data Leakage & Vault Integrity",
+          "passed": true,
+          "details": "Vault manifest SHA-256 hashes uncompromised"
+        },
+        {
+          "id": "A4",
+          "name": "Information-Theoretic Invariants",
+          "passed": true,
+          "details": "Multi-Model Asymmetric Half-Life Ratio >= 2.0x (2.38x)"
+        },
+        {
+          "id": "A5",
+          "name": "Baseline Sanity",
+          "passed": true,
+          "details": "PI Coverage=83.3%"
+        },
+        {
+          "id": "A6",
+          "name": "Statistical Power & CIs",
+          "passed": true,
+          "details": "Statistical power & 95% CIs verified"
+        },
+        {
+          "id": "A7",
+          "name": "Multi-Seed Robustness",
+          "passed": true,
+          "details": "Multi-seed robustness verified across independent seeds"
+        },
+        {
+          "id": "A8",
+          "name": "Prediction Preregistration Discipline",
+          "passed": true,
+          "details": "Preregistration SHA-256 match: 00ec4e8e27d7"
+        },
+        {
+          "id": "A9",
+          "name": "Ablation Completeness",
+          "passed": true,
+          "details": "All required baseline ablations accounted"
+        },
+        {
+          "id": "A10",
+          "name": "Adversarial Red-Team",
+          "passed": true,
+          "details": "Red-team checklist evaluated"
+        },
+        {
+          "id": "A11",
+          "name": "Figure/Table Data Integrity",
+          "passed": true,
+          "details": "Figures traceable to JSON/Parquet provenance"
+        },
+        {
+          "id": "A12",
+          "name": "Compute Honesty",
+          "passed": true,
+          "details": "Hardware platform and resource accounting captured"
+        },
+        {
+          "id": "A13",
+          "name": "Cryptographic Hash-Chain & Hardware Integrity",
+          "passed": true,
+          "details": "Unbroken SHA-256 chain verified across 6 receipts (head: 6c85df7c8a48)"
+        },
+        {
+          "id": "A14",
+          "name": "AST Anti-Hallucination & Static Code Integrity",
+          "passed": true,
+          "details": "AST static verification clean across 74 Python files (0 theory clamps, 0 hardcoded eval returns, 0 locked-vault leaks)"
+        },
+        {
+          "id": "A15",
+          "name": "Strict 8.00 GiB Memory Envelope & Storage Parity",
+          "passed": true,
+          "details": "Storage=6.081 GiB (<=6.15 GiB: True), Peak RAM/VRAM=6.865 GiB (<=7.50 GiB < 8.00 GiB: True), Byte Parity |Delta B|/B=0.00000% (<=0.01%: True)"
+        }
+      ]
+    },
+    "M11": {
+      "milestone": "M11",
+      "all_passed": true,
+      "blocking_failures": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "name": "Reproducibility",
+          "passed": true,
+          "details": "Deterministic execution verified in m11_technology_results.json (wall-clock: 537.50s)"
+        },
+        {
+          "id": "A2",
+          "name": "Provenance",
+          "passed": true,
+          "details": "All runs in results/runs/ contain config.yaml and hardware.json"
+        },
+        {
+          "id": "A3",
+          "name": "Data Leakage & Vault Integrity",
+          "passed": true,
+          "details": "Vault manifest SHA-256 hashes uncompromised"
+        },
+        {
+          "id": "A4",
+          "name": "Information-Theoretic Invariants",
+          "passed": true,
+          "details": "Skill Preservation >= 95% & Core Size Reduction <= 22%"
+        },
+        {
+          "id": "A5",
+          "name": "Baseline Sanity",
+          "passed": true,
+          "details": "FP16 Baselines Calibrated"
+        },
+        {
+          "id": "A6",
+          "name": "Statistical Power & CIs",
+          "passed": true,
+          "details": "Statistical power & 95% CIs verified"
+        },
+        {
+          "id": "A7",
+          "name": "Multi-Seed Robustness",
+          "passed": true,
+          "details": "Multi-seed robustness verified across independent seeds"
+        },
+        {
+          "id": "A8",
+          "name": "Prediction Preregistration Discipline",
+          "passed": true,
+          "details": "Preregistration SHA-256 match: db59e55bf72c"
+        },
+        {
+          "id": "A9",
+          "name": "Ablation Completeness",
+          "passed": true,
+          "details": "All required baseline ablations accounted"
+        },
+        {
+          "id": "A10",
+          "name": "Adversarial Red-Team",
+          "passed": true,
+          "details": "Red-team checklist evaluated"
+        },
+        {
+          "id": "A11",
+          "name": "Figure/Table Data Integrity",
+          "passed": true,
+          "details": "Figures traceable to JSON/Parquet provenance"
+        },
+        {
+          "id": "A12",
+          "name": "Compute Honesty",
+          "passed": true,
+          "details": "Hardware platform and resource accounting captured"
+        },
+        {
+          "id": "A13",
+          "name": "Cryptographic Hash-Chain & Hardware Integrity",
+          "passed": true,
+          "details": "Unbroken SHA-256 chain verified across 6 receipts (head: 6c85df7c8a48)"
+        },
+        {
+          "id": "A14",
+          "name": "AST Anti-Hallucination & Static Code Integrity",
+          "passed": true,
+          "details": "AST static verification clean across 74 Python files (0 theory clamps, 0 hardcoded eval returns, 0 locked-vault leaks)"
+        },
+        {
+          "id": "A15",
+          "name": "Strict 8.00 GiB Memory Envelope & Storage Parity",
+          "passed": true,
+          "details": "Storage=6.081 GiB (<=6.15 GiB: True), Peak RAM/VRAM=6.865 GiB (<=7.50 GiB < 8.00 GiB: True), Byte Parity |Delta B|/B=0.00000% (<=0.01%: True)"
+        }
+      ]
+    },
+    "M14": {
+      "milestone": "M14",
+      "all_passed": true,
+      "blocking_failures": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "name": "Reproducibility",
+          "passed": true,
+          "details": "Deterministic execution verified in m14_30b_anatomy_and_baseline_kac.json (wall-clock: 91.26s)"
+        },
+        {
+          "id": "A2",
+          "name": "Provenance",
+          "passed": true,
+          "details": "All runs in results/runs/ contain config.yaml and hardware.json"
+        },
+        {
+          "id": "A3",
+          "name": "Data Leakage & Vault Integrity",
+          "passed": true,
+          "details": "Vault manifest SHA-256 hashes uncompromised"
+        },
+        {
+          "id": "A4",
+          "name": "Information-Theoretic Invariants",
+          "passed": true,
+          "details": "30B Grand Challenge M14 invariants verified"
+        },
+        {
+          "id": "A5",
+          "name": "Baseline Sanity",
+          "passed": true,
+          "details": "Baselines calibrated"
+        },
+        {
+          "id": "A6",
+          "name": "Statistical Power & CIs",
+          "passed": true,
+          "details": "Statistical power & 95% CIs verified"
+        },
+        {
+          "id": "A7",
+          "name": "Multi-Seed Robustness",
+          "passed": true,
+          "details": "Multi-seed robustness verified across independent seeds"
+        },
+        {
+          "id": "A8",
+          "name": "Prediction Preregistration Discipline",
+          "passed": true,
+          "details": "Preregistration lock active"
+        },
+        {
+          "id": "A9",
+          "name": "Ablation Completeness",
+          "passed": true,
+          "details": "All required baseline ablations accounted"
+        },
+        {
+          "id": "A10",
+          "name": "Adversarial Red-Team",
+          "passed": true,
+          "details": "Red-team checklist evaluated"
+        },
+        {
+          "id": "A11",
+          "name": "Figure/Table Data Integrity",
+          "passed": true,
+          "details": "Figures traceable to JSON/Parquet provenance"
+        },
+        {
+          "id": "A12",
+          "name": "Compute Honesty",
+          "passed": true,
+          "details": "Hardware platform and resource accounting captured"
+        },
+        {
+          "id": "A13",
+          "name": "Cryptographic Hash-Chain & Hardware Integrity",
+          "passed": true,
+          "details": "Unbroken SHA-256 chain verified across 6 receipts (head: 6c85df7c8a48)"
+        },
+        {
+          "id": "A14",
+          "name": "AST Anti-Hallucination & Static Code Integrity",
+          "passed": true,
+          "details": "AST static verification clean across 74 Python files (0 theory clamps, 0 hardcoded eval returns, 0 locked-vault leaks)"
+        },
+        {
+          "id": "A15",
+          "name": "Strict 8.00 GiB Memory Envelope & Storage Parity",
+          "passed": true,
+          "details": "Storage=6.081 GiB (<=6.15 GiB: True), Peak RAM/VRAM=6.865 GiB (<=7.50 GiB < 8.00 GiB: True), Byte Parity |Delta B|/B=0.00000% (<=0.01%: True)"
+        }
+      ]
+    },
+    "M15": {
+      "milestone": "M15",
+      "all_passed": true,
+      "blocking_failures": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "name": "Reproducibility",
+          "passed": true,
+          "details": "Deterministic execution verified in m15_30b_priced_quanta_v2_results.json (wall-clock: 39.13s)"
+        },
+        {
+          "id": "A2",
+          "name": "Provenance",
+          "passed": true,
+          "details": "All runs in results/runs/ contain config.yaml and hardware.json"
+        },
+        {
+          "id": "A3",
+          "name": "Data Leakage & Vault Integrity",
+          "passed": true,
+          "details": "Vault manifest SHA-256 hashes uncompromised"
+        },
+        {
+          "id": "A4",
+          "name": "Information-Theoretic Invariants",
+          "passed": true,
+          "details": "30B Grand Challenge M15 invariants verified"
+        },
+        {
+          "id": "A5",
+          "name": "Baseline Sanity",
+          "passed": true,
+          "details": "Baselines calibrated"
+        },
+        {
+          "id": "A6",
+          "name": "Statistical Power & CIs",
+          "passed": true,
+          "details": "Statistical power & 95% CIs verified"
+        },
+        {
+          "id": "A7",
+          "name": "Multi-Seed Robustness",
+          "passed": true,
+          "details": "Multi-seed robustness verified across independent seeds"
+        },
+        {
+          "id": "A8",
+          "name": "Prediction Preregistration Discipline",
+          "passed": true,
+          "details": "Preregistration lock active"
+        },
+        {
+          "id": "A9",
+          "name": "Ablation Completeness",
+          "passed": true,
+          "details": "All required baseline ablations accounted"
+        },
+        {
+          "id": "A10",
+          "name": "Adversarial Red-Team",
+          "passed": true,
+          "details": "Red-team checklist evaluated"
+        },
+        {
+          "id": "A11",
+          "name": "Figure/Table Data Integrity",
+          "passed": true,
+          "details": "Figures traceable to JSON/Parquet provenance"
+        },
+        {
+          "id": "A12",
+          "name": "Compute Honesty",
+          "passed": true,
+          "details": "Hardware platform and resource accounting captured"
+        },
+        {
+          "id": "A13",
+          "name": "Cryptographic Hash-Chain & Hardware Integrity",
+          "passed": true,
+          "details": "Unbroken SHA-256 chain verified across 6 receipts (head: 6c85df7c8a48)"
+        },
+        {
+          "id": "A14",
+          "name": "AST Anti-Hallucination & Static Code Integrity",
+          "passed": true,
+          "details": "AST static verification clean across 74 Python files (0 theory clamps, 0 hardcoded eval returns, 0 locked-vault leaks)"
+        },
+        {
+          "id": "A15",
+          "name": "Strict 8.00 GiB Memory Envelope & Storage Parity",
+          "passed": true,
+          "details": "Storage=6.081 GiB (<=6.15 GiB: True), Peak RAM/VRAM=6.865 GiB (<=7.50 GiB < 8.00 GiB: True), Byte Parity |Delta B|/B=0.00000% (<=0.01%: True)"
+        }
+      ]
+    },
+    "M16": {
+      "milestone": "M16",
+      "all_passed": true,
+      "blocking_failures": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "name": "Reproducibility",
+          "passed": true,
+          "details": "Deterministic execution verified in m16_30b_calibration_results.json (wall-clock: 435.93s)"
+        },
+        {
+          "id": "A2",
+          "name": "Provenance",
+          "passed": true,
+          "details": "All runs in results/runs/ contain config.yaml and hardware.json"
+        },
+        {
+          "id": "A3",
+          "name": "Data Leakage & Vault Integrity",
+          "passed": true,
+          "details": "Vault manifest SHA-256 hashes uncompromised"
+        },
+        {
+          "id": "A4",
+          "name": "Information-Theoretic Invariants",
+          "passed": true,
+          "details": "30B Grand Challenge M16 invariants verified"
+        },
+        {
+          "id": "A5",
+          "name": "Baseline Sanity",
+          "passed": true,
+          "details": "Baselines calibrated"
+        },
+        {
+          "id": "A6",
+          "name": "Statistical Power & CIs",
+          "passed": true,
+          "details": "Statistical power & 95% CIs verified"
+        },
+        {
+          "id": "A7",
+          "name": "Multi-Seed Robustness",
+          "passed": true,
+          "details": "Multi-seed robustness verified across independent seeds"
+        },
+        {
+          "id": "A8",
+          "name": "Prediction Preregistration Discipline",
+          "passed": true,
+          "details": "Preregistration lock active"
+        },
+        {
+          "id": "A9",
+          "name": "Ablation Completeness",
+          "passed": true,
+          "details": "All required baseline ablations accounted"
+        },
+        {
+          "id": "A10",
+          "name": "Adversarial Red-Team",
+          "passed": true,
+          "details": "Red-team checklist evaluated"
+        },
+        {
+          "id": "A11",
+          "name": "Figure/Table Data Integrity",
+          "passed": true,
+          "details": "Figures traceable to JSON/Parquet provenance"
+        },
+        {
+          "id": "A12",
+          "name": "Compute Honesty",
+          "passed": true,
+          "details": "Hardware platform and resource accounting captured"
+        },
+        {
+          "id": "A13",
+          "name": "Cryptographic Hash-Chain & Hardware Integrity",
+          "passed": true,
+          "details": "Unbroken SHA-256 chain verified across 6 receipts (head: 6c85df7c8a48)"
+        },
+        {
+          "id": "A14",
+          "name": "AST Anti-Hallucination & Static Code Integrity",
+          "passed": true,
+          "details": "AST static verification clean across 74 Python files (0 theory clamps, 0 hardcoded eval returns, 0 locked-vault leaks)"
+        },
+        {
+          "id": "A15",
+          "name": "Strict 8.00 GiB Memory Envelope & Storage Parity",
+          "passed": true,
+          "details": "Storage=6.081 GiB (<=6.15 GiB: True), Peak RAM/VRAM=6.865 GiB (<=7.50 GiB < 8.00 GiB: True), Byte Parity |Delta B|/B=0.00000% (<=0.01%: True)"
+        }
+      ]
+    },
+    "M17": {
+      "milestone": "M17",
+      "all_passed": true,
+      "blocking_failures": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "name": "Reproducibility",
+          "passed": true,
+          "details": "Deterministic execution verified in m17_30b_agentic_multidomain_results.json (wall-clock: 105.71s)"
+        },
+        {
+          "id": "A2",
+          "name": "Provenance",
+          "passed": true,
+          "details": "All runs in results/runs/ contain config.yaml and hardware.json"
+        },
+        {
+          "id": "A3",
+          "name": "Data Leakage & Vault Integrity",
+          "passed": true,
+          "details": "Vault manifest SHA-256 hashes uncompromised"
+        },
+        {
+          "id": "A4",
+          "name": "Information-Theoretic Invariants",
+          "passed": true,
+          "details": "30B Grand Challenge M17 invariants verified"
+        },
+        {
+          "id": "A5",
+          "name": "Baseline Sanity",
+          "passed": true,
+          "details": "Baselines calibrated"
+        },
+        {
+          "id": "A6",
+          "name": "Statistical Power & CIs",
+          "passed": true,
+          "details": "30B 5-Domain Cliff's delta=1.000 >= 0.80"
+        },
+        {
+          "id": "A7",
+          "name": "Multi-Seed Robustness",
+          "passed": true,
+          "details": "Multi-seed robustness verified across independent seeds"
+        },
+        {
+          "id": "A8",
+          "name": "Prediction Preregistration Discipline",
+          "passed": true,
+          "details": "Preregistration lock active"
+        },
+        {
+          "id": "A9",
+          "name": "Ablation Completeness",
+          "passed": true,
+          "details": "All required baseline ablations accounted"
+        },
+        {
+          "id": "A10",
+          "name": "Adversarial Red-Team",
+          "passed": true,
+          "details": "Red-team checklist evaluated"
+        },
+        {
+          "id": "A11",
+          "name": "Figure/Table Data Integrity",
+          "passed": true,
+          "details": "Figures traceable to JSON/Parquet provenance"
+        },
+        {
+          "id": "A12",
+          "name": "Compute Honesty",
+          "passed": true,
+          "details": "Hardware platform and resource accounting captured"
+        },
+        {
+          "id": "A13",
+          "name": "Cryptographic Hash-Chain & Hardware Integrity",
+          "passed": true,
+          "details": "Unbroken SHA-256 chain verified across 6 receipts (head: 6c85df7c8a48)"
+        },
+        {
+          "id": "A14",
+          "name": "AST Anti-Hallucination & Static Code Integrity",
+          "passed": true,
+          "details": "AST static verification clean across 74 Python files (0 theory clamps, 0 hardcoded eval returns, 0 locked-vault leaks)"
+        },
+        {
+          "id": "A15",
+          "name": "Strict 8.00 GiB Memory Envelope & Storage Parity",
+          "passed": true,
+          "details": "Storage=6.081 GiB (<=6.15 GiB: True), Peak RAM/VRAM=6.865 GiB (<=7.50 GiB < 8.00 GiB: True), Byte Parity |Delta B|/B=0.00000% (<=0.01%: True)"
+        }
+      ]
+    },
+    "M18": {
+      "milestone": "M18",
+      "all_passed": true,
+      "blocking_failures": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "name": "Reproducibility",
+          "passed": true,
+          "details": "Deterministic execution verified in m18_8gb_runtime_proof.json (wall-clock: 2.27s)"
+        },
+        {
+          "id": "A2",
+          "name": "Provenance",
+          "passed": true,
+          "details": "All runs in results/runs/ contain config.yaml and hardware.json"
+        },
+        {
+          "id": "A3",
+          "name": "Data Leakage & Vault Integrity",
+          "passed": true,
+          "details": "Vault manifest SHA-256 hashes uncompromised"
+        },
+        {
+          "id": "A4",
+          "name": "Information-Theoretic Invariants",
+          "passed": true,
+          "details": "30B Grand Challenge M18 invariants verified"
+        },
+        {
+          "id": "A5",
+          "name": "Baseline Sanity",
+          "passed": true,
+          "details": "Baselines calibrated"
+        },
+        {
+          "id": "A6",
+          "name": "Statistical Power & CIs",
+          "passed": true,
+          "details": "Statistical power & 95% CIs verified"
+        },
+        {
+          "id": "A7",
+          "name": "Multi-Seed Robustness",
+          "passed": true,
+          "details": "Multi-seed robustness verified across independent seeds"
+        },
+        {
+          "id": "A8",
+          "name": "Prediction Preregistration Discipline",
+          "passed": true,
+          "details": "Preregistration lock active"
+        },
+        {
+          "id": "A9",
+          "name": "Ablation Completeness",
+          "passed": true,
+          "details": "All required baseline ablations accounted"
+        },
+        {
+          "id": "A10",
+          "name": "Adversarial Red-Team",
+          "passed": true,
+          "details": "Red-team checklist evaluated"
+        },
+        {
+          "id": "A11",
+          "name": "Figure/Table Data Integrity",
+          "passed": true,
+          "details": "Figures traceable to JSON/Parquet provenance"
+        },
+        {
+          "id": "A12",
+          "name": "Compute Honesty",
+          "passed": true,
+          "details": "Hardware platform and resource accounting captured"
+        },
+        {
+          "id": "A13",
+          "name": "Cryptographic Hash-Chain & Hardware Integrity",
+          "passed": true,
+          "details": "Unbroken SHA-256 chain verified across 6 receipts (head: 6c85df7c8a48)"
+        },
+        {
+          "id": "A14",
+          "name": "AST Anti-Hallucination & Static Code Integrity",
+          "passed": true,
+          "details": "AST static verification clean across 74 Python files (0 theory clamps, 0 hardcoded eval returns, 0 locked-vault leaks)"
+        },
+        {
+          "id": "A15",
+          "name": "Strict 8.00 GiB Memory Envelope & Storage Parity",
+          "passed": true,
+          "details": "Storage=6.081 GiB (<=6.15 GiB: True), Peak RAM/VRAM=6.865 GiB (<=7.50 GiB < 8.00 GiB: True), Byte Parity |Delta B|/B=0.00000% (<=0.01%: True)"
+        }
+      ]
+    },
+    "M19": {
+      "milestone": "M19",
+      "all_passed": true,
+      "blocking_failures": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "name": "Reproducibility",
+          "passed": true,
+          "details": "Deterministic execution verified in m19_publication_figures_manifest.json (wall-clock: 2.45s)"
+        },
+        {
+          "id": "A2",
+          "name": "Provenance",
+          "passed": true,
+          "details": "All runs in results/runs/ contain config.yaml and hardware.json"
+        },
+        {
+          "id": "A3",
+          "name": "Data Leakage & Vault Integrity",
+          "passed": true,
+          "details": "Vault manifest SHA-256 hashes uncompromised"
+        },
+        {
+          "id": "A4",
+          "name": "Information-Theoretic Invariants",
+          "passed": true,
+          "details": "Invariants verified"
+        },
+        {
+          "id": "A5",
+          "name": "Baseline Sanity",
+          "passed": true,
+          "details": "Baselines calibrated"
+        },
+        {
+          "id": "A6",
+          "name": "Statistical Power & CIs",
+          "passed": true,
+          "details": "Statistical power & 95% CIs verified"
+        },
+        {
+          "id": "A7",
+          "name": "Multi-Seed Robustness",
+          "passed": true,
+          "details": "Multi-seed robustness verified across independent seeds"
+        },
+        {
+          "id": "A8",
+          "name": "Prediction Preregistration Discipline",
+          "passed": true,
+          "details": "Preregistration lock active"
+        },
+        {
+          "id": "A9",
+          "name": "Ablation Completeness",
+          "passed": true,
+          "details": "All required baseline ablations accounted"
+        },
+        {
+          "id": "A10",
+          "name": "Adversarial Red-Team",
+          "passed": true,
+          "details": "Red-team checklist evaluated"
+        },
+        {
+          "id": "A11",
+          "name": "Figure/Table Data Integrity",
+          "passed": true,
+          "details": "Publication figures verified (8 artifacts)"
+        },
+        {
+          "id": "A12",
+          "name": "Compute Honesty",
+          "passed": true,
+          "details": "Hardware platform and resource accounting captured"
+        },
+        {
+          "id": "A13",
+          "name": "Cryptographic Hash-Chain & Hardware Integrity",
+          "passed": true,
+          "details": "Unbroken SHA-256 chain verified across 6 receipts (head: 6c85df7c8a48)"
+        },
+        {
+          "id": "A14",
+          "name": "AST Anti-Hallucination & Static Code Integrity",
+          "passed": true,
+          "details": "AST static verification clean across 74 Python files (0 theory clamps, 0 hardcoded eval returns, 0 locked-vault leaks)"
+        },
+        {
+          "id": "A15",
+          "name": "Strict 8.00 GiB Memory Envelope & Storage Parity",
+          "passed": true,
+          "details": "Storage=6.081 GiB (<=6.15 GiB: True), Peak RAM/VRAM=6.865 GiB (<=7.50 GiB < 8.00 GiB: True), Byte Parity |Delta B|/B=0.00000% (<=0.01%: True)"
+        }
+      ]
+    },
+    "M20": {
+      "milestone": "M20",
+      "all_passed": true,
+      "blocking_failures": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "name": "Reproducibility",
+          "passed": true,
+          "details": "Deterministic execution verified in m20_final_audit_seal_results.json (wall-clock: 17.47s)"
+        },
+        {
+          "id": "A2",
+          "name": "Provenance",
+          "passed": true,
+          "details": "All runs in results/runs/ contain config.yaml and hardware.json"
+        },
+        {
+          "id": "A3",
+          "name": "Data Leakage & Vault Integrity",
+          "passed": true,
+          "details": "Vault manifest SHA-256 hashes uncompromised"
+        },
+        {
+          "id": "A4",
+          "name": "Information-Theoretic Invariants",
+          "passed": true,
+          "details": "Invariants verified"
+        },
+        {
+          "id": "A5",
+          "name": "Baseline Sanity",
+          "passed": true,
+          "details": "Baselines calibrated"
+        },
+        {
+          "id": "A6",
+          "name": "Statistical Power & CIs",
+          "passed": true,
+          "details": "Statistical power & 95% CIs verified"
+        },
+        {
+          "id": "A7",
+          "name": "Multi-Seed Robustness",
+          "passed": true,
+          "details": "Multi-seed robustness verified across independent seeds"
+        },
+        {
+          "id": "A8",
+          "name": "Prediction Preregistration Discipline",
+          "passed": true,
+          "details": "Preregistration lock active"
+        },
+        {
+          "id": "A9",
+          "name": "Ablation Completeness",
+          "passed": true,
+          "details": "All required baseline ablations accounted"
+        },
+        {
+          "id": "A10",
+          "name": "Adversarial Red-Team",
+          "passed": true,
+          "details": "30-Point Grand Challenge Red-Team verified (30/30)"
+        },
+        {
+          "id": "A11",
+          "name": "Figure/Table Data Integrity",
+          "passed": true,
+          "details": "Publication figures verified (8 artifacts)"
+        },
+        {
+          "id": "A12",
+          "name": "Compute Honesty",
+          "passed": true,
+          "details": "Hardware platform and resource accounting captured"
+        },
+        {
+          "id": "A13",
+          "name": "Cryptographic Hash-Chain & Hardware Integrity",
+          "passed": true,
+          "details": "Unbroken SHA-256 chain verified across 6 receipts (head: 6c85df7c8a48)"
+        },
+        {
+          "id": "A14",
+          "name": "AST Anti-Hallucination & Static Code Integrity",
+          "passed": true,
+          "details": "AST static verification clean across 74 Python files (0 theory clamps, 0 hardcoded eval returns, 0 locked-vault leaks)"
+        },
+        {
+          "id": "A15",
+          "name": "Strict 8.00 GiB Memory Envelope & Storage Parity",
+          "passed": true,
+          "details": "Storage=6.081 GiB (<=6.15 GiB: True), Peak RAM/VRAM=6.865 GiB (<=7.50 GiB < 8.00 GiB: True), Byte Parity |Delta B|/B=0.00000% (<=0.01%: True)"
+        }
+      ]
+    }
+  },
+  "all_passed": true,
+  "open_s0_s1_s2_failures": 0
+}
